@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info>
+    <mime-type type="application/android-resource+xml">
+        <sub-class-of type="application/xml"/>
+        <magic priority="50">
+            <match value="0x03000800" type="string" offset="0"/>
+        </magic>
+    </mime-type>
+
+    <mime-type type="application/android-resource+arsc">
+        <sub-class-of type="application/xml"/>
+        <magic priority="50">
+            <match value="0x02000c00" type="string" offset="0"/>
+        </magic>
+    </mime-type>
+
+    <mime-type type="application/x-dex">
+        <magic priority="50">
+            <match value="0x6465780a" type="string" offset="0"/>
+        </magic>
+    </mime-type>
+
+    <mime-type type="application/x-odex">
+        <magic priority="50">
+            <match value="0x6465781a" type="string" offset="0"/>
+        </magic>
+    </mime-type>
+
+    <mime-type type="application/vnd.bouncycastle.keystore">
+        <magic priority="50">
+            <match value="0x00000001000014" type="string" offset="0"/>
+        </magic>
+    </mime-type>
+
+    <mime-type type="audio/vnd.sonivox.jet">
+        <magic priority="50">
+            <match value="JET " type="string" offset="0"/>
+        </magic>
+    </mime-type>
+</mime-info>
+
