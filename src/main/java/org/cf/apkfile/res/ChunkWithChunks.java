@@ -40,7 +40,7 @@ public abstract class ChunkWithChunks extends Chunk {
         chunks.clear();
         int start = this.offset + getHeaderSize();
         int offset = start;
-        int end = this.offset + getOriginalChunkSize();
+        int end = this.offset + Math.min(getOriginalChunkSize(), buffer.remaining());
         int position = buffer.position();
         buffer.position(start);
 

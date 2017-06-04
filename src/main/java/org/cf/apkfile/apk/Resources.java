@@ -1,17 +1,12 @@
 package org.cf.apkfile.apk;
 
+import org.cf.apkfile.res.Chunk;
 import org.cf.apkfile.res.ResourceFile;
 import org.cf.apkfile.res.ResourceTableChunk;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.StringWriter;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -30,8 +25,12 @@ public class Resources {
     private final Map<String, Map<String, Object>> resourceConfigs;
 
     public Resources(InputStream resourcesStream) throws IOException {
-        ResourceFile arscRF = ResourceFile.fromInputStream(resourcesStream);
-        resourceTable = (ResourceTableChunk) arscRF.getChunks().get(0);
+        ResourceFile resourceFile = ResourceFile.fromInputStream(resourcesStream);
+        Chunk chunk = resourceFile.getChunks().get(0);
+        if (!(chunk instanceof ResourceTableChunk)) {
+            throw new RuntimeException("Resources file appears to be invalid");
+        }
+        resourceTable = (ResourceTableChunk) chunk;
 
         entries = new HashMap<>();
         resourceConfigs = new HashMap<>();

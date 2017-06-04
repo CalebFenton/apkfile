@@ -42,14 +42,14 @@ public final class UnknownChunk extends Chunk {
             Logger.warn("Header size (" + headerSize + ") > chunk size (" + chunkSize + ")");
             header = new byte[0];
             payload = new byte[0];
-            dummyChunkSize = Math.min(headerSize + chunkSize, buffer.remaining());
+            dummyChunkSize = Math.min(headerSize + chunkSize, buffer.remaining() + Chunk.METADATA_SIZE);
             return;
         }
         if (headerSize + chunkSize > buffer.remaining()) {
             Logger.warn("Chunk size (" + (headerSize + chunkSize) + ") greater than remaining buffer (" + buffer.remaining() + ")");
             header = new byte[0];
             payload = new byte[0];
-            dummyChunkSize = buffer.remaining();
+            dummyChunkSize = Math.max(buffer.remaining(), Chunk.METADATA_SIZE);
             return;
         }
         if (headerSize == 0) {
