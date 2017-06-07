@@ -8,23 +8,9 @@ import org.bouncycastle.cert.X509CertificateHolder;
 import org.bouncycastle.cms.CMSException;
 import org.bouncycastle.cms.CMSSignedData;
 
-import sun.security.pkcs.PKCS7;
-
-import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Field;
-import java.security.cert.X509Certificate;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Hashtable;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-
-import javax.naming.InvalidNameException;
-import javax.naming.ldap.LdapName;
-import javax.naming.ldap.Rdn;
+import java.util.*;
 
 public class Certificate {
 
@@ -47,6 +33,7 @@ public class Certificate {
         }
         return allRdns;
     }
+
 
     private static SubjectAndIssuerRdns buildRdns(X500Name subject, X500Name issuer) {
         Hashtable defaultSymbols = null;
