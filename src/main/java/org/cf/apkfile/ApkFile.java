@@ -1,6 +1,5 @@
 package org.cf.apkfile;
 
-import com.beust.jcommander.internal.Nullable;
 import javafx.util.Pair;
 import org.bouncycastle.cms.CMSException;
 import org.cf.apkfile.apk.Certificate;
@@ -10,6 +9,7 @@ import org.cf.apkfile.manifest.AndroidManifest;
 import org.cf.apkfile.res.ResourceTableChunk;
 import org.pmw.tinylog.Logger;
 
+import javax.annotation.Nullable;
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.IOException;
@@ -19,15 +19,19 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
-import java.util.zip.ZipEntry;
 
 
 public class ApkFile extends JarFile {
 
     public static final Pattern CERTIFICATE_PATTERN = Pattern
             .compile("META-INF/[^\\.]+\\.(RSA|DSA|EC)", Pattern.CASE_INSENSITIVE);
+    public static final Pattern DEX_PATTERN = Pattern.compile(".dex$", Pattern.CASE_INSENSITIVE);
+    public static final Pattern ASSETS_PATTERN = Pattern.compile("^assets/");
+    public static final Pattern RESOURCES_PATTERN = Pattern.compile("^res/");
+    public static final Pattern RAW_RESOURCES_PATTERN = Pattern.compile("%res/raw/");
+    public static final Pattern LIB_PATTERN = Pattern.compile("^lib/");
+
     public static final byte[] DEX_MAGIC = new byte[]{0x64, 0x65, 0x78, 0x0A, 0x30, 0x33,};
-    public static final Pattern DEX_PATTERN = Pattern.compile(".*\\.dex$", Pattern.CASE_INSENSITIVE);
 
     private final AndroidManifest androidManifest;
     private final Certificate certificate;
@@ -41,14 +45,14 @@ public class ApkFile extends JarFile {
     }
 
     public ApkFile(File file, boolean parseResources, boolean parseAndroidManifest, boolean parseCertificate) throws IOException, ParseException {
-        this(file.getAbsolutePath(), parseResources, parseAndroidManifest, parseCertificate);
+        this(file.getAbsolutePath(), true, parseResources, parseAndroidManifest, parseCertificate);
     }
 
     public ApkFile(String apkPath) throws IOException, ParseException {
-        this(apkPath, true, true, true);
+        this(apkPath, true, true, true, true);
     }
 
-    public ApkFile(String apkPath, boolean parseResources, boolean parseAndroidManifest, boolean parseCertificate) throws IOException, ParseException {
+    public ApkFile(String apkPath, boolean analyzeDexMagic, boolean parseResources, boolean parseAndroidManifest, boolean parseCertificate) throws IOException, ParseException {
         super(apkPath, parseCertificate);
         this.theFile = new File(apkPath);
         entryNameToEntry = buildEntryNameToEntry(this);
@@ -72,7 +76,7 @@ public class ApkFile extends JarFile {
             androidManifest = null;
         }
 
-        entryNameToDex = loadDexFiles(true);
+        entryNameToDex = loadDexFiles(analyzeDexMagic);
         for (Map.Entry<String, DexFile> entry : entryNameToDex.entrySet()) {
             entry.getValue().analyze();
         }
@@ -100,7 +104,7 @@ public class ApkFile extends JarFile {
 
     public Map<String, JarEntry> getEntries(Pattern entryNamePattern) {
         return entryNameToEntry.entrySet().stream()
-                .filter(e -> entryNamePattern.matcher(e.getKey()).matches())
+                .filter(e -> entryNamePattern.matcher(e.getKey()).find())
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
     }
 
@@ -130,8 +134,42 @@ public class ApkFile extends JarFile {
         return theFile;
     }
 
+    @Nullable
+    public JarEntry getResourcesArscEntry() {
+        return getEntry("resources.arsc");
+    }
+
+    @Nullable
+    public JarEntry getAndroidManifestEntry() {
+        return getEntry("AndroidManifest.xml");
+    }
+
+    public Map<String, JarEntry> getAssetsEntries() {
+        return getEntries(ASSETS_PATTERN);
+    }
+
+    public Map<String, JarEntry> getResourcesEntries() {
+        return getEntries(RESOURCES_PATTERN);
+    }
+
+    public Map<String, JarEntry> getRawResourcesEntries() {
+        return getEntries(RAW_RESOURCES_PATTERN);
+    }
+
+    public Map<String, JarEntry> getLibEntries() {
+        return getEntries(LIB_PATTERN);
+    }
+
+    public JarEntry getCertificateEntry() {
+        return getEntry(CERTIFICATE_PATTERN);
+    }
+
+    public Map<String, JarEntry> getDexEntries() {
+        return getEntries(DEX_PATTERN);
+    }
+
     private AndroidManifest loadAndroidManifest(@Nullable ResourceTableChunk resourceTable) throws ParseException {
-        ZipEntry manifestEntry = getEntry("AndroidManifest.xml");
+        JarEntry manifestEntry = getAndroidManifestEntry();
         if (manifestEntry == null) {
             throw new ParseException("No AndroidManifest found; invalid APK");
         }
@@ -154,7 +192,7 @@ public class ApkFile extends JarFile {
         Map<String, InputStream> dexStreams = new HashMap<>();
         if (analyzeMagic) {
             for (Map.Entry<String, JarEntry> entry : entryNameToEntry.entrySet()) {
-                ZipEntry ze = entry.getValue();
+                JarEntry ze = entry.getValue();
                 // 0x70 is the header length
                 if (ze.getSize() < 0x70) {
                     continue;
@@ -198,7 +236,7 @@ public class ApkFile extends JarFile {
     }
 
     private Resources parseResources() throws ParseException {
-        ZipEntry resourcesEntry = getEntry("resources.arsc");
+        JarEntry resourcesEntry = getResourcesArscEntry();
         if (resourcesEntry == null) {
             throw new ParseException("No resources.arsc found; invalid APK");
         }
@@ -217,16 +255,8 @@ public class ApkFile extends JarFile {
         }
     }
 
-    public ZipEntry getCertificateEntry() {
-        return getEntry(CERTIFICATE_PATTERN);
-    }
-
-    public Map<String, JarEntry> getDexEntries() {
-        return getEntries(DEX_PATTERN);
-    }
-
     private Certificate parseCertificate() throws ParseException {
-        ZipEntry certEntry = getCertificateEntry();
+        JarEntry certEntry = getCertificateEntry();
         if (certEntry == null) {
             throw new ParseException("No certificate found; unsigned APK");
         }

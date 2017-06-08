@@ -12,14 +12,13 @@ AndroidManifest androidManifest = apkFile.getAndroidManifest();
 String packageName = androidManifest.getPackageName(); // com.example.android.apis
 ```
 
-ApkFile provides objects for:
+`ApkFile` provides objects for:
 
 * Android manifest
 * Resources via modified & hardened [ArscBlamer](https://github.com/google/android-arscblamer)
 * Signing certificate
 * DEX files via [dexlib2](https://github.com/JesusFreke/smali/tree/master/dexlib2)
-* ZIP entries
-
+* JAR (ZIP) entries
 
 ## Serializing to JSON
 
