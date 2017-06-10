@@ -29,12 +29,12 @@ public class DexFile {
     private final TObjectIntMap<MethodReference> apiCounts;
     private final TObjectIntMap<String> classAccessorCounts;
     private final Map<String, DexClass> classPathToClass;
-    private final transient DexBackedDexFile dexFile;
     private final TObjectIntMap<FieldReference> fieldReferenceCounts;
     private final TObjectIntMap<String> methodAccessorCounts;
     private final Map<String, DexMethod> methodDescriptorToMethod;
     private final TObjectIntMap<Opcode> opCounts;
     private final TObjectIntMap<StringReference> stringReferenceCounts;
+
     private int annotationCount = 0;
     private float cyclomaticComplexity = 0.0f;
     private int debugItemCount = 0;
@@ -43,6 +43,8 @@ public class DexFile {
     private int registerCount = 0;
     private int tryCatchCount = 0;
     private int failedClasses;
+
+    private final transient DexBackedDexFile dexFile;
 
     public DexFile(InputStream is) throws IOException {
         BufferedInputStream bis = new BufferedInputStream(is);
