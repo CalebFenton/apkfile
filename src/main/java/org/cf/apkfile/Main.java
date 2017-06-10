@@ -2,13 +2,10 @@ package org.cf.apkfile;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
-
 import gnu.trove.map.TObjectIntMap;
-
+import org.cf.apkfile.apk.JarFileExclusionStrategy;
 import org.pmw.tinylog.Configurator;
 import org.pmw.tinylog.Level;
 
@@ -42,11 +39,13 @@ public class Main {
         Gson gson = gsonBuilder
                 .disableHtmlEscaping()
                 .serializeSpecialFloatingPointValues()
+                .setExclusionStrategies(new JarFileExclusionStrategy())
                 .setPrettyPrinting()
                 .create();
         Writer writer = new OutputStreamWriter(System.out);
-        ApkFile apkFile = new ApkFile(apkPath,  true,true, true, true);
+        ApkFile apkFile = new ApkFile(apkPath, true, true, true, true);
         gson.toJson(apkFile, writer);
+
         writer.close();
         apkFile.close();
     }
