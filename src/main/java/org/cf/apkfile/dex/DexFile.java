@@ -72,6 +72,12 @@ public class DexFile {
         }
     }
 
+    private boolean isLocalNonSupportClass(String classPath) {
+        if (classPath.startsWith("Landroid/support/")) {
+            return false;
+        }
+        return localClasses.contains(classPath);
+    }
     public void analyze() {
         for (DexBackedClassDef classDef : dexFile.getClasses()) {
             String classPath = classDef.getType();
@@ -91,22 +97,23 @@ public class DexFile {
             }
 
             /*
+             * We want API counts here, not method calls to local classes.
              * In Dalvik, you can reference a method or field of a parent class by referring to
              * the child class. This means, to get *true* API fields and method calls, you'd
              * need to map method calls to parent methods up the class hierarchy of Android
              * framework classes. This is computationally expensive and there are multiple
-             * frameworks. As a rough approximation of API fields and method calls, remove
-             * *all* field and method references which are to local classes.
+             * framework versions. As an approximation, remove field and method references
+             * to local, non-support classes.
             */
             dexClass.getApiCounts().keySet()
-                    .removeIf(k -> localClasses.contains(getComponentBase(k.getDefiningClass())));
+                    .removeIf(k -> isLocalNonSupportClass(getComponentBase(k.getDefiningClass())));
             dexClass.getFieldReferenceCounts().keySet()
-                    .removeIf(k -> localClasses.contains(getComponentBase(k.getDefiningClass())));
+                    .removeIf(k -> isLocalNonSupportClass(getComponentBase(k.getDefiningClass())));
             for (DexMethod dexMethod : dexClass.getMethodSignatureToMethod().values()) {
                 dexMethod.getApiCounts().keySet().removeIf(
-                        k -> localClasses.contains(getComponentBase(k.getDefiningClass())));
+                        k -> isLocalNonSupportClass(getComponentBase(k.getDefiningClass())));
                 dexMethod.getFieldReferenceCounts().keySet().removeIf(
-                        k -> localClasses.contains(getComponentBase(k.getDefiningClass())));
+                        k -> isLocalNonSupportClass(getComponentBase(k.getDefiningClass())));
             }
 
             Utils.rollUp(opCounts, dexClass.getOpCounts());
