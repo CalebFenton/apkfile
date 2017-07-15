@@ -1,6 +1,5 @@
 package org.cf.apkfile;
 
-import javafx.util.Pair;
 import org.bouncycastle.cms.CMSException;
 import org.cf.apkfile.apk.Certificate;
 import org.cf.apkfile.apk.Resources;
@@ -227,12 +226,12 @@ public class ApkFile extends JarFile {
 
         return dexStreams.entrySet().stream().map(e -> {
             try {
-                return new Pair<>(e.getKey(), new DexFile(e.getValue()));
+                return new AbstractMap.SimpleEntry<>(e.getKey(), new DexFile(e.getValue()));
             } catch (IOException e1) {
                 e1.printStackTrace();
                 return null;
             }
-        }).filter(Objects::nonNull).collect(Collectors.toMap(Pair::getKey, Pair::getValue));
+        }).filter(Objects::nonNull).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
     }
 
     private Resources parseResources() throws ParseException {
