@@ -29,7 +29,6 @@ public class ApkFile extends JarFile {
     public static final Pattern RESOURCES_PATTERN = Pattern.compile("^res/");
     public static final Pattern RAW_RESOURCES_PATTERN = Pattern.compile("%res/raw/");
     public static final Pattern LIB_PATTERN = Pattern.compile("^lib/");
-
     public static final byte[] DEX_MAGIC = new byte[]{0x64, 0x65, 0x78, 0x0A, 0x30, 0x33,};
 
     private final AndroidManifest androidManifest;
@@ -37,22 +36,25 @@ public class ApkFile extends JarFile {
     private final Map<String, DexFile> entryNameToDex;
     private final Map<String, JarEntry> entryNameToEntry;
     private final Resources resources;
+
     private final transient File theFile;
+    private final transient boolean fullMethodSignatures;
 
     public ApkFile(File file) throws IOException, ParseException {
         this(file.getAbsolutePath());
     }
 
-    public ApkFile(File file, boolean parseResources, boolean parseAndroidManifest, boolean parseCertificate) throws IOException, ParseException {
-        this(file.getAbsolutePath(), true, parseResources, parseAndroidManifest, parseCertificate);
+    public ApkFile(File file, boolean parseResources, boolean parseAndroidManifest, boolean parseCertificate, boolean fullMethodSignatures) throws IOException, ParseException {
+        this(file.getAbsolutePath(), true, parseResources, parseAndroidManifest, parseCertificate, fullMethodSignatures);
     }
 
     public ApkFile(String apkPath) throws IOException, ParseException {
-        this(apkPath, true, true, true, true);
+        this(apkPath, true, true, true, true, true);
     }
 
-    public ApkFile(String apkPath, boolean analyzeDexMagic, boolean parseResources, boolean parseAndroidManifest, boolean parseCertificate) throws IOException, ParseException {
+    public ApkFile(String apkPath, boolean analyzeDexMagic, boolean parseResources, boolean parseAndroidManifest, boolean parseCertificate, boolean fullMethodSignatures) throws IOException, ParseException {
         super(apkPath, parseCertificate);
+        this.fullMethodSignatures = fullMethodSignatures;
         this.theFile = new File(apkPath);
         entryNameToEntry = buildEntryNameToEntry(this);
 
@@ -226,7 +228,7 @@ public class ApkFile extends JarFile {
 
         return dexStreams.entrySet().stream().map(e -> {
             try {
-                return new AbstractMap.SimpleEntry<>(e.getKey(), new DexFile(e.getValue()));
+                return new AbstractMap.SimpleEntry<>(e.getKey(), new DexFile(e.getValue(), fullMethodSignatures));
             } catch (IOException e1) {
                 e1.printStackTrace();
                 return null;

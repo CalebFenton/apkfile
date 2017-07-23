@@ -26,6 +26,8 @@ public class DexClass {
     private final Map<String, DexMethod> methodSignatureToMethod;
     private final TObjectIntMap<Opcode> opCounts;
     private final TObjectIntMap<StringReference> stringReferenceCounts;
+    private final boolean fullMethodSignatures;
+
     private int annotationCount = 0;
     private double cyclomaticComplexity = 0.0D;
     private int debugItemCount = 0;
@@ -36,6 +38,12 @@ public class DexClass {
     private int failedMethods = 0;
 
     public DexClass(DexBackedClassDef classDef) {
+        this(classDef, true);
+    }
+
+    public DexClass(DexBackedClassDef classDef, boolean fullMethodSignatures) {
+        this.fullMethodSignatures = fullMethodSignatures;
+
         this.classDef = classDef;
         methodSignatureToMethod = new HashMap<>();
         opCounts = new TObjectIntHashMap<>();
@@ -47,12 +55,13 @@ public class DexClass {
         classAccessors = buildAccessors(classDef.getAccessFlags());
     }
 
+
     private void analyze() {
         fieldCount = Utils.makeCollection(classDef.getFields()).size();
         for (DexBackedMethod dbm : classDef.getMethods()) {
             DexMethod dexMethod;
             try {
-                dexMethod = new DexMethod(dbm);
+                dexMethod = new DexMethod(dbm, fullMethodSignatures);
                 failedMethods += 1;
             } catch (Exception e) {
                 Logger.warn("Failed to analyze method: " + ReferenceUtil.getMethodDescriptor(dbm) + "; skipping", e);

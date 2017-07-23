@@ -43,7 +43,7 @@ public class Main {
                 .setPrettyPrinting()
                 .create();
         Writer writer = new OutputStreamWriter(System.out);
-        ApkFile apkFile = new ApkFile(apkPath, true, true, true, true);
+        ApkFile apkFile = new ApkFile(apkPath, true, true, true, true, false);
         gson.toJson(apkFile, writer);
 
         writer.close();

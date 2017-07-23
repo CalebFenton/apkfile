@@ -29,6 +29,8 @@ public class DexMethod {
     private final TObjectIntMap<String> methodAccessors;
     private final TObjectIntMap<Opcode> opCounts;
     private final TObjectIntMap<StringReference> stringReferenceCounts;
+    private final boolean fullMethodSignatures;
+
     private int annotationCount = 0;
     private int cyclomaticComplexity = 0;
     private int debugItemCount = 0;
@@ -36,7 +38,13 @@ public class DexMethod {
     private int registerCount = 0;
     private int tryCatchCount = 0;
 
-    DexMethod(DexBackedMethod method) {
+    public DexMethod(DexBackedMethod method) {
+        this(method, true);
+    }
+
+    public DexMethod(DexBackedMethod method, boolean fullMethodSignatures) {
+        this.fullMethodSignatures = fullMethodSignatures;
+
         this.method = method;
         opCounts = new TObjectIntHashMap<>();
         apiCounts = new TObjectIntHashMap<>();
@@ -65,7 +73,12 @@ public class DexMethod {
                 switch (op.referenceType) {
                     case ReferenceType.METHOD:
                         MethodReference methodRef = (MethodReference) refInstr.getReference();
-                        apiCounts.adjustOrPutValue(methodRef, 1, 1);
+                        if (fullMethodSignatures) {
+                            apiCounts.adjustOrPutValue(methodRef, 1, 1);
+                        } else {
+                            ShortMethodReference shortMethodRef = new ShortMethodReference(methodRef);
+                            apiCounts.adjustOrPutValue(shortMethodRef, 1, 1);
+                        }
                         break;
                     case ReferenceType.FIELD:
                         FieldReference fieldRef = (FieldReference) refInstr.getReference();

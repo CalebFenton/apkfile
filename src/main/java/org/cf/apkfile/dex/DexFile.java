@@ -34,7 +34,7 @@ public class DexFile {
     private final Map<String, DexMethod> methodDescriptorToMethod;
     private final TObjectIntMap<Opcode> opCounts;
     private final TObjectIntMap<StringReference> stringReferenceCounts;
-
+    private final boolean fullMethodSignatures;
     private int annotationCount = 0;
     private float cyclomaticComplexity = 0.0f;
     private int debugItemCount = 0;
@@ -47,6 +47,12 @@ public class DexFile {
     private final transient DexBackedDexFile dexFile;
 
     public DexFile(InputStream is) throws IOException {
+        this(is, true);
+    }
+
+    public DexFile(InputStream is, boolean fullMethodSignatures) throws IOException {
+        this.fullMethodSignatures = fullMethodSignatures;
+
         BufferedInputStream bis = new BufferedInputStream(is);
         dexFile = DexBackedDexFile.fromInputStream(Opcodes.forApi(39), bis);
         classPathToClass = new HashMap<>();
@@ -73,17 +79,15 @@ public class DexFile {
     }
 
     private boolean isLocalNonSupportClass(String classPath) {
-        if (classPath.startsWith("Landroid/support/")) {
-            return false;
-        }
-        return localClasses.contains(classPath);
+        return !classPath.startsWith("Landroid/support/") && localClasses.contains(classPath);
     }
+
     public void analyze() {
         for (DexBackedClassDef classDef : dexFile.getClasses()) {
             String classPath = classDef.getType();
             DexClass dexClass;
             try {
-                dexClass = new DexClass(classDef);
+                dexClass = new DexClass(classDef, fullMethodSignatures);
                 failedClasses++;
             } catch (Exception e) {
                 Logger.warn("Failed to analyze class: " + classDef.getType() + "; skipping", e);
