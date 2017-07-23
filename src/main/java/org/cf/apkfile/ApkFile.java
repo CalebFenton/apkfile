@@ -44,8 +44,8 @@ public class ApkFile extends JarFile {
         this(file.getAbsolutePath());
     }
 
-    public ApkFile(File file, boolean parseResources, boolean parseAndroidManifest, boolean parseCertificate, boolean fullMethodSignatures) throws IOException, ParseException {
-        this(file.getAbsolutePath(), true, parseResources, parseAndroidManifest, parseCertificate, fullMethodSignatures);
+    public ApkFile(File file, boolean analyzeDexMagic, boolean parseResources, boolean parseAndroidManifest, boolean parseCertificate, boolean fullMethodSignatures) throws IOException, ParseException {
+        this(file.getAbsolutePath(), analyzeDexMagic, parseResources, parseAndroidManifest, parseCertificate, fullMethodSignatures);
     }
 
     public ApkFile(String apkPath) throws IOException, ParseException {
