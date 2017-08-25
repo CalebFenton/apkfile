@@ -27,7 +27,7 @@ public class ApkFile extends JarFile {
     public static final Pattern DEX_PATTERN = Pattern.compile(".dex$", Pattern.CASE_INSENSITIVE);
     public static final Pattern ASSETS_PATTERN = Pattern.compile("^assets/");
     public static final Pattern RESOURCES_PATTERN = Pattern.compile("^res/");
-    public static final Pattern RAW_RESOURCES_PATTERN = Pattern.compile("%res/raw/");
+    public static final Pattern RAW_RESOURCES_PATTERN = Pattern.compile("^res/raw/");
     public static final Pattern LIB_PATTERN = Pattern.compile("^lib/");
     public static final byte[] DEX_MAGIC = new byte[]{0x64, 0x65, 0x78, 0x0A, 0x30, 0x33,};
 
