@@ -8,6 +8,10 @@ import java.util.List;
 
 import javax.annotation.Nonnull;
 
+/**
+ * Don't include parameter types in method signature string.
+ * Technically, parameters aren't part of the method signature, but what do those nerds know.
+ */
 public class ShortMethodReference implements MethodReference {
 
     private final MethodReference methodRef;
@@ -18,6 +22,27 @@ public class ShortMethodReference implements MethodReference {
         String fullSignature = methodRef.toString();
         int parensIndex = fullSignature.indexOf('(');
         shortSignature = fullSignature.substring(0, parensIndex);
+    }
+
+    @Override
+    public int compareTo(@Nonnull MethodReference o) {
+        String signature = o.toString();
+        return shortSignature.compareTo(signature);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (obj == this) {
+            return true;
+        }
+        if (obj.getClass() != getClass()) {
+            return false;
+        }
+        ShortMethodReference other = (ShortMethodReference) obj;
+        return Objects.equal(this.shortSignature, other.shortSignature);
     }
 
     @Nonnull
@@ -45,34 +70,12 @@ public class ShortMethodReference implements MethodReference {
     }
 
     @Override
-    public int compareTo(@Nonnull MethodReference o) {
-        String signature = o.toString();
-        return shortSignature.compareTo(signature);
+    public int hashCode() {
+        return Objects.hashCode(shortSignature);
     }
 
     @Override
     public String toString() {
         return shortSignature;
-    }
-
-
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
-            return false;
-        }
-        if (obj == this) {
-            return true;
-        }
-        if (obj.getClass() != getClass()) {
-            return false;
-        }
-        ShortMethodReference other = (ShortMethodReference) obj;
-        return Objects.equal(this.shortSignature, other.shortSignature);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hashCode(shortSignature);
     }
 }
