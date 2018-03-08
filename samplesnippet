@@ -1,0 +1,27 @@
+Serializing to JSON
+Below is an example of how to stream an ApkFile to JSON:
+
+GsonBuilder gsonBuilder = new GsonBuilder();
+        JsonSerializer<TObjectIntMap> serializer = (src, typeOfSrc, context) -> {
+            JsonObject jsonMerchant = new JsonObject();
+            for (Object key : src.keys()) {
+                int value = src.get(key);
+                jsonMerchant.addProperty(key.toString(), value);
+            }
+            return jsonMerchant;
+        };
+        gsonBuilder.registerTypeAdapter(TObjectIntMap.class, serializer);
+        try {
+ApkFile apkFile = new ApkFile("ignore/DroidSwarm-1.0.1.apk");
+            gsonBuilder.registerTypeAdapter(TObjectIntMap.class, serializer);
+            Gson gson = gsonBuilder
+                    .disableHtmlEscaping()
+                    .serializeSpecialFloatingPointValues()
+                    .setExclusionStrategies(new JarFileExclusionStrategy())
+                    .setPrettyPrinting()
+                    .create();
+// Don't just create a JSON string since it's huge. Instead, stream it out.
+Writer writer = new OutputStreamWriter(System.out);
+gson.toJson(apkFile, writer);
+writer.close();
+apkFile.close();
