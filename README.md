@@ -22,16 +22,34 @@ String packageName = androidManifest.getPackageName(); // com.example.android.ap
 
 ## Serializing to JSON
 
-Below is an example of how to stream an ApkFile to JSON:
+Below is an example of how to stream an `ApkFile` to JSON:
 
 ```java
-ApkFile apkFile = new ApkFile("ignore/DroidSwarm-1.0.1.apk");
 GsonBuilder gsonBuilder = new GsonBuilder();
 
-// Use these settings to handle odd strings and floating point values like "NaN":
-Gson gson = new GsonBuilder().disableHtmlEscaping().serializeSpecialFloatingPointValues().setPrettyPrinting().create();
+// ApkFile makes use of some Trove libraries for speed. These need a special
+// type adapter to convert into JSON.
+JsonSerializer<TObjectIntMap> serializer = (src, typeOfSrc, context) -> {
+    JsonObject jsonMerchant = new JsonObject();
+    for (Object key : src.keys()) {
+        int value = src.get(key);
+        jsonMerchant.addProperty(key.toString(), value);
+    }
+    return jsonMerchant;
+};
+gsonBuilder.registerTypeAdapter(TObjectIntMap.class, serializer);
+Gson gson = gsonBuilder
+        .disableHtmlEscaping()
+        .serializeSpecialFloatingPointValues()
+        .setExclusionStrategies(new JarFileExclusionStrategy())
+        .setPrettyPrinting()
+        .create();
 
-// Don't just create a JSON string since it's huge. Instead, stream it out.
+// This is where all the heavy lifting happens.
+// You can inspect the object afterwards or just serialize to JSON.
+ApkFile apkFile = new ApkFile("ignore/DroidSwarm-1.0.1.apk");
+
+// Since the JSON is usually very large and takes up a lot of memory, stream it out.
 Writer writer = new OutputStreamWriter(System.out);
 gson.toJson(apkFile, writer);
 writer.close();
@@ -578,7 +596,7 @@ Below is the highly abbreviated output from the code above. A full version can b
 ## License
 
 ```
-Copyright 2017 RedNaga. All Rights Reserved.
+Copyright 2018 RedNaga. All Rights Reserved.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
