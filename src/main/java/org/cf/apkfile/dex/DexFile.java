@@ -3,6 +3,7 @@ package org.cf.apkfile.dex;
 import gnu.trove.map.TObjectIntMap;
 import gnu.trove.map.hash.TObjectIntHashMap;
 
+import org.cf.apkfile.utils.EntropyCalculatingInputStream;
 import org.cf.apkfile.utils.Utils;
 import org.jf.dexlib2.Opcode;
 import org.jf.dexlib2.Opcodes;
@@ -14,7 +15,6 @@ import org.jf.dexlib2.iface.reference.StringReference;
 import org.jf.dexlib2.util.ReferenceUtil;
 import org.pmw.tinylog.Logger;
 
-import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
@@ -42,7 +42,8 @@ public class DexFile {
     private int instructionCount = 0;
     private int registerCount = 0;
     private int tryCatchCount = 0;
-    private int failedClasses;
+    private int failedClasses = 0;
+    private double entropy = 0;
 
     private final transient DexBackedDexFile dexFile;
 
@@ -53,8 +54,9 @@ public class DexFile {
     public DexFile(InputStream is, boolean fullMethodSignatures) throws IOException {
         this.fullMethodSignatures = fullMethodSignatures;
 
-        BufferedInputStream bis = new BufferedInputStream(is);
+        EntropyCalculatingInputStream bis = new EntropyCalculatingInputStream(is);
         dexFile = DexBackedDexFile.fromInputStream(Opcodes.forApi(39), bis);
+        entropy = bis.entropy();
         classPathToClass = new HashMap<>();
         methodDescriptorToMethod = new HashMap<>();
         opCounts = new TObjectIntHashMap<>();
@@ -108,7 +110,7 @@ public class DexFile {
              * framework classes. This is computationally expensive and there are multiple
              * framework versions. As an approximation, remove field and method references
              * to local, non-support classes.
-            */
+             */
             dexClass.getApiCounts().keySet()
                     .removeIf(k -> isLocalNonSupportClass(getComponentBase(k.getDefiningClass())));
             dexClass.getFieldReferenceCounts().keySet()
@@ -143,7 +145,7 @@ public class DexFile {
         /* Some class references for method calls look like:
          * [Lcom/google/android/gms/internal/zzvk$zza$zza;->clone()Ljava/lang/Object;
          * but the '[' form of the class isn't in local classes. Strip it out to get 'base' class
-        */
+         */
         int index = 0;
         while (classDescriptor.charAt(index) == '[') {
             index += 1;
