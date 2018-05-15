@@ -10,7 +10,7 @@ import java.io.InputStream;
 public class EntropyCalculatingInputStream extends BufferedInputStream {
 
     private final TByteIntMap counts = new TByteIntHashMap();
-    private int total = 0;
+    private long total = 0;
 
     public EntropyCalculatingInputStream(InputStream in) {
         super(in);
@@ -44,6 +44,10 @@ public class EntropyCalculatingInputStream extends BufferedInputStream {
 
     public double perplexity() {
         return Math.pow(2, entropy());
+    }
+
+    public long total() {
+        return total;
     }
 
     private static double Log2(double n) {

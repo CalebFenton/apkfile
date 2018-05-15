@@ -44,6 +44,7 @@ public class DexFile {
     private int tryCatchCount = 0;
     private int failedClasses = 0;
     private double entropy = 0;
+    private long file_size = 0;
 
     private final transient DexBackedDexFile dexFile;
 
@@ -57,6 +58,8 @@ public class DexFile {
         EntropyCalculatingInputStream bis = new EntropyCalculatingInputStream(is);
         dexFile = DexBackedDexFile.fromInputStream(Opcodes.forApi(39), bis);
         entropy = bis.entropy();
+        file_size = bis.total();
+
         classPathToClass = new HashMap<>();
         methodDescriptorToMethod = new HashMap<>();
         opCounts = new TObjectIntHashMap<>();
