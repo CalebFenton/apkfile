@@ -71,6 +71,14 @@ public class DexFile {
         loadLocalClasses(dexFile);
     }
 
+    public double getEntropy() {
+        return entropy;
+    }
+
+    public long getFile_size() {
+        return file_size;
+    }
+
     private static synchronized void loadLocalClasses(DexBackedDexFile dexFile) {
         /*
          * Must collect all local classes before any analysis because an API method is defined as
