@@ -12,6 +12,8 @@ import org.jf.dexlib2.iface.reference.MethodReference;
 import org.jf.dexlib2.util.ReferenceUtil;
 
 import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.annotation.Nonnull;
 
@@ -29,7 +31,7 @@ public class ApkComplexityAnalyzer {
                 DexBackedMethod method = dexMethod.getMethod();
                 DexBackedMethodImplementation implementation = method.getImplementation();
                 if (implementation != null) {
-                    int complexity = calculateComplexity(implementation, dexFiles);
+                    int complexity = calculateComplexity(implementation, dexFiles, new HashSet<>());
                     dexMethod.setCyclomaticComplexity(complexity);
                 }
             }
@@ -38,7 +40,8 @@ public class ApkComplexityAnalyzer {
     }
 
     private static int calculateComplexity(@Nonnull DexBackedMethodImplementation implementation,
-                                           Collection<DexFile> dexFiles) {
+                                           Collection<DexFile> dexFiles,
+                                           Set<String> visitedMethodDescriptors) {
         int decisionPoints = 0;
         int exits = 0;
         for (Instruction instruction : implementation.getInstructions()) {
@@ -98,6 +101,10 @@ public class ApkComplexityAnalyzer {
                     ReferenceInstruction refInstr = (ReferenceInstruction) instruction;
                     MethodReference methodRef = (MethodReference) refInstr.getReference();
                     String methodDescriptor = ReferenceUtil.getMethodDescriptor(methodRef);
+                    if (visitedMethodDescriptors.contains(methodDescriptor)) {
+                        decisionPoints += 1;
+                        break;
+                    }
                     for (DexFile dexFile : dexFiles) {
                         DexMethod dexMethod = dexFile.getMethod(methodDescriptor);
                         if (dexMethod == null) {
@@ -107,7 +114,9 @@ public class ApkComplexityAnalyzer {
                         DexBackedMethodImplementation calledImplementation = method
                                 .getImplementation();
                         if (calledImplementation != null) {
-                            decisionPoints += calculateComplexity(calledImplementation, dexFiles);
+                            visitedMethodDescriptors.add(methodDescriptor);
+                            decisionPoints += calculateComplexity(calledImplementation, dexFiles,
+                                                                  visitedMethodDescriptors);
                         }
                     }
             }
