@@ -81,6 +81,9 @@ public class ApkFile extends JarFile {
         for (Map.Entry<String, DexFile> entry : entryNameToDex.entrySet()) {
             entry.getValue().analyze();
         }
+
+        ApkComplexityAnalyzer complexityAnalyzer = new ApkComplexityAnalyzer(entryNameToDex.values());
+        complexityAnalyzer.analyze();
     }
 
     public Collection<JarEntry> getAllEntries() {

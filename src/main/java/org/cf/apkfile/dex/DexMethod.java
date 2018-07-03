@@ -11,8 +11,6 @@ import org.jf.dexlib2.dexbacked.DexBackedMethod;
 import org.jf.dexlib2.dexbacked.DexBackedMethodImplementation;
 import org.jf.dexlib2.iface.instruction.Instruction;
 import org.jf.dexlib2.iface.instruction.ReferenceInstruction;
-import org.jf.dexlib2.iface.instruction.formats.PackedSwitchPayload;
-import org.jf.dexlib2.iface.instruction.formats.SparseSwitchPayload;
 import org.jf.dexlib2.iface.reference.FieldReference;
 import org.jf.dexlib2.iface.reference.MethodReference;
 import org.jf.dexlib2.iface.reference.StringReference;
@@ -35,6 +33,7 @@ public class DexMethod {
     private final transient boolean fullMethodSignatures;
 
     private int annotationCount = 0;
+
     private int cyclomaticComplexity = 0;
     private int debugItemCount = 0;
     private int instructionCount = 0;
@@ -61,7 +60,6 @@ public class DexMethod {
     }
 
     private void analyze(@Nonnull DexBackedMethodImplementation implementation) {
-        cyclomaticComplexity = calculateComplexity(implementation);
         registerCount = implementation.getRegisterCount();
         tryCatchCount = implementation.getTryBlocks().size();
         debugItemCount = Utils.makeCollection(implementation.getDebugItems()).size();
@@ -111,48 +109,6 @@ public class DexMethod {
         }
     }
 
-    private static int calculateComplexity(@Nonnull DexBackedMethodImplementation implementation) {
-        // Cyclomatic complexity = <branches> - <exits> + 2
-        int branches = 0;
-        int exits = 0;
-        for (Instruction instruction : implementation.getInstructions()) {
-            switch (instruction.getOpcode()) {
-                case IF_EQ:
-                case IF_EQZ:
-                case IF_GE:
-                case IF_GEZ:
-                case IF_GT:
-                case IF_GTZ:
-                case IF_LE:
-                case IF_LEZ:
-                case IF_LT:
-                case IF_LTZ:
-                case IF_NE:
-                case IF_NEZ:
-                    branches += 2;
-                    break;
-                case PACKED_SWITCH_PAYLOAD:
-                    branches += ((PackedSwitchPayload) instruction).getSwitchElements().size();
-                    break;
-                case RETURN:
-                case RETURN_OBJECT:
-                case RETURN_VOID:
-                case RETURN_VOID_BARRIER:
-                case RETURN_VOID_NO_BARRIER:
-                case RETURN_WIDE:
-                    exits += 1;
-                    break;
-                case SPARSE_SWITCH_PAYLOAD:
-                    branches += ((SparseSwitchPayload) instruction).getSwitchElements().size();
-                    break;
-                case THROW:
-                case THROW_VERIFICATION_ERROR:
-                    exits += 1;
-                    break;
-            }
-        }
-        return branches - exits + 2;
-    }
 
     public int getAnnotationCount() {
         return annotationCount;
@@ -200,6 +156,10 @@ public class DexMethod {
 
     public int getTryCatchCount() {
         return tryCatchCount;
+    }
+
+    public void setCyclomaticComplexity(int cyclomaticComplexity) {
+        this.cyclomaticComplexity = cyclomaticComplexity;
     }
 
     public String toString() {
