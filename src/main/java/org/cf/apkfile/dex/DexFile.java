@@ -75,7 +75,7 @@ public class DexFile {
         return entropy;
     }
 
-    public long getFile_size() {
+    public long getFileSize() {
         return file_size;
     }
 
@@ -114,7 +114,7 @@ public class DexFile {
             }
 
             /*
-             * We want API counts here, not method calls to local classes.
+             * We want API counts here, not method calls to local classes, which is noisy.
              * In Dalvik, you can reference a method or field of a parent class by referring to
              * the child class. This means, to get *true* API fields and method calls, you'd
              * need to map method calls to parent methods up the class hierarchy of Android

@@ -16,6 +16,7 @@ import org.jf.dexlib2.iface.instruction.formats.SparseSwitchPayload;
 import org.jf.dexlib2.iface.reference.FieldReference;
 import org.jf.dexlib2.iface.reference.MethodReference;
 import org.jf.dexlib2.iface.reference.StringReference;
+import org.jf.dexlib2.util.ReferenceUtil;
 
 import java.lang.reflect.Modifier;
 
@@ -23,13 +24,15 @@ import javax.annotation.Nonnull;
 
 public class DexMethod {
 
+    private static final String[] API_PACKAGES = new String[]{"Landroid/", "Lcom/android/", "Lcom/google/", "Lcom/sec/android/", "Lcom/sun/", "Ldalvik/", "Lgov/", "Ljava/", "Ljavax/", "Ljunit/", "Llibcore/", "Lorg/apache/", "Lorg/ccil/", "Lorg/json/", "Lorg/kxml2/", "Lorg/spongycastle/", "Lorg/w3c/", "Lorg/xml/", "Lorg/xmlpull/", "Lsun/"};
+
     private final TObjectIntMap<MethodReference> apiCounts;
     private final TObjectIntMap<FieldReference> fieldReferenceCounts;
     private final transient DexBackedMethod method;
     private final TObjectIntMap<String> methodAccessors;
     private final TObjectIntMap<Opcode> opCounts;
     private final TObjectIntMap<StringReference> stringReferenceCounts;
-    private final boolean fullMethodSignatures;
+    private final transient boolean fullMethodSignatures;
 
     private int annotationCount = 0;
     private int cyclomaticComplexity = 0;
@@ -70,13 +73,28 @@ public class DexMethod {
 
             if (instruction instanceof ReferenceInstruction) {
                 ReferenceInstruction refInstr = (ReferenceInstruction) instruction;
+                if (op.referenceType == ReferenceType.METHOD || op.referenceType == ReferenceType.FIELD) {
+                    boolean isApi = false;
+                    for (String apiPackage : API_PACKAGES) {
+                        String refStr = ReferenceUtil.getReferenceString(refInstr.getReference());
+                        if (refStr.startsWith(apiPackage)) {
+                            isApi = true;
+                            break;
+                        }
+                        if (!isApi) {
+                            continue;
+                        }
+                    }
+                }
+
                 switch (op.referenceType) {
                     case ReferenceType.METHOD:
                         MethodReference methodRef = (MethodReference) refInstr.getReference();
                         if (fullMethodSignatures) {
                             apiCounts.adjustOrPutValue(methodRef, 1, 1);
                         } else {
-                            ShortMethodReference shortMethodRef = new ShortMethodReference(methodRef);
+                            ShortMethodReference shortMethodRef = new ShortMethodReference(
+                                    methodRef);
                             apiCounts.adjustOrPutValue(shortMethodRef, 1, 1);
                         }
                         break;
