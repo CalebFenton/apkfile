@@ -11,9 +11,17 @@ import java.util.Map;
 
 public class Utils {
 
-    public static Map<Object, Object> convertToJava(TObjectIntMap map) {
-        Map<Object, Object> javaMap = new HashMap<>();
+    public static Map<Object, Integer> convertToJava(TObjectIntMap map) {
+        Map<Object, Integer> javaMap = new HashMap<>();
         for (Object key : map.keySet()) {
+            javaMap.put(key, map.get(key));
+        }
+        return javaMap;
+    }
+
+    public static Map<Integer, Integer> convertToJava(TIntIntMap map) {
+        Map<Integer, Integer> javaMap = new HashMap<>();
+        for (int key : map.keys()) {
             javaMap.put(key, map.get(key));
         }
         return javaMap;
