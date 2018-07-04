@@ -4,7 +4,10 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonSerializer;
+
+import gnu.trove.map.TIntIntMap;
 import gnu.trove.map.TObjectIntMap;
+
 import org.cf.apkfile.apk.JarFileExclusionStrategy;
 import org.pmw.tinylog.Configurator;
 import org.pmw.tinylog.Level;
@@ -27,7 +30,7 @@ public class Main {
 
         String apkPath = args[0];
         GsonBuilder gsonBuilder = new GsonBuilder();
-        JsonSerializer<TObjectIntMap> serializer = (src, typeOfSrc, context) -> {
+        JsonSerializer<TObjectIntMap> objectIntMapJsonSerializer = (src, typeOfSrc, context) -> {
             JsonObject jsonMerchant = new JsonObject();
             for (Object key : src.keys()) {
                 int value = src.get(key);
@@ -35,12 +38,19 @@ public class Main {
             }
             return jsonMerchant;
         };
-        gsonBuilder.registerTypeAdapter(TObjectIntMap.class, serializer);
-        Gson gson = gsonBuilder
-                .disableHtmlEscaping()
-                .serializeSpecialFloatingPointValues()
-                .setExclusionStrategies(new JarFileExclusionStrategy())
-                .setPrettyPrinting()
+        gsonBuilder.registerTypeAdapter(TObjectIntMap.class, objectIntMapJsonSerializer);
+        JsonSerializer<TIntIntMap> intIntMapJsonSerializer = (src, typeOfSrc, context) -> {
+            JsonObject jsonMerchant = new JsonObject();
+            for (int key : src.keys()) {
+                int value = src.get(key);
+                jsonMerchant.addProperty(Integer.toString(key), value);
+            }
+            return jsonMerchant;
+        };
+        gsonBuilder.registerTypeAdapter(TIntIntMap.class, intIntMapJsonSerializer);
+
+        Gson gson = gsonBuilder.disableHtmlEscaping().serializeSpecialFloatingPointValues()
+                .setExclusionStrategies(new JarFileExclusionStrategy()).setPrettyPrinting()
                 .create();
         Writer writer = new OutputStreamWriter(System.out);
         ApkFile apkFile = new ApkFile(apkPath, true, true, true, true, false);

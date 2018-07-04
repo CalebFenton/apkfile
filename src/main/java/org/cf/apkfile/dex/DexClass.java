@@ -1,9 +1,11 @@
 package org.cf.apkfile.dex;
 
+import gnu.trove.map.TIntIntMap;
 import gnu.trove.map.TObjectIntMap;
+import gnu.trove.map.hash.TIntIntHashMap;
 import gnu.trove.map.hash.TObjectIntHashMap;
+
 import org.cf.apkfile.utils.Utils;
-import org.jf.dexlib2.Opcode;
 import org.jf.dexlib2.dexbacked.DexBackedClassDef;
 import org.jf.dexlib2.dexbacked.DexBackedMethod;
 import org.jf.dexlib2.iface.reference.FieldReference;
@@ -24,7 +26,7 @@ public class DexClass {
     private final TObjectIntMap<FieldReference> fieldReferenceCounts;
     private final TObjectIntMap<String> methodAccessorCounts;
     private final Map<String, DexMethod> methodSignatureToMethod;
-    private final TObjectIntMap<Opcode> opCounts;
+    private final TIntIntMap opCounts;
     private final TObjectIntMap<StringReference> stringReferenceCounts;
     private final boolean fullMethodSignatures;
 
@@ -46,7 +48,7 @@ public class DexClass {
 
         this.classDef = classDef;
         methodSignatureToMethod = new HashMap<>();
-        opCounts = new TObjectIntHashMap<>();
+        opCounts = new TIntIntHashMap();
         apiCounts = new TObjectIntHashMap<>();
         stringReferenceCounts = new TObjectIntHashMap<>();
         fieldReferenceCounts = new TObjectIntHashMap<>();
@@ -64,7 +66,8 @@ public class DexClass {
                 dexMethod = new DexMethod(dbm, fullMethodSignatures);
                 failedMethods += 1;
             } catch (Exception e) {
-                Logger.warn("Failed to analyze method: " + ReferenceUtil.getMethodDescriptor(dbm) + "; skipping", e);
+                Logger.warn("Failed to analyze method: " + ReferenceUtil
+                        .getMethodDescriptor(dbm) + "; skipping", e);
                 continue;
             }
             String methodDescriptor = ReferenceUtil.getMethodDescriptor(dbm);
@@ -137,7 +140,7 @@ public class DexClass {
         return methodSignatureToMethod;
     }
 
-    public TObjectIntMap<Opcode> getOpCounts() {
+    public TIntIntMap getOpCounts() {
         return opCounts;
     }
 

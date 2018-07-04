@@ -1,7 +1,9 @@
 package org.cf.apkfile.dex;
 
 
+import gnu.trove.map.TIntIntMap;
 import gnu.trove.map.TObjectIntMap;
+import gnu.trove.map.hash.TIntIntHashMap;
 import gnu.trove.map.hash.TObjectIntHashMap;
 
 import org.cf.apkfile.utils.Utils;
@@ -17,6 +19,8 @@ import org.jf.dexlib2.iface.reference.StringReference;
 import org.jf.dexlib2.util.ReferenceUtil;
 
 import java.lang.reflect.Modifier;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.annotation.Nonnull;
 
@@ -28,12 +32,12 @@ public class DexMethod {
     private final TObjectIntMap<FieldReference> fieldReferenceCounts;
     private final transient DexBackedMethod method;
     private final TObjectIntMap<String> methodAccessors;
-    private final TObjectIntMap<Opcode> opCounts;
+    private final TIntIntMap opCounts;
     private final TObjectIntMap<StringReference> stringReferenceCounts;
     private final transient boolean fullMethodSignatures;
+    private final NGramTable nGramTable;
 
     private int annotationCount = 0;
-
     private int cyclomaticComplexity = 0;
     private int debugItemCount = 0;
     private int instructionCount = 0;
@@ -48,7 +52,8 @@ public class DexMethod {
         this.fullMethodSignatures = fullMethodSignatures;
 
         this.method = method;
-        opCounts = new TObjectIntHashMap<>();
+        opCounts = new TIntIntHashMap();
+        nGramTable = new NGramTable();
         apiCounts = new TObjectIntHashMap<>();
         stringReferenceCounts = new TObjectIntHashMap<>();
         fieldReferenceCounts = new TObjectIntHashMap<>();
@@ -59,6 +64,21 @@ public class DexMethod {
         methodAccessors = buildAccessors(method.getAccessFlags());
     }
 
+    private void sequenceNGrams(Iterable<? extends Instruction> instructions) {
+        List<Short> opCodes = new ArrayList<>();
+        for (Instruction instruction : instructions) {
+            Opcode op = instruction.getOpcode();
+            opCodes.add(op.apiToValueMap.get(15));
+        }
+        for (int i = 0; i < opCodes.size(); i++) {
+            if (i + 2 < opCodes.size()) {
+                NGram nGram = NGram
+                        .create(3, opCodes.get(i), opCodes.get(i + 1), opCodes.get(i + 2));
+                nGramTable.add(nGram);
+            }
+        }
+    }
+
     private void analyze(@Nonnull DexBackedMethodImplementation implementation) {
         registerCount = implementation.getRegisterCount();
         tryCatchCount = implementation.getTryBlocks().size();
@@ -67,7 +87,7 @@ public class DexMethod {
         for (Instruction instruction : implementation.getInstructions()) {
             instructionCount++;
             Opcode op = instruction.getOpcode();
-            opCounts.adjustOrPutValue(op, 1, 1);
+            opCounts.adjustOrPutValue(op.apiToValueMap.get(15), 1, 1);
 
             if (instruction instanceof ReferenceInstruction) {
                 ReferenceInstruction refInstr = (ReferenceInstruction) instruction;
@@ -107,6 +127,8 @@ public class DexMethod {
                 }
             }
         }
+
+        sequenceNGrams(implementation.getInstructions());
     }
 
 
@@ -142,7 +164,7 @@ public class DexMethod {
         return methodAccessors;
     }
 
-    public TObjectIntMap<Opcode> getOpCounts() {
+    public TIntIntMap getOpCounts() {
         return opCounts;
     }
 

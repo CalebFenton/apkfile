@@ -1,5 +1,6 @@
 package org.cf.apkfile.utils;
 
+import gnu.trove.map.TIntIntMap;
 import gnu.trove.map.TObjectIntMap;
 import gnu.trove.map.TObjectLongMap;
 
@@ -32,6 +33,13 @@ public class Utils {
             list.add(item);
         }
         return list;
+    }
+
+    public static void rollUp(TIntIntMap dest, TIntIntMap src) {
+        for (int key : src.keys()) {
+            int value = src.get(key);
+            dest.adjustOrPutValue(key, value, value);
+        }
     }
 
     public static void rollUp(TObjectIntMap dest, TObjectIntMap src) {
