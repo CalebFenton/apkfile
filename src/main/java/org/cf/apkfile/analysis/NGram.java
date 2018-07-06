@@ -1,19 +1,18 @@
-package org.cf.apkfile.dex;
+package org.cf.apkfile.analysis;
 
 import java.util.Arrays;
 import java.util.zip.Adler32;
 
 public class NGram {
 
-    private int[] data;
+    private final int[] data;
     private int hashCode;
 
-
-    public NGram(int n) {
+    NGram(int n) {
         data = new int[n];
     }
 
-    public void set(int index, int value) {
+    void set(int index, int value) {
         data[index] = value;
         hashCode = 0;
     }
@@ -44,6 +43,7 @@ public class NGram {
         if (rhs == this) {
             return true;
         }
+        
         if (rhs instanceof NGram) {
             NGram other = (NGram) rhs;
             if (hashCode() == other.hashCode()) {
@@ -58,7 +58,6 @@ public class NGram {
     public String toString() {
         StringBuilder output = new StringBuilder();
         for (int d : data) {
-            output.append("0x");
             output.append(Integer.toHexString(d));
             output.append(' ');
         }
@@ -76,4 +75,5 @@ public class NGram {
 
         return ngram;
     }
+
 }

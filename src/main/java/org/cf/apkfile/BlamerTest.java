@@ -3,6 +3,8 @@ package org.cf.apkfile;
 import com.google.common.io.ByteStreams;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import org.cf.apkfile.apk.ApkFile;
+import org.cf.apkfile.apk.ApkFileFactory;
 import org.cf.apkfile.res.Chunk;
 import org.cf.apkfile.res.ResourceFile;
 import org.cf.apkfile.res.ResourceTableChunk;
@@ -14,7 +16,6 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.file.attribute.FileTime;
 import java.security.CodeSigner;
-import java.security.cert.Certificate;
 import java.security.cert.X509Certificate;
 import java.util.Enumeration;
 import java.util.Locale;
@@ -32,7 +33,7 @@ public class BlamerTest {
     }
 
     private static void getDates(String path) throws IOException, ParseException {
-        ApkFile apkFile = new ApkFile(path);
+        ApkFile apkFile = new ApkFileFactory().build(path);
         FileTime apkModifiedTime = FileTime.from(new File(path).lastModified(), TimeUnit.MILLISECONDS);
         System.out.println(apkFile.getDexEntries().keySet());
         FileTime dexModifiedTime = apkFile.getDexEntries().get("classes.dex").getLastModifiedTime();
@@ -61,6 +62,7 @@ public class BlamerTest {
         System.out.println("Android manifest cert probably created: " + cert.getNotBefore());
         System.out.println("Full cert: " + cert.toString());
     }
+
     private static void getDates2(String path) throws IOException, ParseException {
         JarFile jar = new JarFile(path, true);
         // Need each entry so that future calls to entry.getCodeSigners will return anything
@@ -84,10 +86,11 @@ public class BlamerTest {
                 CodeSigner[] css = entry.getCodeSigners();
                 System.out.println(css.length);
             }
-        }    }
+        }
+    }
 
     private static void doit(String path) throws Exception {
-        ApkFile apkFile = new ApkFile(path);
+        ApkFile apkFile = new ApkFileFactory().build(path);
         GsonBuilder gsonBuilder = new GsonBuilder();
         Gson gson = new GsonBuilder().disableHtmlEscaping().serializeSpecialFloatingPointValues().setPrettyPrinting().create();
         String json = gson.toJson(apkFile);
@@ -96,7 +99,12 @@ public class BlamerTest {
     }
 
     private static void old(String path) throws Exception {
-        ApkFile apkFile = new ApkFile(path, true,false, false, false, false);
+        ApkFile apkFile = new ApkFileFactory()
+                .skipParsingResources()
+                .skipParsingAndroidManifest()
+                .skipParsingResources()
+                .skipParsingDexFiles()
+                .build(path);
 
         ZipEntry resourcesEntry = apkFile.getEntry("resources.arsc");
         InputStream resourcesStream = apkFile.getInputStream(resourcesEntry);

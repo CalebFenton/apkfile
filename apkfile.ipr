@@ -1,638 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ASMPluginConfiguration">
-    <asm skipDebug="false" skipFrames="false" skipCode="false" expandFrames="false" />
-    <groovy codeStyle="LEGACY" />
-  </component>
   <component name="CompilerConfiguration">
+    <option name="DEFAULT_COMPILER" value="Javac"/>
     <resourceExtensions>
-      <entry name=".+\.(properties|xml|html|dtd|tld)" />
-      <entry name=".+\.(gif|png|jpeg|jpg)" />
+      <entry name=".+\.(properties|xml|html|dtd|tld)"/>
+      <entry name=".+\.(gif|png|jpeg|jpg)"/>
     </resourceExtensions>
     <wildcardResourcePatterns>
-      <entry name="!?*.class" />
-      <entry name="!?*.scala" />
-      <entry name="!?*.java" />
-      <entry name="!?*.groovy" />
+      <entry name="!?*.class"/>
+      <entry name="!?*.scala"/>
+      <entry name="!?*.groovy"/>
+      <entry name="!?*.java"/>
     </wildcardResourcePatterns>
-    <bytecodeTargetLevel target="1.8">
-      <module name="apkfile_main" target="1.8" />
-      <module name="apkfile_test" target="1.8" />
-    </bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.8"/>
+    <annotationProcessing>
+      <profile name="Default" enabled="true" default="true">
+        <sourceOutputDir name="build/generated/source/apt/main"/>
+        <sourceTestOutputDir name="build/generated/source/apt/test"/>
+        <outputRelativeToContentRoot value="true"/>
+        <processorPath useClasspath="true"/>
+      </profile>
+    </annotationProcessing>
   </component>
-  <component name="CopyrightManager" default="" />
+  <component name="CopyrightManager" default="">
+    <module2copyright/>
+  </component>
   <component name="DependencyValidationManager">
-    <option name="SKIP_IMPORT_STATEMENTS" value="false" />
+    <option name="SKIP_IMPORT_STATEMENTS" value="false"/>
   </component>
-  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" />
-  <component name="GradleSettings">
-    <option name="linkedExternalProjectsSettings">
-      <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleJvm" value="1.8" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-    </option>
-  </component>
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false"/>
   <component name="GradleUISettings">
-    <setting name="root" />
+    <setting name="root"/>
   </component>
   <component name="GradleUISettings2">
-    <setting name="root" />
+    <setting name="root"/>
   </component>
-  <component name="IdProvider" IDEtalkID="11DA1DB66DD62DDA1ED602B7079FE97C" />
-  <component name="InspectionProjectProfileManager">
-    <profile version="1.0">
-      <option name="myName" value="Project Default" />
-    </profile>
-    <version value="1.0" />
-  </component>
+  <component name="IdProvider" IDEtalkID="11DA1DB66DD62DDA1ED602B7079FE97C"/>
   <component name="JavadocGenerationManager">
-    <option name="OUTPUT_DIRECTORY" />
-    <option name="OPTION_SCOPE" value="protected" />
-    <option name="OPTION_HIERARCHY" value="true" />
-    <option name="OPTION_NAVIGATOR" value="true" />
-    <option name="OPTION_INDEX" value="true" />
-    <option name="OPTION_SEPARATE_INDEX" value="true" />
-    <option name="OPTION_DOCUMENT_TAG_USE" value="false" />
-    <option name="OPTION_DOCUMENT_TAG_AUTHOR" value="false" />
-    <option name="OPTION_DOCUMENT_TAG_VERSION" value="false" />
-    <option name="OPTION_DOCUMENT_TAG_DEPRECATED" value="true" />
-    <option name="OPTION_DEPRECATED_LIST" value="true" />
-    <option name="OTHER_OPTIONS" value="" />
-    <option name="HEAP_SIZE" />
-    <option name="LOCALE" />
-    <option name="OPEN_IN_BROWSER" value="true" />
-  </component>
-  <component name="Palette2">
-    <group name="Swing">
-      <item class="com.intellij.uiDesigner.HSpacer" tooltip-text="Horizontal Spacer" icon="/com/intellij/uiDesigner/icons/hspacer.png" removable="false" auto-create-binding="false" can-attach-label="false">
-        <default-constraints vsize-policy="1" hsize-policy="6" anchor="0" fill="1" />
-      </item>
-      <item class="com.intellij.uiDesigner.VSpacer" tooltip-text="Vertical Spacer" icon="/com/intellij/uiDesigner/icons/vspacer.png" removable="false" auto-create-binding="false" can-attach-label="false">
-        <default-constraints vsize-policy="6" hsize-policy="1" anchor="0" fill="2" />
-      </item>
-      <item class="javax.swing.JPanel" icon="/com/intellij/uiDesigner/icons/panel.png" removable="false" auto-create-binding="false" can-attach-label="false">
-        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3" />
-      </item>
-      <item class="javax.swing.JScrollPane" icon="/com/intellij/uiDesigner/icons/scrollPane.png" removable="false" auto-create-binding="false" can-attach-label="true">
-        <default-constraints vsize-policy="7" hsize-policy="7" anchor="0" fill="3" />
-      </item>
-      <item class="javax.swing.JButton" icon="/com/intellij/uiDesigner/icons/button.png" removable="false" auto-create-binding="true" can-attach-label="false">
-        <default-constraints vsize-policy="0" hsize-policy="3" anchor="0" fill="1" />
-        <initial-values>
-          <property name="text" value="Button" />
-        </initial-values>
-      </item>
-      <item class="javax.swing.JRadioButton" icon="/com/intellij/uiDesigner/icons/radioButton.png" removable="false" auto-create-binding="true" can-attach-label="false">
-        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
-        <initial-values>
-          <property name="text" value="RadioButton" />
-        </initial-values>
-      </item>
-      <item class="javax.swing.JCheckBox" icon="/com/intellij/uiDesigner/icons/checkBox.png" removable="false" auto-create-binding="true" can-attach-label="false">
-        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
-        <initial-values>
-          <property name="text" value="CheckBox" />
-        </initial-values>
-      </item>
-      <item class="javax.swing.JLabel" icon="/com/intellij/uiDesigner/icons/label.png" removable="false" auto-create-binding="false" can-attach-label="false">
-        <default-constraints vsize-policy="0" hsize-policy="0" anchor="8" fill="0" />
-        <initial-values>
-          <property name="text" value="Label" />
-        </initial-values>
-      </item>
-      <item class="javax.swing.JTextField" icon="/com/intellij/uiDesigner/icons/textField.png" removable="false" auto-create-binding="true" can-attach-label="true">
-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
-          <preferred-size width="150" height="-1" />
-        </default-constraints>
-      </item>
-      <item class="javax.swing.JPasswordField" icon="/com/intellij/uiDesigner/icons/passwordField.png" removable="false" auto-create-binding="true" can-attach-label="true">
-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
-          <preferred-size width="150" height="-1" />
-        </default-constraints>
-      </item>
-      <item class="javax.swing.JFormattedTextField" icon="/com/intellij/uiDesigner/icons/formattedTextField.png" removable="false" auto-create-binding="true" can-attach-label="true">
-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
-          <preferred-size width="150" height="-1" />
-        </default-constraints>
-      </item>
-      <item class="javax.swing.JTextArea" icon="/com/intellij/uiDesigner/icons/textArea.png" removable="false" auto-create-binding="true" can-attach-label="true">
-        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
-          <preferred-size width="150" height="50" />
-        </default-constraints>
-      </item>
-      <item class="javax.swing.JTextPane" icon="/com/intellij/uiDesigner/icons/textPane.png" removable="false" auto-create-binding="true" can-attach-label="true">
-        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
-          <preferred-size width="150" height="50" />
-        </default-constraints>
-      </item>
-      <item class="javax.swing.JEditorPane" icon="/com/intellij/uiDesigner/icons/editorPane.png" removable="false" auto-create-binding="true" can-attach-label="true">
-        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
-          <preferred-size width="150" height="50" />
-        </default-constraints>
-      </item>
-      <item class="javax.swing.JComboBox" icon="/com/intellij/uiDesigner/icons/comboBox.png" removable="false" auto-create-binding="true" can-attach-label="true">
-        <default-constraints vsize-policy="0" hsize-policy="2" anchor="8" fill="1" />
-      </item>
-      <item class="javax.swing.JTable" icon="/com/intellij/uiDesigner/icons/table.png" removable="false" auto-create-binding="true" can-attach-label="false">
-        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
-          <preferred-size width="150" height="50" />
-        </default-constraints>
-      </item>
-      <item class="javax.swing.JList" icon="/com/intellij/uiDesigner/icons/list.png" removable="false" auto-create-binding="true" can-attach-label="false">
-        <default-constraints vsize-policy="6" hsize-policy="2" anchor="0" fill="3">
-          <preferred-size width="150" height="50" />
-        </default-constraints>
-      </item>
-      <item class="javax.swing.JTree" icon="/com/intellij/uiDesigner/icons/tree.png" removable="false" auto-create-binding="true" can-attach-label="false">
-        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
-          <preferred-size width="150" height="50" />
-        </default-constraints>
-      </item>
-      <item class="javax.swing.JTabbedPane" icon="/com/intellij/uiDesigner/icons/tabbedPane.png" removable="false" auto-create-binding="true" can-attach-label="false">
-        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
-          <preferred-size width="200" height="200" />
-        </default-constraints>
-      </item>
-      <item class="javax.swing.JSplitPane" icon="/com/intellij/uiDesigner/icons/splitPane.png" removable="false" auto-create-binding="false" can-attach-label="false">
-        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
-          <preferred-size width="200" height="200" />
-        </default-constraints>
-      </item>
-      <item class="javax.swing.JSpinner" icon="/com/intellij/uiDesigner/icons/spinner.png" removable="false" auto-create-binding="true" can-attach-label="true">
-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
-      </item>
-      <item class="javax.swing.JSlider" icon="/com/intellij/uiDesigner/icons/slider.png" removable="false" auto-create-binding="true" can-attach-label="false">
-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
-      </item>
-      <item class="javax.swing.JSeparator" icon="/com/intellij/uiDesigner/icons/separator.png" removable="false" auto-create-binding="false" can-attach-label="false">
-        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3" />
-      </item>
-      <item class="javax.swing.JProgressBar" icon="/com/intellij/uiDesigner/icons/progressbar.png" removable="false" auto-create-binding="true" can-attach-label="false">
-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1" />
-      </item>
-      <item class="javax.swing.JToolBar" icon="/com/intellij/uiDesigner/icons/toolbar.png" removable="false" auto-create-binding="false" can-attach-label="false">
-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1">
-          <preferred-size width="-1" height="20" />
-        </default-constraints>
-      </item>
-      <item class="javax.swing.JToolBar$Separator" icon="/com/intellij/uiDesigner/icons/toolbarSeparator.png" removable="false" auto-create-binding="false" can-attach-label="false">
-        <default-constraints vsize-policy="0" hsize-policy="0" anchor="0" fill="1" />
-      </item>
-      <item class="javax.swing.JScrollBar" icon="/com/intellij/uiDesigner/icons/scrollbar.png" removable="false" auto-create-binding="true" can-attach-label="false">
-        <default-constraints vsize-policy="6" hsize-policy="0" anchor="0" fill="2" />
-      </item>
-    </group>
-  </component>
-  <component name="ProjectCodeStyleSettingsManager">
-    <option name="PER_PROJECT_SETTINGS">
-      <value>
-        <option name="JD_PRESERVE_LINE_FEEDS" value="true" />
-        <codeStyleSettings language="JAVA">
-          <option name="KEEP_FIRST_COLUMN_COMMENT" value="false" />
-          <option name="ENUM_CONSTANTS_WRAP" value="2" />
-          <arrangement>
-            <rules>
-              <section>
-                <rule>
-                  <match>
-                    <AND>
-                      <FIELD>true</FIELD>
-                      <FINAL>true</FINAL>
-                      <PUBLIC>true</PUBLIC>
-                      <STATIC>true</STATIC>
-                    </AND>
-                  </match>
-                </rule>
-              </section>
-              <section>
-                <rule>
-                  <match>
-                    <AND>
-                      <FIELD>true</FIELD>
-                      <FINAL>true</FINAL>
-                      <PROTECTED>true</PROTECTED>
-                      <STATIC>true</STATIC>
-                    </AND>
-                  </match>
-                </rule>
-              </section>
-              <section>
-                <rule>
-                  <match>
-                    <AND>
-                      <FIELD>true</FIELD>
-                      <FINAL>true</FINAL>
-                      <PACKAGE_PRIVATE>true</PACKAGE_PRIVATE>
-                      <STATIC>true</STATIC>
-                    </AND>
-                  </match>
-                </rule>
-              </section>
-              <section>
-                <rule>
-                  <match>
-                    <AND>
-                      <FIELD>true</FIELD>
-                      <FINAL>true</FINAL>
-                      <PRIVATE>true</PRIVATE>
-                      <STATIC>true</STATIC>
-                    </AND>
-                  </match>
-                </rule>
-              </section>
-              <section>
-                <rule>
-                  <match>
-                    <AND>
-                      <FIELD>true</FIELD>
-                      <PUBLIC>true</PUBLIC>
-                      <STATIC>true</STATIC>
-                    </AND>
-                  </match>
-                </rule>
-              </section>
-              <section>
-                <rule>
-                  <match>
-                    <AND>
-                      <FIELD>true</FIELD>
-                      <PROTECTED>true</PROTECTED>
-                      <STATIC>true</STATIC>
-                    </AND>
-                  </match>
-                </rule>
-              </section>
-              <section>
-                <rule>
-                  <match>
-                    <AND>
-                      <FIELD>true</FIELD>
-                      <PACKAGE_PRIVATE>true</PACKAGE_PRIVATE>
-                      <STATIC>true</STATIC>
-                    </AND>
-                  </match>
-                </rule>
-              </section>
-              <section>
-                <rule>
-                  <match>
-                    <AND>
-                      <FIELD>true</FIELD>
-                      <PRIVATE>true</PRIVATE>
-                      <STATIC>true</STATIC>
-                    </AND>
-                  </match>
-                </rule>
-              </section>
-              <section>
-                <rule>
-                  <match>
-                    <AND>
-                      <INITIALIZER_BLOCK>true</INITIALIZER_BLOCK>
-                      <STATIC>true</STATIC>
-                    </AND>
-                  </match>
-                </rule>
-              </section>
-              <section>
-                <rule>
-                  <match>
-                    <AND>
-                      <FIELD>true</FIELD>
-                      <FINAL>true</FINAL>
-                      <PUBLIC>true</PUBLIC>
-                    </AND>
-                  </match>
-                </rule>
-              </section>
-              <section>
-                <rule>
-                  <match>
-                    <AND>
-                      <FIELD>true</FIELD>
-                      <FINAL>true</FINAL>
-                      <PROTECTED>true</PROTECTED>
-                    </AND>
-                  </match>
-                </rule>
-              </section>
-              <section>
-                <rule>
-                  <match>
-                    <AND>
-                      <FIELD>true</FIELD>
-                      <FINAL>true</FINAL>
-                      <PACKAGE_PRIVATE>true</PACKAGE_PRIVATE>
-                    </AND>
-                  </match>
-                </rule>
-              </section>
-              <section>
-                <rule>
-                  <match>
-                    <AND>
-                      <FIELD>true</FIELD>
-                      <FINAL>true</FINAL>
-                      <PRIVATE>true</PRIVATE>
-                    </AND>
-                  </match>
-                </rule>
-              </section>
-              <section>
-                <rule>
-                  <match>
-                    <AND>
-                      <FIELD>true</FIELD>
-                      <PUBLIC>true</PUBLIC>
-                    </AND>
-                  </match>
-                </rule>
-              </section>
-              <section>
-                <rule>
-                  <match>
-                    <AND>
-                      <FIELD>true</FIELD>
-                      <PROTECTED>true</PROTECTED>
-                    </AND>
-                  </match>
-                </rule>
-              </section>
-              <section>
-                <rule>
-                  <match>
-                    <AND>
-                      <FIELD>true</FIELD>
-                      <PACKAGE_PRIVATE>true</PACKAGE_PRIVATE>
-                    </AND>
-                  </match>
-                </rule>
-              </section>
-              <section>
-                <rule>
-                  <match>
-                    <AND>
-                      <FIELD>true</FIELD>
-                      <PRIVATE>true</PRIVATE>
-                    </AND>
-                  </match>
-                </rule>
-              </section>
-              <section>
-                <rule>
-                  <match>
-                    <FIELD>true</FIELD>
-                  </match>
-                </rule>
-              </section>
-              <section>
-                <rule>
-                  <match>
-                    <INITIALIZER_BLOCK>true</INITIALIZER_BLOCK>
-                  </match>
-                </rule>
-              </section>
-              <section>
-                <rule>
-                  <match>
-                    <CONSTRUCTOR>true</CONSTRUCTOR>
-                  </match>
-                </rule>
-              </section>
-              <section>
-                <rule>
-                  <match>
-                    <AND>
-                      <METHOD>true</METHOD>
-                      <STATIC>false</STATIC>
-                      <visibility />
-                    </AND>
-                  </match>
-                  <order>BY_NAME</order>
-                </rule>
-              </section>
-              <section>
-                <rule>
-                  <match>
-                    <AND>
-                      <METHOD>true</METHOD>
-                      <STATIC>true</STATIC>
-                      <visibility />
-                    </AND>
-                  </match>
-                  <order>BY_NAME</order>
-                </rule>
-              </section>
-              <section>
-                <rule>
-                  <match>
-                    <ENUM>true</ENUM>
-                  </match>
-                </rule>
-              </section>
-              <section>
-                <rule>
-                  <match>
-                    <INTERFACE>true</INTERFACE>
-                  </match>
-                </rule>
-              </section>
-              <section>
-                <rule>
-                  <match>
-                    <AND>
-                      <CLASS>true</CLASS>
-                      <STATIC>true</STATIC>
-                    </AND>
-                  </match>
-                </rule>
-              </section>
-              <section>
-                <rule>
-                  <match>
-                    <CLASS>true</CLASS>
-                  </match>
-                </rule>
-              </section>
-            </rules>
-          </arrangement>
-        </codeStyleSettings>
-      </value>
-    </option>
-    <option name="USE_PER_PROJECT_SETTINGS" value="true" />
+    <option name="OUTPUT_DIRECTORY"/>
+    <option name="OPTION_SCOPE" value="protected"/>
+    <option name="OPTION_HIERARCHY" value="true"/>
+    <option name="OPTION_NAVIGATOR" value="true"/>
+    <option name="OPTION_INDEX" value="true"/>
+    <option name="OPTION_SEPARATE_INDEX" value="true"/>
+    <option name="OPTION_DOCUMENT_TAG_USE" value="false"/>
+    <option name="OPTION_DOCUMENT_TAG_AUTHOR" value="false"/>
+    <option name="OPTION_DOCUMENT_TAG_VERSION" value="false"/>
+    <option name="OPTION_DOCUMENT_TAG_DEPRECATED" value="true"/>
+    <option name="OPTION_DEPRECATED_LIST" value="true"/>
+    <option name="OTHER_OPTIONS" value=""/>
+    <option name="HEAP_SIZE"/>
+    <option name="LOCALE"/>
+    <option name="OPEN_IN_BROWSER" value="true"/>
   </component>
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/apkfile.iml" filepath="$PROJECT_DIR$/.idea/modules/apkfile.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/apkfile_main.iml" filepath="$PROJECT_DIR$/.idea/modules/apkfile_main.iml" group="apkfile" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/apkfile_test.iml" filepath="$PROJECT_DIR$/.idea/modules/apkfile_test.iml" group="apkfile" />
+      <module fileurl="file://$PROJECT_DIR$/apkfile.iml" filepath="$PROJECT_DIR$/apkfile.iml"/>
     </modules>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/out" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" assert-keyword="true" jdk-15="true" project-jdk-type="JavaSDK" assert-jdk-15="true" project-jdk-name="1.8">
+    <output url="file://$PROJECT_DIR$/out"/>
   </component>
   <component name="SvnBranchConfigurationManager">
-    <option name="mySupportsUserInfoFilter" value="true" />
+    <option name="mySupportsUserInfoFilter" value="true"/>
   </component>
   <component name="VcsDirectoryMappings">
-    <mapping directory="" vcs="Git" />
-  </component>
-  <component name="libraryTable">
-    <library name="Gradle: com.beust:jcommander:1.64">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.beust/jcommander/1.64/456a985ac9b12d34820e4d5de063b2c2fc43ed5a/jcommander-1.64.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.beust/jcommander/1.64/1b16adc28aca77f62a61f31380f84961c9c3570d/jcommander-1.64-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: com.google.auto.value:auto-value:1.4.1">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.auto.value/auto-value/1.4.1/8172ebbd7970188aff304c8a420b9f17168f6f48/auto-value-1.4.1.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.auto.value/auto-value/1.4.1/db8c65394f0d5f85df1b115a7d6bcae757a1dbcc/auto-value-1.4.1-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: com.google.code.findbugs:annotations:3.0.1u2">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/annotations/3.0.1u2/89a670596c98e416fb2583c08ae34cc5c3ce2097/annotations-3.0.1u2.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/annotations/3.0.1u2/3f8905fee497bc64999ea458285311220cfa92bf/annotations-3.0.1u2-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: com.google.code.findbugs:jsr305:3.0.1">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.1/f7be08ec23c21485b9b5a1cf1654c2ec8c58168d/jsr305-3.0.1.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.1/a2926c057ca3b662b9db194c869bdbe7d3bb8aef/jsr305-3.0.1-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: com.google.code.gson:gson:2.8.0">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.0/c4ba5371a29ac9b2ad6129b1d39ea38750043eff/gson-2.8.0.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.0/baf95d8519fc1a11d388f8543cb40cd2bb9d66dc/gson-2.8.0-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: com.google.guava:guava:18.0">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/18.0/cce0823396aa693798f8882e64213b1772032b09/guava-18.0.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/18.0/ad97fe8faaf01a3d3faacecd58e8fa6e78a973ca/guava-18.0-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: net.jcip:jcip-annotations:1.0">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.jcip/jcip-annotations/1.0/afba4942caaeaf46aab0b976afd57cc7c181467e/jcip-annotations-1.0.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.jcip/jcip-annotations/1.0/d853625d8001c00d40abed553e670279504699f9/jcip-annotations-1.0-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: net.sf.trove4j:trove4j:3.0.3">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.trove4j/trove4j/3.0.3/42ccaf4761f0dfdfa805c9e340d99a755907e2dd/trove4j-3.0.3.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.trove4j/trove4j/3.0.3/109c5be93362e6e651e417c51d1863477a22969c/trove4j-3.0.3-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: org.bouncycastle:bcmail-jdk15on:1.56">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcmail-jdk15on/1.56/308555c2a798bf5df51f4fd2731aa40be8dd4268/bcmail-jdk15on-1.56.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcmail-jdk15on/1.56/a657c86506a1f242f8fa6ef2c1f8a60289b19372/bcmail-jdk15on-1.56-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: org.bouncycastle:bcpkix-jdk15on:1.56">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcpkix-jdk15on/1.56/4648af70268b6fdb24674fb1fd7c1fcc73db1231/bcpkix-jdk15on-1.56.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcpkix-jdk15on/1.56/118b4633c59394749b2b2f278138beb31c930663/bcpkix-jdk15on-1.56-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: org.bouncycastle:bcprov-jdk15on:1.56">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcprov-jdk15on/1.56/a153c6f9744a3e9dd6feab5e210e1c9861362ec7/bcprov-jdk15on-1.56.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcprov-jdk15on/1.56/93c7b191596378df51c31b7d8717f71b0aeee53c/bcprov-jdk15on-1.56-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: org.smali:dexlib2:2.2.1">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.smali/dexlib2/2.2.1/5ede69519123c773b02610f6ba2c841a95938239/dexlib2-2.2.1.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.smali/dexlib2/2.2.1/db00da20cdb9fd9ede10dd6304d645ebd7bb5b7d/dexlib2-2.2.1-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: org.smali:util:2.2.1">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.smali/util/2.2.1/76cd8342427c55beb67c8508e7aa2ce1354cb272/util-2.2.1.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.smali/util/2.2.1/744ad5efcbcadb17b2c91a96ec7122c70714f3ca/util-2.2.1-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: org.tinylog:tinylog:1.2-beta-1">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.tinylog/tinylog/1.2-beta-1/b0c4eaeaf091f5a284d8eeb4498d77453335f0ad/tinylog-1.2-beta-1.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.tinylog/tinylog/1.2-beta-1/975eb96df38ef696fab41472b29a8c0761bced82/tinylog-1.2-beta-1-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Gradle: xmlpull:xmlpull:1.1.3.1">
-      <CLASSES>
-        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/xmlpull/xmlpull/1.1.3.1/2b8e230d2ab644e4ecaa94db7cdedbc40c805dfa/xmlpull-1.1.3.1.jar!/" />
-      </CLASSES>
-      <JAVADOC />
-      <SOURCES />
-    </library>
+    <mapping directory="" vcs=""/>
   </component>
   <component name="masterDetails">
     <states>
       <state key="ArtifactsStructureConfigurable.UI">
         <UIState>
           <splitter-proportions>
-            <SplitterProportionsDataImpl />
+            <SplitterProportionsDataImpl/>
           </splitter-proportions>
-          <settings />
+          <settings/>
         </UIState>
       </state>
       <state key="Copyright.UI">
         <UIState>
           <splitter-proportions>
-            <SplitterProportionsDataImpl />
+            <SplitterProportionsDataImpl/>
           </splitter-proportions>
         </UIState>
       </state>
@@ -642,7 +90,7 @@
             <SplitterProportionsDataImpl>
               <option name="proportions">
                 <list>
-                  <option value="0.2" />
+                  <option value="0.2"/>
                 </list>
               </option>
             </SplitterProportionsDataImpl>
@@ -653,9 +101,9 @@
       <state key="ScopeChooserConfigurable.UI">
         <UIState>
           <splitter-proportions>
-            <SplitterProportionsDataImpl />
+            <SplitterProportionsDataImpl/>
           </splitter-proportions>
-          <settings />
+          <settings/>
         </UIState>
       </state>
     </states>

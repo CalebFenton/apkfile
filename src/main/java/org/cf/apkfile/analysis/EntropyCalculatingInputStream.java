@@ -1,4 +1,4 @@
-package org.cf.apkfile.utils;
+package org.cf.apkfile.analysis;
 
 import gnu.trove.map.TByteIntMap;
 import gnu.trove.map.hash.TByteIntHashMap;
@@ -10,6 +10,7 @@ import java.io.InputStream;
 public class EntropyCalculatingInputStream extends BufferedInputStream {
 
     private final TByteIntMap counts = new TByteIntHashMap();
+
     private long total = 0;
 
     public EntropyCalculatingInputStream(InputStream in) {

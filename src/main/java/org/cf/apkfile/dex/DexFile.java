@@ -1,19 +1,12 @@
 package org.cf.apkfile.dex;
 
-import gnu.trove.map.TIntIntMap;
 import gnu.trove.map.TObjectIntMap;
-import gnu.trove.map.hash.TIntIntHashMap;
 import gnu.trove.map.hash.TObjectIntHashMap;
-
-import org.cf.apkfile.utils.EntropyCalculatingInputStream;
+import org.cf.apkfile.analysis.EntropyCalculatingInputStream;
 import org.cf.apkfile.utils.Utils;
 import org.jf.dexlib2.Opcodes;
 import org.jf.dexlib2.dexbacked.DexBackedClassDef;
 import org.jf.dexlib2.dexbacked.DexBackedDexFile;
-import org.jf.dexlib2.iface.reference.FieldReference;
-import org.jf.dexlib2.iface.reference.MethodReference;
-import org.jf.dexlib2.iface.reference.StringReference;
-import org.jf.dexlib2.util.ReferenceUtil;
 import org.pmw.tinylog.Logger;
 
 import java.io.IOException;
@@ -25,62 +18,164 @@ import java.util.Set;
 
 public class DexFile {
 
-    private static final transient Set<String> localClasses = new HashSet<>();
+    private static final transient String SUPPORT_PACKAGE = "Landroid/support/";
 
-    private final TObjectIntMap<MethodReference> apiCounts;
-    private final TObjectIntMap<String> classAccessorCounts;
+    static final transient int TARGET_API = 39;
+
+    private final transient Set<String> LOCAL_CLASS_PATHS = new HashSet<>();
+    private transient DexBackedDexFile dexFile;
+    private final transient InputStream dexStream;
+
     private final Map<String, DexClass> classPathToClass;
-    private final TObjectIntMap<FieldReference> fieldReferenceCounts;
-    private final TObjectIntMap<String> methodAccessorCounts;
+    private final TObjectIntMap<String> classAccessorCounts;
     private final Map<String, DexMethod> methodDescriptorToMethod;
-    private final TIntIntMap opCounts;
-    private final TObjectIntMap<StringReference> stringReferenceCounts;
-    private final boolean fullMethodSignatures;
-    private int annotationCount = 0;
-    private float cyclomaticComplexity = 0.0f;
-    private int debugItemCount = 0;
-    private int fieldCount = 0;
-    private int instructionCount = 0;
-    private int registerCount = 0;
-    private int tryCatchCount = 0;
-    private int failedClasses = 0;
-    private double entropy = 0;
-    private long file_size = 0;
 
-    private final transient DexBackedDexFile dexFile;
+    private int failedClassCount = 0;
+    private double entropy = 0.0D;
+    private double perplexity = 0.0D;
+    private long size = 0;
 
-    public DexFile(InputStream is) throws IOException {
-        this(is, true);
-    }
+    private transient boolean shortMethodSignatures;
+    private transient boolean filterSupportClasses;
+    private transient boolean generateNGrams;
+    private transient int nGramSize;
 
-    public DexFile(InputStream is, boolean fullMethodSignatures) throws IOException {
-        this.fullMethodSignatures = fullMethodSignatures;
-
-        EntropyCalculatingInputStream bis = new EntropyCalculatingInputStream(is);
-        dexFile = DexBackedDexFile.fromInputStream(Opcodes.forApi(39), bis);
-        entropy = bis.entropy();
-        file_size = bis.total();
+    DexFile(InputStream dexStream) throws IOException {
+        this.dexStream = dexStream;
 
         classPathToClass = new HashMap<>();
-        methodDescriptorToMethod = new HashMap<>();
-        opCounts = new TIntIntHashMap();
-        apiCounts = new TObjectIntHashMap<>();
-        stringReferenceCounts = new TObjectIntHashMap<>();
-        fieldReferenceCounts = new TObjectIntHashMap<>();
-        methodAccessorCounts = new TObjectIntHashMap<>();
         classAccessorCounts = new TObjectIntHashMap<>();
-        loadLocalClasses(dexFile);
+        methodDescriptorToMethod = new HashMap<>();
     }
 
     public double getEntropy() {
         return entropy;
     }
 
-    public long getFileSize() {
-        return file_size;
+    public long getSize() {
+        return size;
     }
 
-    private static synchronized void loadLocalClasses(DexBackedDexFile dexFile) {
+    public boolean isLocalClass(String classPath) {
+        return LOCAL_CLASS_PATHS.contains(classPath);
+    }
+
+    public static boolean isSupportClass(String classPath) {
+        return classPath.startsWith(SUPPORT_PACKAGE);
+    }
+
+    public void analyze() {
+        for (DexBackedClassDef classDef : dexFile.getClasses()) {
+            String classPath = classDef.getType();
+            if (filterSupportClasses && isSupportClass(classPath)) {
+                continue;
+            }
+
+            DexClass dexClass;
+            try {
+                dexClass = new DexClass(classDef, shortMethodSignatures, filterSupportClasses, generateNGrams, nGramSize);
+            } catch (Exception e) {
+                Logger.warn("Failed to analyze class: " + classDef.getType() + "; skipping", e);
+                failedClassCount++;
+                continue;
+            }
+            classPathToClass.put(classPath, dexClass);
+
+            /*
+             * The Framework API and field reference counts may include references to local classes
+             * because it's possible to locally define some framework classes in the APK (though not
+             * protected packages like Ljava). In order to ensure counts accurately represent
+             * true framework references, remove any known local classes.
+             */
+            for (DexMethod dexMethod : dexClass.getMethodSignatureToMethod().values()) {
+                methodDescriptorToMethod.put(dexMethod.toString(), dexMethod);
+
+                dexMethod.getFrameworkApiCounts()
+                        .keySet()
+                        .removeIf(k -> isLocalNonSupportClass(Utils.getComponentBase(k.getDefiningClass())));
+                dexMethod.getFrameworkFieldReferenceCounts()
+                        .keySet()
+                        .removeIf(k -> isLocalNonSupportClass(Utils.getComponentBase(k.getDefiningClass())));
+            }
+        }
+
+        int[] classAccessFlags = new int[classPathToClass.size()];
+        int idx = 0;
+        for (DexClass dexClass : classPathToClass.values()) {
+            classAccessFlags[idx] = dexClass.getAccessFlags();
+            idx++;
+        }
+        Utils.updateAccessorCounts(classAccessorCounts, classAccessFlags);
+    }
+
+    public TObjectIntMap<String> getClassAccessorCounts() {
+        return classAccessorCounts;
+    }
+
+    public int getFailedClassCount() {
+        return failedClassCount;
+    }
+
+    public double getPerplexity() {
+        return perplexity;
+    }
+
+    public DexClass getClass(String classPath) {
+        return classPathToClass.get(classPath);
+    }
+
+    public Map<String, DexClass> getClassPathToClass() {
+        return classPathToClass;
+    }
+
+    public Map<String, DexMethod> getMethodDescriptorToMethod() {
+        return methodDescriptorToMethod;
+    }
+
+    public DexMethod getMethod(String methodSignature) {
+        return methodDescriptorToMethod.get(methodSignature);
+    }
+
+    public DexBackedDexFile getDexFile() {
+        return dexFile;
+    }
+
+    DexFile parse() throws IOException {
+        EntropyCalculatingInputStream bis = new EntropyCalculatingInputStream(dexStream);
+        dexFile = DexBackedDexFile.fromInputStream(Opcodes.forApi(TARGET_API), bis);
+        entropy = bis.entropy();
+        perplexity = bis.perplexity();
+        size = bis.total();
+
+        cacheLocalClasses(dexFile);
+        return this;
+    }
+
+    DexFile setShortMethodSignatures(boolean shortMethodSignatures) {
+        this.shortMethodSignatures = shortMethodSignatures;
+        return this;
+    }
+
+    DexFile setFilterSupportClasses(boolean filterSupportClasses) {
+        this.filterSupportClasses = filterSupportClasses;
+        return this;
+    }
+
+    DexFile setGenerateNGrams(boolean generateNGrams) {
+        this.generateNGrams = generateNGrams;
+        return this;
+    }
+
+    DexFile setNGramSize(int nGramSize) {
+        this.nGramSize = nGramSize;
+        return this;
+    }
+
+    private boolean isLocalNonSupportClass(String classPath) {
+        return !isSupportClass(classPath) && isLocalClass(classPath);
+    }
+
+    private synchronized void cacheLocalClasses(DexBackedDexFile dexFile) {
         /*
          * Must collect all local classes before any analysis because an API method is defined as
          * any non-local method. In multi-dex situations, there many be many API calls which are not
@@ -88,156 +183,8 @@ public class DexFile {
          */
         for (DexBackedClassDef classDef : dexFile.getClasses()) {
             String classPath = classDef.getType();
-            localClasses.add(classPath);
+            LOCAL_CLASS_PATHS.add(classPath);
         }
     }
 
-    private boolean isLocalNonSupportClass(String classPath) {
-        return !classPath.startsWith("Landroid/support/") && localClasses.contains(classPath);
-    }
-
-    public void analyze() {
-        for (DexBackedClassDef classDef : dexFile.getClasses()) {
-            String classPath = classDef.getType();
-            DexClass dexClass;
-            try {
-                dexClass = new DexClass(classDef, fullMethodSignatures);
-                failedClasses++;
-            } catch (Exception e) {
-                Logger.warn("Failed to analyze class: " + classDef.getType() + "; skipping", e);
-                continue;
-            }
-            classPathToClass.put(classPath, dexClass);
-
-            for (DexMethod method : dexClass.getMethodSignatureToMethod().values()) {
-                String methodDescriptor = ReferenceUtil.getMethodDescriptor(method.getMethod());
-                methodDescriptorToMethod.put(methodDescriptor, method);
-            }
-
-            /*
-             * We want API counts here, not method calls to local classes, which is noisy.
-             * In Dalvik, you can reference a method or field of a parent class by referring to
-             * the child class. This means, to get *true* API fields and method calls, you'd
-             * need to map method calls to parent methods up the class hierarchy of Android
-             * framework classes. This is computationally expensive and there are multiple
-             * framework versions. As an approximation, remove field and method references
-             * to local, non-support classes.
-             */
-            dexClass.getApiCounts().keySet()
-                    .removeIf(k -> isLocalNonSupportClass(getComponentBase(k.getDefiningClass())));
-            dexClass.getFieldReferenceCounts().keySet()
-                    .removeIf(k -> isLocalNonSupportClass(getComponentBase(k.getDefiningClass())));
-            for (DexMethod dexMethod : dexClass.getMethodSignatureToMethod().values()) {
-                dexMethod.getApiCounts().keySet().removeIf(
-                        k -> isLocalNonSupportClass(getComponentBase(k.getDefiningClass())));
-                dexMethod.getFieldReferenceCounts().keySet().removeIf(
-                        k -> isLocalNonSupportClass(getComponentBase(k.getDefiningClass())));
-            }
-
-            Utils.rollUp(opCounts, dexClass.getOpCounts());
-            Utils.rollUp(apiCounts, dexClass.getApiCounts());
-            Utils.rollUp(stringReferenceCounts, dexClass.getStringReferenceCounts());
-            Utils.rollUp(fieldReferenceCounts, dexClass.getFieldReferenceCounts());
-            Utils.rollUp(methodAccessorCounts, dexClass.getMethodAccessorCounts());
-            Utils.rollUp(classAccessorCounts, dexClass.getClassAccessors());
-            fieldCount += dexClass.getFieldCount();
-            annotationCount += dexClass.getAnnotationCount();
-            registerCount += dexClass.getRegisterCount();
-            instructionCount += dexClass.getInstructionCount();
-            tryCatchCount += dexClass.getTryCatchCount();
-            debugItemCount += dexClass.getDebugItemCount();
-            cyclomaticComplexity += dexClass.getCyclomaticComplexity();
-        }
-        if (!classPathToClass.isEmpty()) {
-            cyclomaticComplexity /= classPathToClass.size();
-        }
-    }
-
-    private String getComponentBase(String classDescriptor) {
-        /* Some class references for method calls look like:
-         * [Lcom/google/android/gms/internal/zzvk$zza$zza;->clone()Ljava/lang/Object;
-         * but the '[' form of the class isn't in local classes. Strip it out to get 'base' class
-         */
-        int index = 0;
-        while (classDescriptor.charAt(index) == '[') {
-            index += 1;
-        }
-        if (index == 0) {
-            return classDescriptor;
-        } else {
-            return classDescriptor.substring(index);
-        }
-    }
-
-    public int getAnnotationCount() {
-        return annotationCount;
-    }
-
-    public TObjectIntMap<MethodReference> getApiCounts() {
-        return apiCounts;
-    }
-
-    public DexClass getClass(String classPath) {
-        return classPathToClass.get(classPath);
-    }
-
-    public TObjectIntMap<String> getClassAccessorCounts() {
-        return classAccessorCounts;
-    }
-
-    public Map<String, DexClass> getClassPathToClass() {
-        return classPathToClass;
-    }
-
-    public float getCyclomaticComplexity() {
-        return cyclomaticComplexity;
-    }
-
-    public int getDebugItemCount() {
-        return debugItemCount;
-    }
-
-    public DexBackedDexFile getDexFile() {
-        return dexFile;
-    }
-
-    public int getFieldCount() {
-        return fieldCount;
-    }
-
-    public TObjectIntMap<FieldReference> getFieldReferenceCounts() {
-        return fieldReferenceCounts;
-    }
-
-    public int getInstructionCount() {
-        return instructionCount;
-    }
-
-    public DexMethod getMethod(String methodDescriptor) {
-        return methodDescriptorToMethod.get(methodDescriptor);
-    }
-
-    public TObjectIntMap<String> getMethodAccessorCounts() {
-        return methodAccessorCounts;
-    }
-
-    public Map<String, DexMethod> getMethodDescriptorToMethod() {
-        return methodDescriptorToMethod;
-    }
-
-    public TIntIntMap getOpCounts() {
-        return opCounts;
-    }
-
-    public int getRegisterCount() {
-        return registerCount;
-    }
-
-    public TObjectIntMap<StringReference> getStringReferenceCounts() {
-        return stringReferenceCounts;
-    }
-
-    public int getTryCatchCount() {
-        return tryCatchCount;
-    }
 }

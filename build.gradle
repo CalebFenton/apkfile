@@ -9,19 +9,19 @@ buildscript {
 
     dependencies {
         classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.6.3'
-        classpath 'net.sf.proguard:proguard-gradle:5.2.1'
-        classpath "net.ltgt.gradle:gradle-apt-plugin:0.10"
+        classpath 'net.sf.proguard:proguard-gradle:6.0.3'
+        classpath "net.ltgt.gradle:gradle-apt-plugin:0.17"
     }
 }
 
 plugins {
-    id "net.ltgt.apt" version "0.10"
+    id "net.ltgt.apt" version "0.17"
 }
 
 apply plugin: 'java'
 apply plugin: 'idea'
 
-version = '1.1.0'
+version = '2.0.0'
 group = 'org.cf'
 sourceCompatibility = 1.8
 def jarVersion = version

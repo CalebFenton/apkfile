@@ -2,12 +2,14 @@
 
 ApkFile is a library which creates a representation of an APK composed of Java objects which can be easily inspected for analysis or serialized into JSON. The goal of the library is to provide a robust way to inspect hostile malware samples, but it's general purpose enough to be used for other stuff too.
 
+This library and [APKiD](https://github.com/rednaga/APKiD) provide the machine learning feature extraction for [Judge](http://judge.rednaga.io/), an Android malware detection engine. 
+
 ## Usage
 
 The main object is `ApkFile` and it extends `java.io.File`:
 
 ```java
-ApkFile apkFile = new ApkFile('ApiDemos.apk');
+ApkFile apkFile = new ApkFileFactory().build('ApiDemos.apk');
 AndroidManifest androidManifest = apkFile.getAndroidManifest();
 String packageName = androidManifest.getPackageName(); // com.example.android.apis
 ```
@@ -18,36 +20,23 @@ String packageName = androidManifest.getPackageName(); // com.example.android.ap
 * Resources via modified & hardened [ArscBlamer](https://github.com/google/android-arscblamer)
 * Signing certificate
 * DEX files via [dexlib2](https://github.com/JesusFreke/smali/tree/master/dexlib2)
-* JAR (ZIP) entries
+    * Classes, methods, etc.
+* APK entries
 
 ## Serializing to JSON
 
 Below is an example of how to stream an `ApkFile` to JSON:
 
 ```java
-GsonBuilder gsonBuilder = new GsonBuilder();
-
-// ApkFile makes use of some Trove libraries for speed. These need a special
-// type adapter to convert into JSON.
-JsonSerializer<TObjectIntMap> serializer = (src, typeOfSrc, context) -> {
-    JsonObject jsonMerchant = new JsonObject();
-    for (Object key : src.keys()) {
-        int value = src.get(key);
-        jsonMerchant.addProperty(key.toString(), value);
-    }
-    return jsonMerchant;
-};
-gsonBuilder.registerTypeAdapter(TObjectIntMap.class, serializer);
-Gson gson = gsonBuilder
+ApkFile apkFile = new ApkFileFactory().build("ignore/DroidSwarm-1.0.1.apk");
+// ApkFile uses Trove library for speed. This needs some type adapters to
+// properly convert into JSON.
+Gson gson = Utils.getTroveAwareGsonBuilder()
         .disableHtmlEscaping()
         .serializeSpecialFloatingPointValues()
         .setExclusionStrategies(new JarFileExclusionStrategy())
         .setPrettyPrinting()
         .create();
-
-// This is where all the heavy lifting happens.
-// You can inspect the object afterwards or just serialize to JSON.
-ApkFile apkFile = new ApkFile("ignore/DroidSwarm-1.0.1.apk");
 
 // Since the JSON is usually very large and takes up a lot of memory, stream it out.
 Writer writer = new OutputStreamWriter(System.out);

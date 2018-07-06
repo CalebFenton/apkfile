@@ -1,5 +1,6 @@
-package org.cf.apkfile;
+package org.cf.apkfile.analysis;
 
+import com.google.common.collect.ImmutableSet;
 import org.cf.apkfile.dex.DexFile;
 import org.cf.apkfile.dex.DexMethod;
 import org.jf.dexlib2.dexbacked.DexBackedMethod;
@@ -11,23 +12,30 @@ import org.jf.dexlib2.iface.instruction.formats.SparseSwitchPayload;
 import org.jf.dexlib2.iface.reference.MethodReference;
 import org.jf.dexlib2.util.ReferenceUtil;
 
+import javax.annotation.Nonnull;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.annotation.Nonnull;
-
-public class ApkComplexityAnalyzer {
+public class ComplexityAnalyzer {
 
     private final Collection<DexFile> dexFiles;
 
-    public ApkComplexityAnalyzer(Collection<DexFile> dexFiles) {
+    public ComplexityAnalyzer(DexFile dexFile) {
+        this(ImmutableSet.of(dexFile));
+    }
+
+    public ComplexityAnalyzer(Collection<DexFile> dexFiles) {
         this.dexFiles = dexFiles;
     }
 
     public void analyze() {
         for (DexFile dexFile : dexFiles) {
             for (DexMethod dexMethod : dexFile.getMethodDescriptorToMethod().values()) {
+                if (dexMethod.getCyclomaticComplexity() >= 0) {
+                    continue;
+                }
+
                 DexBackedMethod method = dexMethod.getMethod();
                 DexBackedMethodImplementation implementation = method.getImplementation();
                 if (implementation != null) {
@@ -35,13 +43,14 @@ public class ApkComplexityAnalyzer {
                     dexMethod.setCyclomaticComplexity(complexity);
                 }
             }
+
         }
 
     }
 
-    private static int calculateComplexity(@Nonnull DexBackedMethodImplementation implementation,
-                                           Collection<DexFile> dexFiles,
-                                           Set<String> visitedMethodDescriptors) {
+    private int calculateComplexity(@Nonnull DexBackedMethodImplementation implementation,
+                                    Collection<DexFile> dexFiles,
+                                    Set<String> visitedMethodDescriptors) {
         int decisionPoints = 0;
         int exits = 0;
         for (Instruction instruction : implementation.getInstructions()) {
@@ -78,6 +87,10 @@ public class ApkComplexityAnalyzer {
                     break;
                 case THROW:
                 case THROW_VERIFICATION_ERROR:
+                    // TODO: validate this makes sense...
+                    // for every throw, there must be a try, which is kind of a branch
+                    // otherwise it's possible to have 0 branches and 1000 exits and have negative complexity
+                    decisionPoints += 1;
                     exits += 1;
                     break;
                 case INVOKE_DIRECT:
@@ -105,20 +118,42 @@ public class ApkComplexityAnalyzer {
                         decisionPoints += 1;
                         break;
                     }
+
+                    String definingClass = methodRef.getDefiningClass();
+                    boolean isLocal = false;
+                    for (DexFile dexFile : dexFiles) {
+                        if (dexFile.isLocalClass(definingClass)) {
+                            isLocal = true;
+                            break;
+                        }
+                    }
+                    if (!isLocal) {
+                        // Don't know the complexity of non-local classes...
+                        decisionPoints += 1;
+                        break;
+                    }
+
                     for (DexFile dexFile : dexFiles) {
                         DexMethod dexMethod = dexFile.getMethod(methodDescriptor);
                         if (dexMethod == null) {
                             continue;
                         }
-                        DexBackedMethod method = dexMethod.getMethod();
-                        DexBackedMethodImplementation calledImplementation = method
-                                .getImplementation();
-                        if (calledImplementation != null) {
-                            visitedMethodDescriptors.add(methodDescriptor);
-                            decisionPoints += calculateComplexity(calledImplementation, dexFiles,
-                                                                  visitedMethodDescriptors);
+
+                        if (dexMethod.getCyclomaticComplexity() >= 0) {
+                            decisionPoints += dexMethod.getCyclomaticComplexity();
+                        } else {
+                            DexBackedMethod method = dexMethod.getMethod();
+                            DexBackedMethodImplementation calledImplementation = method.getImplementation();
+                            if (calledImplementation != null) {
+                                visitedMethodDescriptors.add(methodDescriptor);
+                                int complexity = calculateComplexity(calledImplementation, dexFiles, visitedMethodDescriptors);
+                                dexMethod.setCyclomaticComplexity(complexity);
+                                decisionPoints += complexity;
+                                break;
+                            }
                         }
                     }
+                    break;
             }
         }
 

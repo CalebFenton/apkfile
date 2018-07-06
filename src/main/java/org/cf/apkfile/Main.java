@@ -1,14 +1,10 @@
 package org.cf.apkfile;
 
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonSerializer;
-
-import gnu.trove.map.TIntIntMap;
-import gnu.trove.map.TObjectIntMap;
-
+import org.cf.apkfile.apk.ApkFile;
+import org.cf.apkfile.apk.ApkFileFactory;
 import org.cf.apkfile.apk.JarFileExclusionStrategy;
+import org.cf.apkfile.utils.Utils;
 import org.pmw.tinylog.Configurator;
 import org.pmw.tinylog.Level;
 
@@ -29,31 +25,15 @@ public class Main {
         }
 
         String apkPath = args[0];
-        GsonBuilder gsonBuilder = new GsonBuilder();
-        JsonSerializer<TObjectIntMap> objectIntMapJsonSerializer = (src, typeOfSrc, context) -> {
-            JsonObject jsonMerchant = new JsonObject();
-            for (Object key : src.keys()) {
-                int value = src.get(key);
-                jsonMerchant.addProperty(key.toString(), value);
-            }
-            return jsonMerchant;
-        };
-        gsonBuilder.registerTypeAdapter(TObjectIntMap.class, objectIntMapJsonSerializer);
-        JsonSerializer<TIntIntMap> intIntMapJsonSerializer = (src, typeOfSrc, context) -> {
-            JsonObject jsonMerchant = new JsonObject();
-            for (int key : src.keys()) {
-                int value = src.get(key);
-                jsonMerchant.addProperty(Integer.toString(key), value);
-            }
-            return jsonMerchant;
-        };
-        gsonBuilder.registerTypeAdapter(TIntIntMap.class, intIntMapJsonSerializer);
+        ApkFile apkFile = new ApkFileFactory().build(apkPath);
 
-        Gson gson = gsonBuilder.disableHtmlEscaping().serializeSpecialFloatingPointValues()
-                .setExclusionStrategies(new JarFileExclusionStrategy()).setPrettyPrinting()
+        Gson gson = Utils.getTroveAwareGsonBuilder()
+                .disableHtmlEscaping()
+                .serializeSpecialFloatingPointValues()
+                .setExclusionStrategies(new JarFileExclusionStrategy())
+                .setPrettyPrinting()
                 .create();
         Writer writer = new OutputStreamWriter(System.out);
-        ApkFile apkFile = new ApkFile(apkPath, true, true, true, true, false);
         gson.toJson(apkFile, writer);
 
         writer.close();
@@ -61,7 +41,8 @@ public class Main {
     }
 
     private static void configureLog() {
-        Configurator.defaultConfig().writer(new org.pmw.tinylog.writers.FileWriter(LOG_FILE))
+        Configurator.defaultConfig()
+                .writer(new org.pmw.tinylog.writers.FileWriter(LOG_FILE))
                 .level(Level.INFO).activate();
     }
 }
