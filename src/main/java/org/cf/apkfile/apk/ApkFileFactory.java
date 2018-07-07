@@ -39,30 +39,55 @@ public class ApkFileFactory {
                 .parse();
     }
 
+    /***
+     * Used to access dex factory options.
+     * @return the dex file factory instance for this apk file factory
+     */
     public DexFileFactory getDexFileFactory() {
         return dexFactory;
     }
 
+    /***
+     * Skip parsing the APK's {@code resources.arsc} entry.
+     * @return the apk file factory
+     */
     public ApkFileFactory skipParsingResources() {
         skipParsingResources = true;
         return this;
     }
 
+    /***
+     * Only detect DEX files by looking for the {@code .dex} file extension.
+     * Default behavior reads file headers and looks for magic bytes.
+     * @return the apk file factory
+     */
     public ApkFileFactory useSimpleDexDetection() {
         useSimpleDexDetection = true;
         return this;
     }
 
+    /***
+     * Skip parsing the APK's {@code AndroidManifest.xml} entry.
+     * @return the apk file factory
+     */
     public ApkFileFactory skipParsingAndroidManifest() {
         skipParsingAndroidManifest = true;
         return this;
     }
 
+    /***
+     * Skip parsing the APK's signing certificate in {@code META-INF/}
+     * @return the apk file factory
+     */
     public ApkFileFactory skipParsingCertificate() {
         skipParsingCertificate = true;
         return this;
     }
 
+    /***
+     * Skip all DEX file analysis.
+     * @return the apk file factory
+     */
     public ApkFileFactory skipParsingDexFiles() {
         skipParsingDexFiles = true;
         return this;

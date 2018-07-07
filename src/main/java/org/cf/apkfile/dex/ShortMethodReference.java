@@ -1,17 +1,11 @@
 package org.cf.apkfile.dex;
 
 import com.google.common.base.Objects;
-
 import org.jf.dexlib2.iface.reference.MethodReference;
 
+import javax.annotation.Nonnull;
 import java.util.List;
 
-import javax.annotation.Nonnull;
-
-/**
- * Don't include parameter types in method signature string.
- * Technically, parameters aren't part of the method signature, but what do those nerds know.
- */
 public class ShortMethodReference implements MethodReference {
 
     private final MethodReference methodRef;
@@ -20,8 +14,8 @@ public class ShortMethodReference implements MethodReference {
     ShortMethodReference(MethodReference methodRef) {
         this.methodRef = methodRef;
         String fullSignature = methodRef.toString();
-        int parensIndex = fullSignature.indexOf('(');
-        shortSignature = fullSignature.substring(0, parensIndex);
+        int leftParensIndex = fullSignature.indexOf('(');
+        shortSignature = fullSignature.substring(0, leftParensIndex);
     }
 
     @Override
@@ -78,4 +72,5 @@ public class ShortMethodReference implements MethodReference {
     public String toString() {
         return shortSignature;
     }
+
 }
