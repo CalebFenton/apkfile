@@ -22,7 +22,7 @@ public class DexFile {
 
     static final transient int TARGET_API = 39;
 
-    private final transient Set<String> LOCAL_CLASS_PATHS = new HashSet<>();
+    private final transient Set<String> LOCAL_CLASS_PATHS;
     private transient DexBackedDexFile dexFile;
     private final transient InputStream dexStream;
 
@@ -46,6 +46,8 @@ public class DexFile {
         classPathToClass = new HashMap<>();
         classAccessorCounts = new TObjectIntHashMap<>();
         methodDescriptorToMethod = new HashMap<>();
+
+        LOCAL_CLASS_PATHS = new HashSet<>();
     }
 
     public double getEntropy() {
@@ -58,6 +60,10 @@ public class DexFile {
 
     public boolean isLocalClass(String classPath) {
         return LOCAL_CLASS_PATHS.contains(classPath);
+    }
+
+    private boolean isLocalOrSupportClass(String classPath) {
+        return isLocalClass(classPath) || isSupportClass(classPath);
     }
 
     public static boolean isSupportClass(String classPath) {
@@ -92,9 +98,9 @@ public class DexFile {
 
                 if (filterSupportClasses) {
                     dexMethod.getFrameworkApiCounts().keySet()
-                            .removeIf(k -> isSupportClass(Utils.getComponentBase(k.getDefiningClass())));
+                            .removeIf(k -> isLocalOrSupportClass(Utils.getComponentBase(k.getDefiningClass())));
                     dexMethod.getFrameworkFieldReferenceCounts().keySet()
-                            .removeIf(k -> isSupportClass(Utils.getComponentBase(k.getDefiningClass())));
+                            .removeIf(k -> isLocalOrSupportClass(Utils.getComponentBase(k.getDefiningClass())));
                 } else {
                     dexMethod.getFrameworkApiCounts().keySet()
                             .removeIf(k -> isLocalNonSupportClass(Utils.getComponentBase(k.getDefiningClass())));
@@ -151,8 +157,8 @@ public class DexFile {
         entropy = bis.entropy();
         perplexity = bis.perplexity();
         size = bis.total();
-
         cacheLocalClasses(dexFile);
+
         return this;
     }
 
