@@ -90,12 +90,17 @@ public class DexFile {
             for (DexMethod dexMethod : dexClass.getMethodSignatureToMethod().values()) {
                 methodDescriptorToMethod.put(dexMethod.toString(), dexMethod);
 
-                dexMethod.getFrameworkApiCounts()
-                        .keySet()
-                        .removeIf(k -> isLocalNonSupportClass(Utils.getComponentBase(k.getDefiningClass())));
-                dexMethod.getFrameworkFieldReferenceCounts()
-                        .keySet()
-                        .removeIf(k -> isLocalNonSupportClass(Utils.getComponentBase(k.getDefiningClass())));
+                if (filterSupportClasses) {
+                    dexMethod.getFrameworkApiCounts().keySet()
+                            .removeIf(k -> isSupportClass(Utils.getComponentBase(k.getDefiningClass())));
+                    dexMethod.getFrameworkFieldReferenceCounts().keySet()
+                            .removeIf(k -> isSupportClass(Utils.getComponentBase(k.getDefiningClass())));
+                } else {
+                    dexMethod.getFrameworkApiCounts().keySet()
+                            .removeIf(k -> isLocalNonSupportClass(Utils.getComponentBase(k.getDefiningClass())));
+                    dexMethod.getFrameworkFieldReferenceCounts().keySet()
+                            .removeIf(k -> isLocalNonSupportClass(Utils.getComponentBase(k.getDefiningClass())));
+                }
             }
         }
 

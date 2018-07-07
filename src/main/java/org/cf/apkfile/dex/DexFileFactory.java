@@ -46,7 +46,7 @@ public class DexFileFactory {
     }
 
     /***
-     * Don't analyze local Android support library methods
+     * Don't analyze local Android support library methods or include them in API counts.
      * @return the dex file factory
      */
     public DexFileFactory filterSupportClasses() {
