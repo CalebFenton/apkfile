@@ -13,7 +13,7 @@ public class DexFileFactory {
     public DexFileFactory() {
         shortMethodSignatures = false;
         filterSupportClasses = false;
-        generateNGrams = true;
+        generateNGrams = false;
         nGramSize = 3;
     }
 
