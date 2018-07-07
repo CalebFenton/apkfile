@@ -22,6 +22,17 @@ public class EntropyCalculatingInputStream extends BufferedInputStream {
     }
 
     @Override
+    public int read() throws IOException {
+        int value = super.read();
+        if (value != -1) {
+            total++;
+            counts.adjustOrPutValue((byte) value, 1, 1);
+        }
+
+        return value;
+    }
+
+    @Override
     public int read(byte b[], int off, int len) throws IOException {
         int result = super.read(b, off, len);
         if (result > 0) {
