@@ -8,6 +8,7 @@ import gnu.trove.map.TObjectIntMap;
 import gnu.trove.map.TObjectLongMap;
 import gnu.trove.map.hash.TIntIntHashMap;
 import gnu.trove.map.hash.TObjectIntHashMap;
+import gnu.trove.map.hash.TObjectLongHashMap;
 
 import java.lang.reflect.Modifier;
 import java.util.Collection;
@@ -141,6 +142,17 @@ public class Utils {
         };
         gsonBuilder.registerTypeAdapter(TObjectIntMap.class, objectIntMapJsonSerializer);
         gsonBuilder.registerTypeAdapter(TObjectIntHashMap.class, objectIntMapJsonSerializer);
+
+        JsonSerializer<TObjectLongMap> objectLongMapJsonSerializer = (src, typeOfSrc, context) -> {
+            JsonObject jsonMerchant = new JsonObject();
+            for (Object key : src.keys()) {
+                long value = src.get(key);
+                jsonMerchant.addProperty(key.toString(), value);
+            }
+            return jsonMerchant;
+        };
+        gsonBuilder.registerTypeAdapter(TObjectLongMap.class, objectLongMapJsonSerializer);
+        gsonBuilder.registerTypeAdapter(TObjectLongHashMap.class, objectLongMapJsonSerializer);
 
         JsonSerializer<TIntIntMap> intIntMapJsonSerializer = (src, typeOfSrc, context) -> {
             JsonObject jsonMerchant = new JsonObject();
