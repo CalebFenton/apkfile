@@ -245,52 +245,6 @@
                 "\n": 1,
                 "Accept-Language: en\n": 1
               },
-              "nGramTable": {
-                "nGramToCount": {
-                  "6e 62 38": 1,
-                  "62 38 62": 1,
-                  "c 6e 29": 1,
-                  "c 6e c": 3,
-                  "6e 29 d": 1,
-                  "c 1f 22": 2,
-                  "d 1a 22": 1,
-                  "54 22 1a": 1,
-                  "70 6e c": 2,
-                  "70 6e e": 1,
-                  "e 14 6e": 1,
-                  "6e 14 6e": 5,
-                  "38 62 6e": 1,
-                  "c 71 28": 1,
-                  "6e 1a 6e": 1,
-                  "6f 15 6e": 1,
-                  "c 1a 6e": 8,
-                  "1a 6e 14": 3,
-                  "6e c 1f": 6,
-                  "22 1a 70": 2,
-                  "29 d 1a": 1,
-                  "1a 6e 62": 1,
-                  "1a 70 6e": 2,
-                  "1f 22 70": 2,
-                  "15 6e 1a": 1,
-                  "14 6e c": 6,
-                  "6e c 1a": 8,
-                  "1f 1a 6e": 4,
-                  "12 6e c": 1,
-                  "1a 6e c": 9,
-                  "6e e 14": 1,
-                  "70 6e 14": 1,
-                  "c 54 22": 1,
-                  "c 12 6e": 1,
-                  "6e c 54": 1,
-                  "22 70 6e": 2,
-                  "1a 22 1a": 1,
-                  "c 1f 1a": 4,
-                  "6e c 71": 1,
-                  "6e c 12": 1,
-                  "6e c 6e": 4,
-                  "62 6e 14": 1
-                }
-              },
               "size": 587,
               "debugItemCount": 44,
               "instructionCount": 99,
@@ -311,11 +265,6 @@
                 "a": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "70 a f": 1
-                }
-              },
               "size": 63,
               "debugItemCount": 2,
               "instructionCount": 3,
@@ -368,68 +317,6 @@
                 "\n": 2,
                 "": 2
               },
-              "nGramTable": {
-                "nGramToCount": {
-                  "6e 1a 54": 1,
-                  "c 6e 1a": 1,
-                  "c 6e c": 6,
-                  "70 1a 6e": 1,
-                  "72 c 1f": 2,
-                  "72 a 39": 2,
-                  "e 54 6e": 1,
-                  "6e 14 6e": 5,
-                  "1f 52 13": 1,
-                  "1f 54 6e": 1,
-                  "c 6e 14": 3,
-                  "32 22 54": 1,
-                  "6e 29 72": 1,
-                  "c 72 a": 2,
-                  "c 70 6e": 2,
-                  "6e c 1f": 7,
-                  "39 6e 14": 1,
-                  "1f 22 71": 2,
-                  "1f 22 70": 3,
-                  "54 6e c": 2,
-                  "14 6e c": 7,
-                  "6e c 29": 1,
-                  "53 6e c": 3,
-                  "13 32 22": 1,
-                  "52 6e c": 1,
-                  "1a 6e c": 3,
-                  "6e c 28": 1,
-                  "71 c 70": 3,
-                  "a 39 6e": 1,
-                  "c 70 1a": 1,
-                  "54 6e 14": 1,
-                  "c 1f 1a": 1,
-                  "c 1f 54": 1,
-                  "6e c 72": 2,
-                  "1a 54 6e": 2,
-                  "6e c 6e": 10,
-                  "54 71 c": 1,
-                  "c 29 72": 1,
-                  "29 72 c": 2,
-                  "c 1f 6e": 1,
-                  "c 1f 22": 5,
-                  "52 13 32": 1,
-                  "c 1f 52": 1,
-                  "70 6e c": 2,
-                  "70 53 6e": 3,
-                  "1f 6e e": 1,
-                  "c 1a 6e": 2,
-                  "1f 1a 54": 1,
-                  "54 6e 29": 1,
-                  "6e c 1a": 2,
-                  "22 54 71": 1,
-                  "6e e 54": 1,
-                  "c 52 6e": 1,
-                  "22 71 c": 2,
-                  "39 14 6e": 1,
-                  "22 70 53": 3,
-                  "6e c 52": 1,
-                  "a 39 14": 1
-                }
-              },
               "size": 685,
               "debugItemCount": 48,
               "instructionCount": 121,
@@ -451,9 +338,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {}
-              },
               "size": 55,
               "debugItemCount": 2,
               "instructionCount": 2,
@@ -539,149 +423,6 @@
                 "At least one URL required.": 1,
                 "Name required.": 1
               },
-              "nGramTable": {
-                "nGramToCount": {
-                  "78 c 6e": 1,
-                  "78 c 1a": 1,
-                  "77 13 29": 1,
-                  "74 13 f": 1,
-                  "46 6e d8": 1,
-                  "77 b 14": 2,
-                  "46 74 d8": 1,
-                  "78 c 77": 3,
-                  "2 2 6e": 1,
-                  "2 2 32": 1,
-                  "76 8 5b": 1,
-                  "76 8 6e": 2,
-                  "78 c 74": 2,
-                  "71 c 74": 10,
-                  "71 c 14": 1,
-                  "76 22 70": 1,
-                  "74 a 39": 2,
-                  "2 8 59": 1,
-                  "6e a 2": 1,
-                  "6e c 21": 1,
-                  "77 b 31": 1,
-                  "74 13 28": 3,
-                  "74 c 13": 6,
-                  "77 a 71": 1,
-                  "6e c 1f": 7,
-                  "74 13 29": 5,
-                  "5b 62 8": 1,
-                  "6e a 3d": 1,
-                  "a 2 2": 1,
-                  "6e a 38": 1,
-                  "2 13 2": 3,
-                  "6e c 77": 1,
-                  "6e c 78": 7,
-                  "62 8 8": 1,
-                  "6e c 74": 6,
-                  "a d8 2": 1,
-                  "8 8 2": 10,
-                  "5a 8 8": 1,
-                  "74 d8 28": 1,
-                  "1a 8 8": 1,
-                  "5b 2 8": 1,
-                  "c 1f 13": 1,
-                  "1a 13 8": 4,
-                  "c 1f 6e": 6,
-                  "6e d8 28": 1,
-                  "21 2 13": 3,
-                  "59 8 8": 1,
-                  "c 1a 8": 2,
-                  "13 1a 8": 1,
-                  "14 8 2": 7,
-                  "f d 22": 1,
-                  "13 29 46": 2,
-                  "13 f d": 1,
-                  "13 2 2": 3,
-                  "13 22 76": 1,
-                  "c 21 2": 1,
-                  "1a 8 6e": 5,
-                  "16 31 3c": 1,
-                  "6e a d8": 1,
-                  "3d 1a 13": 1,
-                  "c 8 21": 2,
-                  "13 8 8": 10,
-                  "8 21 2": 2,
-                  "2 71 c": 10,
-                  "2 2 34": 2,
-                  "b 14 8": 2,
-                  "c 13 8": 6,
-                  "c 14 8": 1,
-                  "8 6e 77": 1,
-                  "8 6e c": 8,
-                  "8 6e a": 3,
-                  "a 71 c": 1,
-                  "c 6e a": 1,
-                  "2 6e c": 10,
-                  "c 77 a": 1,
-                  "39 1a 13": 2,
-                  "c 74 a": 2,
-                  "34 22 76": 1,
-                  "3c 1a 13": 1,
-                  "3d 1a 8": 1,
-                  "c 74 c": 6,
-                  "29 46 74": 1,
-                  "c 74 28": 1,
-                  "34 14 8": 1,
-                  "31 3c 1a": 1,
-                  "22 1a 76": 6,
-                  "31 3d 1a": 1,
-                  "29 46 6e": 1,
-                  "29 16 31": 1,
-                  "c 77 b": 3,
-                  "c 78 c": 7,
-                  "d8 2 6e": 1,
-                  "8 5b 8": 3,
-                  "8 5b 2": 1,
-                  "c 74 13": 9,
-                  "22 70 6e": 1,
-                  "6e 77 13": 1,
-                  "b 31 3d": 1,
-                  "32 13 1a": 1,
-                  "8 5a 8": 3,
-                  "38 1a 8": 1,
-                  "8 59 8": 1,
-                  "5b 8 5b": 2,
-                  "5b 8 5a": 1,
-                  "d 22 1a": 6,
-                  "5a 8 5a": 2,
-                  "2 32 13": 1,
-                  "2 34 22": 1,
-                  "22 76 22": 1,
-                  "2 34 14": 1,
-                  "13 28 d": 1,
-                  "70 6e c": 1,
-                  "13 29 d": 2,
-                  "1f 6e c": 6,
-                  "a 3d 1a": 1,
-                  "1a 76 8": 6,
-                  "29 d 22": 2,
-                  "d8 28 d": 2,
-                  "8 8 6e": 5,
-                  "29 14 8": 1,
-                  "8 8 5b": 2,
-                  "6e c 1a": 1,
-                  "8 2 71": 10,
-                  "28 14 8": 1,
-                  "6e c 8": 2,
-                  "28 d 22": 3,
-                  "13 28 1a": 1,
-                  "13 28 14": 1,
-                  "13 29 14": 1,
-                  "a 39 1a": 2,
-                  "8 2 6e": 8,
-                  "8 5b 62": 1,
-                  "76 8 2": 1,
-                  "a 38 1a": 1,
-                  "13 29 16": 1,
-                  "76 8 8": 3,
-                  "22 76 8": 1,
-                  "28 1a 8": 1,
-                  "1f 13 22": 1
-                }
-              },
               "size": 1838,
               "debugItemCount": 138,
               "instructionCount": 343,
@@ -715,9 +456,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {}
-              },
               "size": 57,
               "debugItemCount": 2,
               "instructionCount": 2,
@@ -752,11 +490,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "5b 70 e": 1
-                }
-              },
               "size": 72,
               "debugItemCount": 3,
               "instructionCount": 3,
@@ -777,11 +510,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "54 71 e": 1
-                }
-              },
               "size": 69,
               "debugItemCount": 3,
               "instructionCount": 3,
@@ -816,11 +544,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "5b 70 e": 1
-                }
-              },
               "size": 72,
               "debugItemCount": 3,
               "instructionCount": 3,
@@ -841,11 +564,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "54 71 e": 1
-                }
-              },
               "size": 69,
               "debugItemCount": 3,
               "instructionCount": 3,
@@ -914,51 +632,6 @@
                 "failed": 1,
                 "reqs": 1
               },
-              "nGramTable": {
-                "nGramToCount": {
-                  "6e 62 54": 1,
-                  "70 1a 54": 1,
-                  "6e 28 72": 1,
-                  "c 6e 1a": 1,
-                  "c 6e c": 2,
-                  "6e 1a 22": 2,
-                  "c 6e 28": 1,
-                  "70 16 71": 1,
-                  "c 1f 22": 1,
-                  "22 70 5b": 1,
-                  "28 72 c": 1,
-                  "5b 54 71": 1,
-                  "6e 28 d": 1,
-                  "22 70 1a": 1,
-                  "72 c 1f": 1,
-                  "62 38 6e": 1,
-                  "72 a 39": 1,
-                  "a 39 22": 1,
-                  "6e 6e 28": 1,
-                  "70 53 6e": 2,
-                  "c 6e 6e": 1,
-                  "62 54 6e": 1,
-                  "c 72 a": 1,
-                  "71 62 38": 1,
-                  "38 6e 62": 1,
-                  "28 d 28": 1,
-                  "16 71 62": 1,
-                  "1f 22 70": 1,
-                  "1a 22 70": 2,
-                  "54 6e 1a": 1,
-                  "54 6e c": 1,
-                  "53 6e c": 2,
-                  "39 22 70": 1,
-                  "71 c 6e": 1,
-                  "22 70 16": 1,
-                  "6e c 6e": 4,
-                  "22 70 53": 2,
-                  "1a 54 6e": 1,
-                  "6e c 72": 1,
-                  "70 5b 54": 1,
-                  "54 71 c": 1
-                }
-              },
               "size": 338,
               "debugItemCount": 23,
               "instructionCount": 52,
@@ -981,11 +654,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "5b 70 e": 1
-                }
-              },
               "size": 72,
               "debugItemCount": 3,
               "instructionCount": 3,
@@ -1016,9 +684,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {}
-              },
               "size": 57,
               "debugItemCount": 2,
               "instructionCount": 1,
@@ -1041,11 +706,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "5b 70 e": 1
-                }
-              },
               "size": 72,
               "debugItemCount": 3,
               "instructionCount": 3,
@@ -1093,41 +753,6 @@
                 "s": 1,
                 "": 2
               },
-              "nGramTable": {
-                "nGramToCount": {
-                  "6e 62 38": 1,
-                  "54 14 6e": 1,
-                  "62 38 62": 1,
-                  "c 6e c": 1,
-                  "c 1f 6e": 1,
-                  "37 1a 6e": 1,
-                  "62 6e e": 1,
-                  "70 1a 6e": 1,
-                  "d8 1a 6e": 1,
-                  "a 35 22": 1,
-                  "6e e 1a": 1,
-                  "38 62 6e": 1,
-                  "c 12 37": 1,
-                  "c 54 14": 1,
-                  "e 1a 28": 1,
-                  "6e c 1f": 1,
-                  "35 22 71": 1,
-                  "1a 6e a": 1,
-                  "12 37 1a": 1,
-                  "1a 28 1a": 1,
-                  "14 6e c": 1,
-                  "1a 6e c": 2,
-                  "1f 6e 62": 1,
-                  "71 c 70": 1,
-                  "6e c 54": 1,
-                  "c 70 1a": 1,
-                  "22 71 c": 1,
-                  "6e a 35": 1,
-                  "6e c 6e": 1,
-                  "6e c 12": 1,
-                  "28 1a 28": 1
-                }
-              },
               "size": 226,
               "debugItemCount": 17,
               "instructionCount": 34,
@@ -1146,9 +771,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {}
-              },
               "size": 57,
               "debugItemCount": 2,
               "instructionCount": 1,
@@ -1183,11 +805,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "5b 70 e": 1
-                }
-              },
               "size": 72,
               "debugItemCount": 3,
               "instructionCount": 3,
@@ -1211,12 +828,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "71 72 e": 1,
-                  "54 71 72": 1
-                }
-              },
               "size": 80,
               "debugItemCount": 4,
               "instructionCount": 4,
@@ -1265,29 +876,6 @@
                 "DroidSwarm": 1,
                 "Service connected.": 1
               },
-              "nGramTable": {
-                "nGramToCount": {
-                  "d8 6e 1a": 1,
-                  "1f 62 52": 1,
-                  "54 14 6e": 1,
-                  "55 71 e": 1,
-                  "1a 71 54": 1,
-                  "c 69 54": 1,
-                  "71 54 62": 1,
-                  "62 52 d8": 1,
-                  "14 6e c": 1,
-                  "69 54 14": 1,
-                  "c 1f 62": 1,
-                  "6e c 69": 1,
-                  "62 55 71": 1,
-                  "52 d8 6e": 1,
-                  "1a 1a 71": 1,
-                  "1f 6e c": 1,
-                  "54 62 55": 1,
-                  "6e 1a 1a": 1,
-                  "6e c 1f": 1
-                }
-              },
               "size": 163,
               "debugItemCount": 9,
               "instructionCount": 21,
@@ -1315,14 +903,6 @@
                 "DroidSwarm": 1,
                 "Service disconnected.": 1
               },
-              "nGramTable": {
-                "nGramToCount": {
-                  "1a 1a 71": 1,
-                  "69 1a 1a": 1,
-                  "12 69 1a": 1,
-                  "1a 71 e": 1
-                }
-              },
               "size": 78,
               "debugItemCount": 4,
               "instructionCount": 6,
@@ -1345,11 +925,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "5b 70 e": 1
-                }
-              },
               "size": 72,
               "debugItemCount": 3,
               "instructionCount": 3,
@@ -1387,13 +962,6 @@
                 "8d": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "6e a 8d": 1,
-                  "54 6e a": 1,
-                  "a 8d f": 1
-                }
-              },
               "size": 62,
               "debugItemCount": 2,
               "instructionCount": 5,
@@ -1423,19 +991,6 @@
                 "8b": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "53 86 cd": 1,
-                  "16 54 6e": 1,
-                  "86 cd 8b": 1,
-                  "54 53 86": 1,
-                  "54 6e b": 1,
-                  "6e b 54": 1,
-                  "b 54 53": 1,
-                  "8b bb 10": 1,
-                  "cd 8b bb": 1
-                }
-              },
               "size": 80,
               "debugItemCount": 2,
               "instructionCount": 11,
@@ -1495,75 +1050,6 @@
                 "Error opening socketet: ": 1,
                 "Error writing header: ": 1
               },
-              "nGramTable": {
-                "nGramToCount": {
-                  "54 54 52": 1,
-                  "54 52 70": 1,
-                  "54 54 54": 1,
-                  "c 6e c": 7,
-                  "6e 1a 22": 3,
-                  "c 6e a": 1,
-                  "6e 29 d": 1,
-                  "d 6e 29": 1,
-                  "6e 27 d": 1,
-                  "b 71 28": 1,
-                  "d 6e 27": 1,
-                  "6e 28 d": 1,
-                  "d 54 6e": 3,
-                  "70 c 22": 1,
-                  "71 28 d": 3,
-                  "c 71 29": 3,
-                  "c 71 28": 3,
-                  "c 6e 53": 1,
-                  "b 70 c": 1,
-                  "c 71 6e": 1,
-                  "3b 71 c": 1,
-                  "a 6e 54": 1,
-                  "71 28 70": 1,
-                  "71 29 d": 2,
-                  "22 1a 70": 7,
-                  "38 6e e": 1,
-                  "29 d 6e": 2,
-                  "31 3b 71": 1,
-                  "54 6e 1a": 3,
-                  "6e a 38": 1,
-                  "5a 70 b": 1,
-                  "22 54 54": 1,
-                  "71 c 6e": 1,
-                  "70 b 70": 1,
-                  "70 b 71": 1,
-                  "54 6e 53": 1,
-                  "16 bb 5a": 1,
-                  "6e c 71": 7,
-                  "6e c 6e": 8,
-                  "70 a 6e": 1,
-                  "c 22 54": 1,
-                  "53 16 bb": 1,
-                  "28 70 a": 1,
-                  "d 1a 22": 4,
-                  "a 38 6e": 1,
-                  "70 6e c": 8,
-                  "6e 53 16": 1,
-                  "71 6e 28": 1,
-                  "6e 54 6e": 1,
-                  "6e 53 31": 1,
-                  "53 31 3b": 1,
-                  "6e 6e c": 1,
-                  "bb 5a 70": 1,
-                  "27 d 1a": 1,
-                  "29 d 1a": 1,
-                  "28 d 54": 2,
-                  "1a 70 6e": 7,
-                  "e d 54": 1,
-                  "c 54 6e": 1,
-                  "6e c 54": 1,
-                  "52 70 6e": 1,
-                  "1a 22 1a": 7,
-                  "54 6e 6e": 1,
-                  "6e e d": 1,
-                  "28 d 1a": 2
-                }
-              },
               "size": 800,
               "debugItemCount": 56,
               "instructionCount": 130,
@@ -1591,20 +1077,6 @@
                 "1f": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "54 54 6e": 2,
-                  "a 6e a": 1,
-                  "54 54 54": 1,
-                  "54 6e c": 1,
-                  "6e a 54": 1,
-                  "6e a 6e": 1,
-                  "54 6e a": 1,
-                  "c 1f 11": 1,
-                  "6e c 1f": 1,
-                  "a 54 54": 1
-                }
-              },
               "size": 102,
               "debugItemCount": 4,
               "instructionCount": 13,
@@ -1656,51 +1128,6 @@
                 "Connection: keep-alive\r\nContent-Length: ": 1,
                 "POST ": 1
               },
-              "nGramTable": {
-                "nGramToCount": {
-                  "54 54 6e": 3,
-                  "a 6e a": 1,
-                  "c 6e c": 6,
-                  "c 1f 22": 1,
-                  "a 6e c": 1,
-                  "70 1a 6e": 1,
-                  "72 c 1f": 1,
-                  "70 6e c": 1,
-                  "72 a 39": 1,
-                  "72 c 72": 1,
-                  "70 70 c": 1,
-                  "a 39 22": 1,
-                  "1f 54 6e": 1,
-                  "1f 54 54": 1,
-                  "c 54 54": 2,
-                  "1a 70 70": 1,
-                  "c 72 a": 1,
-                  "c 72 c": 1,
-                  "c 1a 6e": 7,
-                  "c 70 6e": 1,
-                  "6e c 1f": 2,
-                  "22 1a 70": 1,
-                  "1f 22 71": 1,
-                  "6e a 6e": 2,
-                  "54 6e a": 1,
-                  "54 6e c": 3,
-                  "6e c 1a": 7,
-                  "c 11 72": 1,
-                  "1a 6e c": 8,
-                  "6e c 28": 1,
-                  "39 22 71": 1,
-                  "71 c 70": 2,
-                  "70 c 6e": 1,
-                  "11 72 c": 1,
-                  "c 70 1a": 1,
-                  "6e c 54": 2,
-                  "22 71 c": 2,
-                  "c 1f 54": 2,
-                  "6e c 11": 1,
-                  "6e c 72": 1,
-                  "6e c 6e": 5
-                }
-              },
               "size": 433,
               "debugItemCount": 20,
               "instructionCount": 82,
@@ -1730,22 +1157,6 @@
                 "8b": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "bc 86 cd": 1,
-                  "53 54 6e": 1,
-                  "86 cd 8b": 1,
-                  "54 53 bc": 1,
-                  "54 53 54": 2,
-                  "54 6e b": 1,
-                  "6e b 54": 1,
-                  "53 bc 86": 1,
-                  "53 54 53": 1,
-                  "b 54 53": 1,
-                  "8b bb 10": 1,
-                  "cd 8b bb": 1
-                }
-              },
               "size": 94,
               "debugItemCount": 2,
               "instructionCount": 15,
@@ -1765,11 +1176,6 @@
                 "54": 2
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "54 54 11": 1
-                }
-              },
               "size": 57,
               "debugItemCount": 2,
               "instructionCount": 3,
@@ -1796,16 +1202,6 @@
                 "22": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "5a 5b e": 1,
-                  "70 22 70": 1,
-                  "5b 16 5a": 1,
-                  "16 5a 5b": 1,
-                  "22 70 5b": 1,
-                  "70 5b 16": 1
-                }
-              },
               "size": 97,
               "debugItemCount": 6,
               "instructionCount": 8,
@@ -1840,11 +1236,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "5b 70 e": 1
-                }
-              },
               "size": 71,
               "debugItemCount": 3,
               "instructionCount": 3,
@@ -1892,44 +1283,6 @@
                 "ds-targets.xml": 1,
                 "/": 1
               },
-              "nGramTable": {
-                "nGramToCount": {
-                  "e 22 6e": 1,
-                  "63 38 71": 1,
-                  "54 14 6e": 2,
-                  "38 12 6e": 1,
-                  "c 1f 63": 1,
-                  "c 6e 28": 1,
-                  "c 6e c": 1,
-                  "c 1f 6e": 1,
-                  "70 1a 6e": 1,
-                  "22 6e c": 1,
-                  "c 22 1a": 1,
-                  "a 38 6e": 1,
-                  "70 6e a": 1,
-                  "6e e 22": 1,
-                  "c 6e e": 1,
-                  "6e 54 14": 1,
-                  "1f 6e a": 1,
-                  "6e c 1f": 2,
-                  "c 71 c": 1,
-                  "38 6e c": 1,
-                  "22 1a 70": 1,
-                  "1f 63 38": 1,
-                  "1a 70 6e": 1,
-                  "6e a 38": 2,
-                  "14 6e c": 2,
-                  "1a 6e c": 1,
-                  "38 71 c": 1,
-                  "71 c 70": 1,
-                  "71 c 22": 1,
-                  "c 70 1a": 1,
-                  "a 38 12": 1,
-                  "6e c 71": 1,
-                  "6e c 6e": 3,
-                  "12 6e 54": 1
-                }
-              },
               "size": 269,
               "debugItemCount": 20,
               "instructionCount": 42,
@@ -1963,9 +1316,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {}
-              },
               "size": 57,
               "debugItemCount": 2,
               "instructionCount": 2,
@@ -1999,9 +1349,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {}
-              },
               "size": 56,
               "debugItemCount": 2,
               "instructionCount": 2,
@@ -2040,22 +1387,6 @@
                 "62": 3
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "6e 12 69": 1,
-                  "a 38 54": 1,
-                  "62 6e 12": 1,
-                  "71 a 38": 1,
-                  "62 38 62": 1,
-                  "54 6e e": 1,
-                  "69 54 71": 1,
-                  "62 62 6e": 1,
-                  "38 54 6e": 1,
-                  "54 71 a": 1,
-                  "38 62 62": 1,
-                  "12 69 54": 1
-                }
-              },
               "size": 114,
               "debugItemCount": 7,
               "instructionCount": 14,
@@ -2078,11 +1409,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "5b 70 e": 1
-                }
-              },
               "size": 69,
               "debugItemCount": 3,
               "instructionCount": 3,
@@ -2123,19 +1449,6 @@
                 "1d": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "a 3a 54": 1,
-                  "1d 6e a": 1,
-                  "54 6e 1e": 1,
-                  "6e a 3a": 1,
-                  "3a 54 6e": 1,
-                  "1e e d": 1,
-                  "6e 1e e": 1,
-                  "d 1e 27": 1,
-                  "e d 1e": 1
-                }
-              },
               "size": 114,
               "debugItemCount": 8,
               "instructionCount": 11,
@@ -2166,22 +1479,6 @@
                 "1d": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "a 3a 54": 1,
-                  "e 54 6e": 1,
-                  "1d 6e a": 1,
-                  "28 d 1e": 1,
-                  "54 6e 28": 1,
-                  "54 6e 1e": 1,
-                  "6e a 3a": 1,
-                  "3a 54 6e": 1,
-                  "1e e 54": 1,
-                  "6e 1e e": 1,
-                  "d 1e 27": 1,
-                  "6e 28 d": 1
-                }
-              },
               "size": 138,
               "debugItemCount": 9,
               "instructionCount": 14,
@@ -2210,18 +1507,6 @@
                 "1d": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "1d 54 6e": 1,
-                  "1e 11 d": 1,
-                  "1f 1e 11": 1,
-                  "11 d 1e": 1,
-                  "54 6e c": 1,
-                  "c 1f 1e": 1,
-                  "d 1e 27": 1,
-                  "6e c 1f": 1
-                }
-              },
               "size": 95,
               "debugItemCount": 2,
               "instructionCount": 10,
@@ -2259,29 +1544,6 @@
                 "38": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "12 1e 11": 1,
-                  "38 28 d": 1,
-                  "28 d 1e": 1,
-                  "6e a 38": 1,
-                  "54 6e a": 1,
-                  "54 6e c": 1,
-                  "72 c 1f": 1,
-                  "72 a 39": 1,
-                  "1d 54 6e": 1,
-                  "a 38 28": 1,
-                  "1e 11 72": 1,
-                  "a 39 12": 1,
-                  "1f 54 6e": 1,
-                  "11 72 c": 1,
-                  "c 1f 54": 1,
-                  "39 12 1e": 1,
-                  "6e c 72": 1,
-                  "c 72 a": 1,
-                  "d 1e 27": 1
-                }
-              },
               "size": 156,
               "debugItemCount": 8,
               "instructionCount": 21,
@@ -2319,32 +1581,6 @@
                 "1": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "54 54 6e": 1,
-                  "d8 28 d": 1,
-                  "28 d 1e": 1,
-                  "6e a 38": 1,
-                  "54 6e c": 1,
-                  "34 1e f": 1,
-                  "54 6e a": 2,
-                  "12 12 54": 1,
-                  "1 28 d8": 1,
-                  "1e f 54": 1,
-                  "1d 12 12": 1,
-                  "1f 54 54": 1,
-                  "f 54 6e": 1,
-                  "a 38 1": 1,
-                  "38 1 28": 1,
-                  "6e a 34": 1,
-                  "c 1f 54": 1,
-                  "28 d8 28": 1,
-                  "a 34 1e": 1,
-                  "12 54 6e": 1,
-                  "d 1e 27": 1,
-                  "6e c 1f": 1
-                }
-              },
               "size": 186,
               "debugItemCount": 14,
               "instructionCount": 25,
@@ -2369,13 +1605,6 @@
                 "22": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "70 22 70": 1,
-                  "22 70 5b": 1,
-                  "70 5b e": 1
-                }
-              },
               "size": 73,
               "debugItemCount": 4,
               "instructionCount": 5,
@@ -2403,17 +1632,6 @@
                 "1d": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "1d 54 6e": 1,
-                  "f d 1e": 1,
-                  "1e f d": 1,
-                  "a 1e f": 1,
-                  "6e a 1e": 1,
-                  "54 6e a": 1,
-                  "d 1e 27": 1
-                }
-              },
               "size": 83,
               "debugItemCount": 2,
               "instructionCount": 9,
@@ -2448,11 +1666,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "5b 70 e": 1
-                }
-              },
               "size": 70,
               "debugItemCount": 3,
               "instructionCount": 3,
@@ -2476,15 +1689,6 @@
                 "a": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "a 38 54": 1,
-                  "71 a 38": 1,
-                  "54 6e e": 1,
-                  "38 54 6e": 1,
-                  "54 71 a": 1
-                }
-              },
               "size": 84,
               "debugItemCount": 4,
               "instructionCount": 7,
@@ -2514,9 +1718,6 @@
               "frameworkFieldReferenceCounts": {},
               "opCounts": {},
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {}
-              },
               "size": 24,
               "debugItemCount": 0,
               "instructionCount": 0,
@@ -2564,26 +1765,6 @@
               "stringReferenceCounts": {
                 "DroidSwarm": 1
               },
-              "nGramTable": {
-                "nGramToCount": {
-                  "c 69 1a": 1,
-                  "39 70 e": 1,
-                  "1a 6e 70": 1,
-                  "6e c 69": 1,
-                  "71 6e 70": 1,
-                  "70 70 70": 4,
-                  "6e 70 70": 1,
-                  "69 1a 6e": 1,
-                  "70 71 6e": 1,
-                  "70 a 39": 1,
-                  "6f 14 6e": 1,
-                  "70 70 71": 1,
-                  "a 39 70": 1,
-                  "14 6e 6e": 1,
-                  "6e 6e c": 1,
-                  "6e 70 a": 1
-                }
-              },
               "size": 176,
               "debugItemCount": 16,
               "instructionCount": 21,
@@ -2611,15 +1792,6 @@
               "stringReferenceCounts": {
                 "wifi": 1
               },
-              "nGramTable": {
-                "nGramToCount": {
-                  "1f 12 6e": 1,
-                  "c 1f 12": 1,
-                  "12 6e e": 1,
-                  "1a 6e c": 1,
-                  "6e c 1f": 1
-                }
-              },
               "size": 80,
               "debugItemCount": 5,
               "instructionCount": 7,
@@ -2639,9 +1811,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {}
-              },
               "size": 63,
               "debugItemCount": 2,
               "instructionCount": 2,
@@ -2666,13 +1835,6 @@
                 "1c": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "70 6e e": 1,
-                  "1c 70 6e": 1,
-                  "22 1c 70": 1
-                }
-              },
               "size": 76,
               "debugItemCount": 5,
               "instructionCount": 5,
@@ -2697,13 +1859,6 @@
                 "1c": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "70 6e e": 1,
-                  "1c 70 6e": 1,
-                  "22 1c 70": 1
-                }
-              },
               "size": 76,
               "debugItemCount": 5,
               "instructionCount": 5,
@@ -2743,35 +1898,6 @@
               "stringReferenceCounts": {
                 "No targets.": 1
               },
-              "nGramTable": {
-                "nGramToCount": {
-                  "6e 22 1c": 1,
-                  "39 6e 22": 1,
-                  "63 39 6e": 1,
-                  "e 63 39": 1,
-                  "1a 71 c": 1,
-                  "6e a 39": 1,
-                  "54 6e a": 1,
-                  "12 70 28": 1,
-                  "62 6e 6e": 1,
-                  "6e e 63": 1,
-                  "6e 12 70": 1,
-                  "70 6e 70": 1,
-                  "71 c 6e": 1,
-                  "6e 70 28": 1,
-                  "a 39 1a": 1,
-                  "6e 6e 12": 1,
-                  "28 62 6e": 1,
-                  "39 1a 71": 1,
-                  "c 6e e": 1,
-                  "39 54 6e": 1,
-                  "12 62 39": 1,
-                  "70 28 62": 1,
-                  "1c 70 6e": 1,
-                  "22 1c 70": 1,
-                  "62 39 54": 1
-                }
-              },
               "size": 175,
               "debugItemCount": 12,
               "instructionCount": 27,
@@ -2798,16 +1924,6 @@
                 "70": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "70 6e e": 1,
-                  "22 70 6e": 1,
-                  "1f 22 70": 1,
-                  "14 6e c": 1,
-                  "c 1f 22": 1,
-                  "6e c 1f": 1
-                }
-              },
               "size": 92,
               "debugItemCount": 5,
               "instructionCount": 8,
@@ -2836,18 +1952,6 @@
               },
               "stringReferenceCounts": {
                 "connectivity": 1
-              },
-              "nGramTable": {
-                "nGramToCount": {
-                  "1f 12 6e": 1,
-                  "6e a f": 1,
-                  "c 6e a": 1,
-                  "c 1f 12": 1,
-                  "6e c 6e": 1,
-                  "12 6e c": 1,
-                  "1a 6e c": 1,
-                  "6e c 1f": 1
-                }
               },
               "size": 95,
               "debugItemCount": 6,
@@ -2885,25 +1989,6 @@
               },
               "stringReferenceCounts": {
                 "Select Action": 1
-              },
-              "nGramTable": {
-                "nGramToCount": {
-                  "46 72 d8": 1,
-                  "72 d8 28": 1,
-                  "33 1a 72": 1,
-                  "62 21 34": 1,
-                  "12 62 21": 1,
-                  "a 14 33": 1,
-                  "e 12 62": 1,
-                  "12 62 46": 1,
-                  "34 e 12": 1,
-                  "21 34 e": 1,
-                  "72 12 62": 1,
-                  "1a 72 12": 1,
-                  "6e a 14": 1,
-                  "62 46 72": 1,
-                  "14 33 1a": 1
-                }
               },
               "size": 142,
               "debugItemCount": 10,
@@ -2949,38 +2034,6 @@
                 "failed": 1,
                 "reqs": 1
               },
-              "nGramTable": {
-                "nGramToCount": {
-                  "12 1a 4d": 3,
-                  "6e 22 54": 1,
-                  "4d 23 26": 1,
-                  "1a 4d 23": 1,
-                  "7 76 5b": 1,
-                  "54 14 23": 1,
-                  "1a 4d 12": 2,
-                  "76 5b 54": 1,
-                  "c 1f 22": 1,
-                  "70 6e 22": 1,
-                  "4d 12 1a": 2,
-                  "6e e 0": 1,
-                  "14 62 70": 1,
-                  "12 14 6e": 1,
-                  "6e 6e e": 1,
-                  "26 7 76": 1,
-                  "14 23 12": 1,
-                  "6e c 1f": 1,
-                  "e 0 300": 1,
-                  "14 6e c": 1,
-                  "22 14 62": 1,
-                  "23 26 7": 1,
-                  "22 54 14": 1,
-                  "1f 22 14": 1,
-                  "5b 54 6e": 1,
-                  "62 70 6e": 1,
-                  "54 6e 6e": 1,
-                  "23 12 1a": 1
-                }
-              },
               "size": 230,
               "debugItemCount": 17,
               "instructionCount": 34,
@@ -3000,9 +2053,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {}
-              },
               "size": 66,
               "debugItemCount": 2,
               "instructionCount": 2,
@@ -3029,18 +2079,6 @@
                 "70": 3
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "70 6e e": 1,
-                  "70 6e 14": 2,
-                  "6e 14 6e": 2,
-                  "22 70 6e": 3,
-                  "1f 22 70": 3,
-                  "14 6e c": 3,
-                  "c 1f 22": 3,
-                  "6e c 1f": 3
-                }
-              },
               "size": 174,
               "debugItemCount": 13,
               "instructionCount": 22,
@@ -3080,25 +2118,6 @@
                 "Wifi Not Connected!": 1,
                 "Yes": 1
               },
-              "nGramTable": {
-                "nGramToCount": {
-                  "1a 22 70": 2,
-                  "6e 1a 22": 2,
-                  "c 6e 1a": 1,
-                  "14 6e c": 1,
-                  "12 22 70": 1,
-                  "6e 6e 14": 1,
-                  "1a 6e 6e": 1,
-                  "70 6e 6e": 1,
-                  "70 6e 1a": 2,
-                  "6e 14 6e": 1,
-                  "22 70 6e": 3,
-                  "c 6e e": 1,
-                  "6e 1a 6e": 1,
-                  "6e c 6e": 2,
-                  "6e 6e c": 1
-                }
-              },
               "size": 176,
               "debugItemCount": 13,
               "instructionCount": 23,
@@ -3121,11 +2140,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "6f 6e e": 1
-                }
-              },
               "size": 63,
               "debugItemCount": 4,
               "instructionCount": 3,
@@ -3145,9 +2159,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {}
-              },
               "size": 63,
               "debugItemCount": 2,
               "instructionCount": 2,
@@ -3175,24 +2186,6 @@
                 "1f": 2
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "c 6e 28": 1,
-                  "1f 38 14": 1,
-                  "14 6e c": 6,
-                  "6e e 14": 1,
-                  "e 14 6e": 1,
-                  "6e 14 6e": 2,
-                  "1f 14 6e": 1,
-                  "c 6e e": 1,
-                  "c 6e 14": 2,
-                  "c 1f 38": 1,
-                  "c 1f 14": 1,
-                  "6e c 6e": 4,
-                  "38 14 6e": 1,
-                  "6e c 1f": 2
-                }
-              },
               "size": 196,
               "debugItemCount": 11,
               "instructionCount": 27,
@@ -3227,22 +2220,6 @@
               "stringReferenceCounts": {
                 "DroidSwarm": 1,
                 "Binding service.": 1
-              },
-              "nGramTable": {
-                "nGramToCount": {
-                  "12 6a e": 1,
-                  "6e 12 6a": 1,
-                  "1a 1a 71": 1,
-                  "71 6e c": 1,
-                  "12 6e 12": 1,
-                  "54 12 6e": 1,
-                  "70 54 12": 1,
-                  "1c 70 54": 1,
-                  "6e c 22": 1,
-                  "1a 71 6e": 1,
-                  "c 22 1c": 1,
-                  "22 1c 70": 1
-                }
               },
               "size": 109,
               "debugItemCount": 7,
@@ -3287,36 +2264,6 @@
                 "Remove": 1,
                 "Export": 1
               },
-              "nGramTable": {
-                "nGramToCount": {
-                  "69 70 28": 1,
-                  "6e 28 1a": 1,
-                  "c 1f 72": 1,
-                  "f 1a 6e": 1,
-                  "12 f 1a": 1,
-                  "72 c 1f": 1,
-                  "46 62 52": 1,
-                  "72 a 62": 1,
-                  "c 54 1a": 1,
-                  "1f 72 a": 1,
-                  "62 6e 28": 1,
-                  "38 62 6e": 1,
-                  "70 12 f": 1,
-                  "a 38 62": 1,
-                  "a 38 69": 2,
-                  "62 52 6e": 1,
-                  "a 62 46": 1,
-                  "69 70 12": 1,
-                  "62 46 62": 1,
-                  "1a 6e a": 3,
-                  "6e a 38": 3,
-                  "28 1a 6e": 1,
-                  "52 6e c": 1,
-                  "6e c 54": 1,
-                  "54 1a 6e": 1,
-                  "38 69 70": 2
-                }
-              },
               "size": 233,
               "debugItemCount": 22,
               "instructionCount": 34,
@@ -3341,13 +2288,6 @@
                 "1c": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "70 6e e": 1,
-                  "1c 70 6e": 1,
-                  "22 1c 70": 1
-                }
-              },
               "size": 76,
               "debugItemCount": 5,
               "instructionCount": 5,
@@ -3367,9 +2307,6 @@
                 "54": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {}
-              },
               "size": 60,
               "debugItemCount": 2,
               "instructionCount": 2,
@@ -3389,9 +2326,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {}
-              },
               "size": 63,
               "debugItemCount": 2,
               "instructionCount": 2,
@@ -3426,22 +2360,6 @@
                 "DroidSwarm": 1,
                 "Unbinding service.": 1
               },
-              "nGramTable": {
-                "nGramToCount": {
-                  "12 6a 12": 1,
-                  "6e 12 6a": 1,
-                  "1a 1a 71": 1,
-                  "63 38 1a": 1,
-                  "c 54 6e": 1,
-                  "71 6e c": 1,
-                  "12 69 e": 1,
-                  "38 1a 1a": 1,
-                  "6e c 54": 1,
-                  "6a 12 69": 1,
-                  "54 6e 12": 1,
-                  "1a 71 6e": 1
-                }
-              },
               "size": 106,
               "debugItemCount": 7,
               "instructionCount": 14,
@@ -3461,9 +2379,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {}
-              },
               "size": 63,
               "debugItemCount": 2,
               "instructionCount": 2,
@@ -3505,32 +2420,6 @@
                 "Error loading saved targets:\n": 1,
                 "Error loading saved targets.": 1
               },
-              "nGramTable": {
-                "nGramToCount": {
-                  "22 1a 70": 1,
-                  "1a 70 6e": 1,
-                  "c 6e c": 1,
-                  "6e 1a 22": 1,
-                  "c 6e 1a": 1,
-                  "d 1a 12": 1,
-                  "1a 71 28": 1,
-                  "70 6e c": 1,
-                  "71 c 6e": 1,
-                  "1a 1a 71": 1,
-                  "71 6e 28": 1,
-                  "71 e d": 1,
-                  "71 28 d": 1,
-                  "12 71 c": 1,
-                  "e d 1a": 1,
-                  "1a 22 1a": 1,
-                  "1a 12 71": 1,
-                  "6e c 71": 1,
-                  "6e c 6e": 1,
-                  "d 1a 1a": 1,
-                  "c 71 6e": 1,
-                  "28 d 1a": 1
-                }
-              },
               "size": 183,
               "debugItemCount": 15,
               "instructionCount": 24,
@@ -3550,9 +2439,6 @@
                 "54": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {}
-              },
               "size": 60,
               "debugItemCount": 2,
               "instructionCount": 2,
@@ -3604,46 +2490,6 @@
                 "Ok": 1,
                 "": 1
               },
-              "nGramTable": {
-                "nGramToCount": {
-                  "6e 1a 22": 1,
-                  "c 6e 1a": 1,
-                  "72 22 70": 1,
-                  "c 6e a": 1,
-                  "c 6e c": 1,
-                  "70 6e 6e": 1,
-                  "70 6e c": 1,
-                  "1a 1a 72": 1,
-                  "6e 14 6e": 1,
-                  "72 c 1a": 1,
-                  "c 1a 72": 1,
-                  "72 72 22": 1,
-                  "1a 72 72": 1,
-                  "1a 72 c": 1,
-                  "12 12 6e": 1,
-                  "6e 6e e": 1,
-                  "1a 6e 14": 1,
-                  "c 1a 6e": 1,
-                  "39 72 c": 1,
-                  "1a 22 70": 1,
-                  "14 6e c": 1,
-                  "6e a 39": 1,
-                  "54 6e c": 1,
-                  "6e c 1a": 2,
-                  "e d 28": 1,
-                  "12 6e c": 2,
-                  "72 c 6e": 1,
-                  "c 54 6e": 1,
-                  "a 39 72": 1,
-                  "c 1a 1a": 1,
-                  "c 12 6e": 1,
-                  "22 70 6e": 2,
-                  "6e c 54": 1,
-                  "6e c 12": 1,
-                  "6e c 6e": 2,
-                  "6e e d": 1
-                }
-              },
               "size": 292,
               "debugItemCount": 28,
               "instructionCount": 42,
@@ -3672,21 +2518,6 @@
                 "Remove": 1,
                 "Export": 1
               },
-              "nGramTable": {
-                "nGramToCount": {
-                  "12 1a 4d": 2,
-                  "69 6a 12": 1,
-                  "4d 12 1a": 2,
-                  "12 69 e": 1,
-                  "1a 4d 69": 1,
-                  "23 1a 4d": 1,
-                  "4d 69 6a": 1,
-                  "1a 4d 12": 2,
-                  "6a 12 69": 1,
-                  "12 12 23": 1,
-                  "12 23 1a": 1
-                }
-              },
               "size": 108,
               "debugItemCount": 7,
               "instructionCount": 16,
@@ -3711,15 +2542,6 @@
                 "22": 3
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "70 22 70": 1,
-                  "70 5b 22": 2,
-                  "5b 22 70": 2,
-                  "22 70 5b": 3,
-                  "70 5b e": 1
-                }
-              },
               "size": 110,
               "debugItemCount": 6,
               "instructionCount": 11,
@@ -3739,9 +2561,6 @@
                 "54": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {}
-              },
               "size": 61,
               "debugItemCount": 2,
               "instructionCount": 2,
@@ -3766,14 +2585,6 @@
                 "22": 2
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "70 6e e": 1,
-                  "22 22 70": 1,
-                  "22 70 70": 1,
-                  "70 70 6e": 1
-                }
-              },
               "size": 79,
               "debugItemCount": 4,
               "instructionCount": 6,
@@ -3820,22 +2631,6 @@
                 "android.intent.action.MEDIA_REMOVED": 1,
                 "android.intent.action.MEDIA_MOUNTED": 1
               },
-              "nGramTable": {
-                "nGramToCount": {
-                  "6e 62 62": 1,
-                  "6e 71 e": 1,
-                  "62 6e 71": 1,
-                  "1a 6e 62": 1,
-                  "1a 6e 1a": 1,
-                  "62 62 6e": 1,
-                  "6e 1a 6e": 1,
-                  "70 69 22": 1,
-                  "70 1a 6e": 1,
-                  "22 70 1a": 1,
-                  "69 22 70": 1,
-                  "22 70 69": 1
-                }
-              },
               "size": 123,
               "debugItemCount": 9,
               "instructionCount": 14,
@@ -3855,9 +2650,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {}
-              },
               "size": 55,
               "debugItemCount": 2,
               "instructionCount": 2,
@@ -3878,12 +2670,6 @@
                 "6a": 2
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "6a 6a e": 1,
-                  "12 6a 6a": 1
-                }
-              },
               "size": 62,
               "debugItemCount": 4,
               "instructionCount": 4,
@@ -3917,24 +2703,6 @@
                 "mounted": 1,
                 "mounted_ro": 1
               },
-              "nGramTable": {
-                "nGramToCount": {
-                  "6a 6a 28": 2,
-                  "6a 6a e": 1,
-                  "28 6a 6a": 1,
-                  "6a e 1a": 1,
-                  "38 6a 6a": 2,
-                  "1a 6e a": 2,
-                  "6a 28 6a": 1,
-                  "6e a 38": 2,
-                  "71 c 1a": 1,
-                  "a 38 6a": 2,
-                  "12 71 c": 1,
-                  "e 1a 6e": 1,
-                  "12 12 71": 1,
-                  "c 1a 6e": 1
-                }
-              },
               "size": 134,
               "debugItemCount": 10,
               "instructionCount": 21,
@@ -3957,12 +2725,6 @@
                 "62": 2
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "62 62 6e": 1,
-                  "62 6e e": 1
-                }
-              },
               "size": 63,
               "debugItemCount": 3,
               "instructionCount": 4,
@@ -3984,9 +2746,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {}
-              },
               "size": 56,
               "debugItemCount": 2,
               "instructionCount": 2,
@@ -4031,18 +2790,6 @@
               "stringReferenceCounts": {
                 "target_list.xml": 1
               },
-              "nGramTable": {
-                "nGramToCount": {
-                  "70 1a 12": 1,
-                  "62 72 6e": 1,
-                  "1a 12 6e": 1,
-                  "6e c 62": 1,
-                  "72 6e e": 1,
-                  "c 62 72": 1,
-                  "12 6e c": 1,
-                  "22 70 1a": 1
-                }
-              },
               "size": 111,
               "debugItemCount": 8,
               "instructionCount": 10,
@@ -4066,14 +2813,6 @@
                 "22": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "12 6a e": 1,
-                  "69 12 6a": 1,
-                  "70 69 12": 1,
-                  "22 70 69": 1
-                }
-              },
               "size": 75,
               "debugItemCount": 4,
               "instructionCount": 6,
@@ -4117,34 +2856,6 @@
               "stringReferenceCounts": {
                 "target_list.xml": 1
               },
-              "nGramTable": {
-                "nGramToCount": {
-                  "e 22 70": 1,
-                  "38 e 22": 1,
-                  "63 38 e": 1,
-                  "70 1c 1a": 1,
-                  "6a 28 72": 1,
-                  "54 6e c": 1,
-                  "c 1f 6e": 1,
-                  "39 12 6a": 1,
-                  "22 70 1c": 1,
-                  "28 72 c": 1,
-                  "1a 6e c": 1,
-                  "72 c 1f": 2,
-                  "12 6a 28": 1,
-                  "72 a 39": 1,
-                  "1f 6e 28": 1,
-                  "a 39 12": 1,
-                  "69 62 54": 1,
-                  "62 54 6e": 1,
-                  "6e c 72": 2,
-                  "c 1f 69": 1,
-                  "c 72 a": 1,
-                  "c 72 c": 1,
-                  "1c 1a 6e": 1,
-                  "1f 69 62": 1
-                }
-              },
               "size": 184,
               "debugItemCount": 11,
               "instructionCount": 28,
@@ -4166,9 +2877,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {}
-              },
               "size": 56,
               "debugItemCount": 2,
               "instructionCount": 2,
@@ -4203,11 +2911,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "5b 70 e": 1
-                }
-              },
               "size": 68,
               "debugItemCount": 2,
               "instructionCount": 3,
@@ -4227,9 +2930,6 @@
                 "54": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {}
-              },
               "size": 53,
               "debugItemCount": 2,
               "instructionCount": 2,
@@ -4263,9 +2963,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {}
-              },
               "size": 57,
               "debugItemCount": 2,
               "instructionCount": 2,
@@ -4300,11 +2997,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "5b 70 e": 1
-                }
-              },
               "size": 72,
               "debugItemCount": 3,
               "instructionCount": 3,
@@ -4325,11 +3017,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "54 71 e": 1
-                }
-              },
               "size": 69,
               "debugItemCount": 3,
               "instructionCount": 3,
@@ -4363,9 +3050,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {}
-              },
               "size": 57,
               "debugItemCount": 2,
               "instructionCount": 2,
@@ -4400,11 +3084,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "5b 70 e": 1
-                }
-              },
               "size": 72,
               "debugItemCount": 3,
               "instructionCount": 3,
@@ -4423,9 +3102,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {}
-              },
               "size": 62,
               "debugItemCount": 2,
               "instructionCount": 1,
@@ -4460,11 +3136,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "5b 70 e": 1
-                }
-              },
               "size": 72,
               "debugItemCount": 3,
               "instructionCount": 3,
@@ -4486,9 +3157,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {}
-              },
               "size": 69,
               "debugItemCount": 3,
               "instructionCount": 2,
@@ -4522,9 +3190,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {}
-              },
               "size": 57,
               "debugItemCount": 2,
               "instructionCount": 2,
@@ -4577,30 +3242,6 @@
                 "DroidSwarm": 1,
                 "Unable to get Inet address for: ": 1
               },
-              "nGramTable": {
-                "nGramToCount": {
-                  "22 1a 70": 1,
-                  "28 d 1e": 1,
-                  "c 6e c": 1,
-                  "54 6e c": 1,
-                  "d 1a 22": 1,
-                  "71 c 5b": 1,
-                  "1d 54 71": 1,
-                  "71 28 d": 1,
-                  "5b 1e e": 1,
-                  "c 71 28": 1,
-                  "e d 1a": 1,
-                  "1a 22 1a": 1,
-                  "6e c 71": 1,
-                  "6e c 6e": 1,
-                  "70 54 6e": 1,
-                  "1a 70 54": 1,
-                  "1e e d": 1,
-                  "c 5b 1e": 1,
-                  "d 1e 27": 1,
-                  "54 71 c": 1
-                }
-              },
               "size": 162,
               "debugItemCount": 8,
               "instructionCount": 22,
@@ -4627,18 +3268,6 @@
                 "bb": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "1d 53 16": 1,
-                  "bb 5a 1e": 1,
-                  "5a 1e 10": 1,
-                  "1e 10 d": 1,
-                  "53 16 bb": 1,
-                  "10 d 1e": 1,
-                  "16 bb 5a": 1,
-                  "d 1e 27": 1
-                }
-              },
               "size": 88,
               "debugItemCount": 2,
               "instructionCount": 10,
@@ -4665,18 +3294,6 @@
                 "bb": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "1d 53 16": 1,
-                  "bb 5a 1e": 1,
-                  "5a 1e 10": 1,
-                  "1e 10 d": 1,
-                  "53 16 bb": 1,
-                  "10 d 1e": 1,
-                  "16 bb 5a": 1,
-                  "d 1e 27": 1
-                }
-              },
               "size": 87,
               "debugItemCount": 2,
               "instructionCount": 10,
@@ -4703,18 +3320,6 @@
                 "bb": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "1d 53 16": 1,
-                  "bb 5a 1e": 1,
-                  "5a 1e 10": 1,
-                  "1e 10 d": 1,
-                  "53 16 bb": 1,
-                  "10 d 1e": 1,
-                  "16 bb 5a": 1,
-                  "d 1e 27": 1
-                }
-              },
               "size": 87,
               "debugItemCount": 2,
               "instructionCount": 10,
@@ -4747,31 +3352,6 @@
               },
               "stringReferenceCounts": {
                 "": 2
-              },
-              "nGramTable": {
-                "nGramToCount": {
-                  "70 1a 5b": 1,
-                  "70 5b 5a": 1,
-                  "70 5b 22": 2,
-                  "5b 22 70": 2,
-                  "5a 22 70": 1,
-                  "16 5a 22": 1,
-                  "22 70 5b": 3,
-                  "13 59 1a": 1,
-                  "5a 5a e": 1,
-                  "5a 5a 5a": 1,
-                  "1a 5b 16": 1,
-                  "5b 5a 5a": 1,
-                  "59 1a 5b": 1,
-                  "1a 5b 13": 1,
-                  "5a 17 5a": 1,
-                  "5b 16 5a": 1,
-                  "16 5a 17": 1,
-                  "17 5a 16": 1,
-                  "5b 13 59": 1,
-                  "5a 16 5a": 1,
-                  "16 70 1a": 1
-                }
               },
               "size": 180,
               "debugItemCount": 15,
@@ -4820,44 +3400,6 @@
               },
               "stringReferenceCounts": {
                 ":": 1
-              },
-              "nGramTable": {
-                "nGramToCount": {
-                  "39 54 22": 1,
-                  "c 1f 6e": 1,
-                  "6e 28 d": 1,
-                  "72 c 1f": 1,
-                  "e 72 c": 1,
-                  "72 a 39": 1,
-                  "1d 54 6e": 1,
-                  "1f 6e 28": 1,
-                  "6e 54 6e": 1,
-                  "a 39 1e": 1,
-                  "54 22 70": 1,
-                  "c 72 a": 1,
-                  "d 1e 27": 1,
-                  "6e c 1f": 1,
-                  "39 1e e": 1,
-                  "28 d 1e": 1,
-                  "6e a 39": 1,
-                  "54 6e a": 1,
-                  "54 6e c": 2,
-                  "1f 1a 12": 1,
-                  "12 6e c": 1,
-                  "70 6e 54": 1,
-                  "c 54 6e": 1,
-                  "12 46 6e": 1,
-                  "c 12 46": 1,
-                  "1e e 72": 1,
-                  "22 70 6e": 1,
-                  "6e c 54": 1,
-                  "1a 12 6e": 1,
-                  "c 1f 1a": 1,
-                  "6e c 12": 1,
-                  "6e c 72": 1,
-                  "46 6e c": 1,
-                  "a 39 54": 1
-                }
               },
               "size": 237,
               "debugItemCount": 16,
@@ -4908,25 +3450,6 @@
                 "0": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "c 6e 28": 1,
-                  "54 1f 6e": 1,
-                  "6e 28 0": 1,
-                  "c 54 1f": 1,
-                  "71 c 54": 1,
-                  "71 c 6e": 2,
-                  "28 0 100": 1,
-                  "1f 6e 54": 1,
-                  "6e 54 71": 2,
-                  "e 54 71": 1,
-                  "6f e 54": 1,
-                  "52 2b 6f": 1,
-                  "c 6e 54": 1,
-                  "2b 6f e": 1,
-                  "54 71 c": 3
-                }
-              },
               "size": 163,
               "debugItemCount": 9,
               "instructionCount": 21,
@@ -4949,11 +3472,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "5b 70 e": 1
-                }
-              },
               "size": 72,
               "debugItemCount": 3,
               "instructionCount": 3,
@@ -4987,9 +3505,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {}
-              },
               "size": 57,
               "debugItemCount": 2,
               "instructionCount": 2,
@@ -5024,11 +3539,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "5b 70 e": 1
-                }
-              },
               "size": 70,
               "debugItemCount": 3,
               "instructionCount": 3,
@@ -5061,27 +3571,6 @@
               },
               "stringReferenceCounts": {
                 "Error saving targets after import.": 1
-              },
-              "nGramTable": {
-                "nGramToCount": {
-                  "c 6e 28": 1,
-                  "c 71 54": 1,
-                  "38 71 c": 1,
-                  "71 c 6e": 1,
-                  "71 c 1a": 1,
-                  "71 c 71": 1,
-                  "d 71 c": 1,
-                  "c 1a 12": 1,
-                  "e d 71": 1,
-                  "a 38 71": 1,
-                  "71 a 38": 1,
-                  "12 71 c": 1,
-                  "1a 12 71": 1,
-                  "54 6e e": 1,
-                  "71 54 6e": 1,
-                  "54 71 a": 1,
-                  "6e e d": 1
-                }
               },
               "size": 154,
               "debugItemCount": 8,
@@ -5117,11 +3606,6 @@
                 "a": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "70 a f": 1
-                }
-              },
               "size": 64,
               "debugItemCount": 2,
               "instructionCount": 3,
@@ -5170,45 +3654,6 @@
               "stringReferenceCounts": {
                 "DroidSwarm - Export": 1,
                 "": 1
-              },
-              "nGramTable": {
-                "nGramToCount": {
-                  "c 1f 62": 1,
-                  "c 1f 22": 2,
-                  "72 c 1f": 1,
-                  "e 72 c": 1,
-                  "72 a 39": 1,
-                  "39 1a 6e": 1,
-                  "6e 14 6e": 2,
-                  "6e 6e 28": 1,
-                  "62 6e a": 1,
-                  "54 62 6e": 1,
-                  "6f 14 6e": 1,
-                  "70 54 6e": 1,
-                  "62 54 6e": 1,
-                  "c 72 a": 1,
-                  "6e c 1f": 2,
-                  "1a 69 12": 1,
-                  "1f 22 70": 2,
-                  "6e a 38": 1,
-                  "54 6e c": 1,
-                  "14 6e c": 2,
-                  "12 6e 6e": 1,
-                  "1a 6e e": 1,
-                  "1f 62 54": 1,
-                  "70 6e 14": 1,
-                  "6e 54 62": 1,
-                  "a 39 1a": 1,
-                  "38 1a 69": 1,
-                  "6e e 72": 1,
-                  "a 38 1a": 1,
-                  "22 70 6e": 1,
-                  "54 6e 54": 1,
-                  "14 6e 14": 1,
-                  "69 12 6e": 1,
-                  "22 70 54": 1,
-                  "6e c 72": 1
-                }
               },
               "size": 278,
               "debugItemCount": 20,
@@ -5278,81 +3723,6 @@
                 "Exported ": 1,
                 "Error saving export: ": 1
               },
-              "nGramTable": {
-                "nGramToCount": {
-                  "f 63 39": 1,
-                  "c 62 6e": 1,
-                  "70 22 70": 1,
-                  "38 7 1f": 1,
-                  "6e 1a 22": 1,
-                  "c 6e 1a": 1,
-                  "c 6e c": 5,
-                  "c 71 12": 1,
-                  "71 12 29": 1,
-                  "63 39 1a": 2,
-                  "6e 12 f": 1,
-                  "39 1a 12": 2,
-                  "12 6e a": 1,
-                  "6e c 1c": 1,
-                  "72 22 1a": 1,
-                  "c 6e 12": 3,
-                  "c 72 c": 1,
-                  "70 12 12": 1,
-                  "6e c 1f": 1,
-                  "38 6e d8": 1,
-                  "38 6e c": 1,
-                  "22 1a 70": 3,
-                  "1f 22 70": 1,
-                  "6e a 38": 2,
-                  "1c 6e a": 1,
-                  "14 6e c": 1,
-                  "c 12 71": 1,
-                  "1a 6e c": 1,
-                  "6e c 38": 1,
-                  "71 c 22": 1,
-                  "6e 12 28": 2,
-                  "71 c 6e": 4,
-                  "72 c 62": 1,
-                  "c 38 6e": 1,
-                  "12 71 c": 4,
-                  "6e a 34": 1,
-                  "6e c 71": 1,
-                  "d8 d8 28": 1,
-                  "6e c 72": 1,
-                  "6e c 6e": 5,
-                  "28 14 6e": 1,
-                  "22 70 72": 1,
-                  "34 71 c": 1,
-                  "12 f 63": 1,
-                  "28 6e c": 1,
-                  "c 1f 22": 1,
-                  "d 1a 12": 1,
-                  "6e d8 d8": 1,
-                  "a 34 71": 1,
-                  "62 6e c": 1,
-                  "c 22 1a": 1,
-                  "a 38 6e": 1,
-                  "70 6e c": 2,
-                  "7 1f 6e": 1,
-                  "a 38 7": 1,
-                  "12 28 14": 1,
-                  "12 12 6e": 1,
-                  "c 1c 6e": 1,
-                  "c 1a 6e": 1,
-                  "70 72 22": 1,
-                  "1f 6e a": 1,
-                  "12 28 6e": 1,
-                  "d8 28 d": 1,
-                  "1a 70 6e": 2,
-                  "6e c 1a": 1,
-                  "1a 22 1a": 1,
-                  "1a 12 71": 3,
-                  "6e c 12": 1,
-                  "1a 70 22": 1,
-                  "22 70 12": 1,
-                  "28 d 1a": 1
-                }
-              },
               "size": 580,
               "debugItemCount": 54,
               "instructionCount": 99,
@@ -5375,11 +3745,6 @@
               "stringReferenceCounts": {
                 "": 1
               },
-              "nGramTable": {
-                "nGramToCount": {
-                  "1a 69 e": 1
-                }
-              },
               "size": 59,
               "debugItemCount": 3,
               "instructionCount": 3,
@@ -5401,9 +3766,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {}
-              },
               "size": 56,
               "debugItemCount": 2,
               "instructionCount": 2,
@@ -5480,78 +3842,6 @@
               "stringReferenceCounts": {
                 "[swarm-mon] [%d/%d] active:%d, completed:%d task:%d isShutdown:%s isTerminated:%s": 1
               },
-              "nGramTable": {
-                "nGramToCount": {
-                  "38 e 1": 1,
-                  "94 54 6e": 1,
-                  "54 54 6e": 1,
-                  "a 71 c": 3,
-                  "38 16 71": 1,
-                  "1 71 c": 2,
-                  "12 54 54": 1,
-                  "4d 71 c": 1,
-                  "c 6e 54": 1,
-                  "12 62 1a": 1,
-                  "12 54 6e": 7,
-                  "b 71 c": 2,
-                  "6e c 1f": 1,
-                  "16 71 55": 1,
-                  "6e a 39": 1,
-                  "54 6e c": 1,
-                  "6e a 37": 1,
-                  "6e a 3d": 1,
-                  "6e a 38": 3,
-                  "54 6e b": 2,
-                  "54 6e a": 12,
-                  "55 38 28": 1,
-                  "55 38 16": 1,
-                  "70 6e d8": 1,
-                  "71 c 6e": 1,
-                  "38 1 71": 2,
-                  "22 70 6e": 1,
-                  "6e a 35": 1,
-                  "39 54 6e": 1,
-                  "6e a 71": 3,
-                  "12 12 62": 1,
-                  "c 1f 54": 1,
-                  "d8 54 6e": 1,
-                  "1f 54 22": 1,
-                  "37 12 54": 1,
-                  "6e b 71": 2,
-                  "c 4d 12": 6,
-                  "71 55 38": 1,
-                  "35 55 38": 1,
-                  "1a 12 23": 1,
-                  "6e d8 54": 1,
-                  "a 38 e": 1,
-                  "3d 54 6e": 1,
-                  "6e 54 6e": 1,
-                  "54 22 70": 1,
-                  "1 28 54": 1,
-                  "a 38 1": 2,
-                  "4d 12 54": 6,
-                  "12 12 12": 1,
-                  "12 23 12": 1,
-                  "62 1a 12": 1,
-                  "28 d 28": 1,
-                  "38 28 d": 1,
-                  "a 94 54": 1,
-                  "23 12 54": 1,
-                  "e 1 28": 1,
-                  "71 c 4d": 7,
-                  "a 3d 54": 1,
-                  "a 35 55": 1,
-                  "a 37 12": 1,
-                  "28 1 28": 1,
-                  "6e a 54": 1,
-                  "6e a 94": 1,
-                  "c 4d 71": 1,
-                  "a 54 6e": 1,
-                  "28 54 6e": 1,
-                  "1 28 1": 1,
-                  "a 39 54": 1
-                }
-              },
               "size": 540,
               "debugItemCount": 31,
               "instructionCount": 115,
@@ -5576,14 +3866,6 @@
                 "5c": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "12 5c 5b": 1,
-                  "5c 5b 5b": 1,
-                  "70 12 5c": 1,
-                  "5b 5b e": 1
-                }
-              },
               "size": 89,
               "debugItemCount": 6,
               "instructionCount": 6,
@@ -5618,11 +3900,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "5b 70 e": 1
-                }
-              },
               "size": 72,
               "debugItemCount": 3,
               "instructionCount": 3,
@@ -5655,23 +3932,6 @@
               },
               "stringReferenceCounts": {
                 "http://": 1
-              },
-              "nGramTable": {
-                "nGramToCount": {
-                  "54 14 6e": 2,
-                  "38 12 6e": 1,
-                  "a 38 12": 1,
-                  "6e a 38": 1,
-                  "14 6e c": 2,
-                  "c 1f 1a": 1,
-                  "c 1f 6e": 1,
-                  "1f 1a 6e": 1,
-                  "1a 6e e": 1,
-                  "12 6e 54": 1,
-                  "6e 54 14": 1,
-                  "1f 6e a": 1,
-                  "6e c 1f": 2
-                }
               },
               "size": 147,
               "debugItemCount": 9,
@@ -5706,9 +3966,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {}
-              },
               "size": 57,
               "debugItemCount": 2,
               "instructionCount": 2,
@@ -5745,21 +4002,6 @@
               "stringReferenceCounts": {
                 " has been rejected from queue": 1
               },
-              "nGramTable": {
-                "nGramToCount": {
-                  "71 c 70": 1,
-                  "c 70 1a": 1,
-                  "c 6e e": 1,
-                  "c 6e c": 1,
-                  "62 22 6e": 1,
-                  "6e c 6e": 2,
-                  "6e c 71": 1,
-                  "1a 6e c": 1,
-                  "70 1a 6e": 1,
-                  "22 6e c": 1,
-                  "c 71 c": 1
-                }
-              },
               "size": 120,
               "debugItemCount": 5,
               "instructionCount": 14,
@@ -5789,9 +4031,6 @@
               "frameworkFieldReferenceCounts": {},
               "opCounts": {},
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {}
-              },
               "size": 24,
               "debugItemCount": 0,
               "instructionCount": 0,
@@ -5822,9 +4061,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {}
-              },
               "size": 67,
               "debugItemCount": 2,
               "instructionCount": 1,
@@ -5843,9 +4079,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {}
-              },
               "size": 67,
               "debugItemCount": 2,
               "instructionCount": 1,
@@ -5868,11 +4101,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "5b 70 e": 1
-                }
-              },
               "size": 70,
               "debugItemCount": 3,
               "instructionCount": 3,
@@ -5898,15 +4126,6 @@
                 "1f": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "54 14 6e": 1,
-                  "1f 6e e": 1,
-                  "14 6e c": 1,
-                  "c 1f 6e": 1,
-                  "6e c 1f": 1
-                }
-              },
               "size": 90,
               "debugItemCount": 5,
               "instructionCount": 7,
@@ -5966,36 +4185,6 @@
                 "Importing URL: ": 1,
                 "Error accessing URL:\n": 1
               },
-              "nGramTable": {
-                "nGramToCount": {
-                  "d 22 1a": 1,
-                  "70 22 70": 1,
-                  "12 22 70": 1,
-                  "c 6e c": 2,
-                  "c 71 12": 1,
-                  "70 6e c": 2,
-                  "72 c 11": 1,
-                  "72 c 72": 2,
-                  "c 6e 12": 1,
-                  "c 72 c": 2,
-                  "22 70 22": 1,
-                  "22 1a 70": 2,
-                  "1a 70 6e": 2,
-                  "c 12 71": 1,
-                  "70 72 c": 1,
-                  "6e 12 28": 1,
-                  "71 c 6e": 1,
-                  "11 d 22": 1,
-                  "12 71 c": 1,
-                  "1a 22 1a": 1,
-                  "6e c 12": 1,
-                  "71 12 22": 1,
-                  "6e c 71": 1,
-                  "6e c 6e": 2,
-                  "c 11 d": 1,
-                  "22 70 72": 1
-                }
-              },
               "size": 256,
               "debugItemCount": 19,
               "instructionCount": 35,
@@ -6044,48 +4233,6 @@
                 "ds-targets.xml": 1,
                 "/": 1
               },
-              "nGramTable": {
-                "nGramToCount": {
-                  "e 22 6e": 1,
-                  "63 38 71": 1,
-                  "c 1f 63": 1,
-                  "c 6e 28": 1,
-                  "c 6e c": 1,
-                  "c 1f 22": 1,
-                  "70 1a 6e": 1,
-                  "22 6e c": 1,
-                  "c 22 1a": 1,
-                  "a 38 6e": 1,
-                  "70 6e a": 1,
-                  "6e 14 6e": 2,
-                  "6f 14 6e": 1,
-                  "6e 70 e": 1,
-                  "c 6e 70": 1,
-                  "6e 1a 6e": 1,
-                  "1a 6e 14": 1,
-                  "69 6f 14": 1,
-                  "6e c 1f": 2,
-                  "c 71 c": 1,
-                  "38 6e c": 1,
-                  "22 1a 70": 1,
-                  "1f 63 38": 1,
-                  "1a 70 6e": 1,
-                  "1f 22 70": 1,
-                  "6e a 38": 1,
-                  "14 6e c": 2,
-                  "14 6e 1a": 1,
-                  "1a 6e c": 1,
-                  "38 71 c": 1,
-                  "71 c 70": 1,
-                  "70 e 22": 1,
-                  "71 c 22": 1,
-                  "70 6e 14": 1,
-                  "c 70 1a": 1,
-                  "22 70 6e": 1,
-                  "6e c 71": 1,
-                  "6e c 6e": 3
-                }
-              },
               "size": 303,
               "debugItemCount": 24,
               "instructionCount": 45,
@@ -6106,11 +4253,6 @@
                 "a": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "70 a f": 1
-                }
-              },
               "size": 64,
               "debugItemCount": 2,
               "instructionCount": 3,
@@ -6180,103 +4322,6 @@
                 "File not found.": 2,
                 "DroidSwarm": 4
               },
-              "nGramTable": {
-                "nGramToCount": {
-                  "8 6e c": 2,
-                  "8 70 c": 1,
-                  "70 1c 72": 1,
-                  "70 22 70": 1,
-                  "6e 1a 22": 2,
-                  "c 6e 1a": 3,
-                  "c 6e c": 6,
-                  "c 71 12": 2,
-                  "72 c 1f": 1,
-                  "39 12 29": 1,
-                  "71 12 29": 2,
-                  "71 12 28": 1,
-                  "8 71 c": 4,
-                  "29 1c 72": 1,
-                  "72 a 39": 1,
-                  "70 c 39": 1,
-                  "c 6e 12": 1,
-                  "12 54 6e": 1,
-                  "c 71 6e": 1,
-                  "c 72 a": 1,
-                  "c 72 c": 1,
-                  "f 6e a": 1,
-                  "6e c 1f": 2,
-                  "22 1a 70": 6,
-                  "54 6e c": 2,
-                  "22 22 70": 1,
-                  "6e a 38": 1,
-                  "6e a 39": 1,
-                  "1a 6e c": 1,
-                  "1f 14 8": 1,
-                  "6e 12 28": 1,
-                  "71 c 6e": 4,
-                  "70 70 1c": 1,
-                  "72 c 22": 1,
-                  "12 8 71": 4,
-                  "22 70 6e": 1,
-                  "14 8 6e": 2,
-                  "6e 1a 1a": 1,
-                  "c 1f 1a": 1,
-                  "1f 7 12": 1,
-                  "c 1f 14": 1,
-                  "6e c 71": 3,
-                  "6e c 6e": 6,
-                  "22 70 70": 1,
-                  "39 12 f": 1,
-                  "6e c 72": 2,
-                  "6e 62 6e": 1,
-                  "d 22 1a": 2,
-                  "c 22 70": 1,
-                  "29 72 c": 1,
-                  "1f 7 29": 1,
-                  "1a 12 8": 1,
-                  "7 29 d": 1,
-                  "c 1f 6e": 1,
-                  "d 1a 12": 1,
-                  "1a 1a 71": 1,
-                  "70 6e c": 5,
-                  "70 6e a": 1,
-                  "1f 6e c": 1,
-                  "12 29 72": 1,
-                  "a 39 22": 1,
-                  "12 f 6e": 1,
-                  "6e d8 29": 1,
-                  "71 6e 62": 1,
-                  "a 38 22": 1,
-                  "12 29 8": 1,
-                  "70 54 6e": 1,
-                  "1a 70 54": 1,
-                  "1a 71 12": 1,
-                  "29 8 70": 1,
-                  "c 1a 6e": 1,
-                  "1c 72 c": 2,
-                  "12 28 d": 2,
-                  "22 70 22": 1,
-                  "29 d 22": 1,
-                  "1a 70 6e": 5,
-                  "c 7 1f": 2,
-                  "1f 1a 22": 1,
-                  "6e c 1a": 1,
-                  "38 22 22": 1,
-                  "28 d 22": 1,
-                  "c 39 12": 1,
-                  "7 1f 7": 2,
-                  "a 39 12": 1,
-                  "62 6e d8": 1,
-                  "c 12 8": 3,
-                  "1a 22 1a": 3,
-                  "6e c 12": 3,
-                  "39 22 1a": 1,
-                  "7 12 54": 1,
-                  "72 c 7": 2,
-                  "12 29 1c": 1,
-                  "28 d 1a": 1
-                }
-              },
               "size": 819,
               "debugItemCount": 67,
               "instructionCount": 151,
@@ -6298,9 +4343,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {}
-              },
               "size": 57,
               "debugItemCount": 2,
               "instructionCount": 2,
@@ -6332,25 +4374,6 @@
                 "39": 2
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "39 6e a": 1,
-                  "1f 22 70": 2,
-                  "6e a 39": 2,
-                  "14 6e c": 2,
-                  "c 1f 22": 2,
-                  "12 6e e": 1,
-                  "70 6e 6e": 1,
-                  "70 6e 14": 1,
-                  "6e 14 6e": 1,
-                  "a 39 12": 1,
-                  "a 39 6e": 1,
-                  "6e 6e a": 1,
-                  "22 70 6e": 2,
-                  "39 12 6e": 1,
-                  "6e c 1f": 2
-                }
-              },
               "size": 169,
               "debugItemCount": 10,
               "instructionCount": 23,
@@ -6370,9 +4393,6 @@
                 "62": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {}
-              },
               "size": 53,
               "debugItemCount": 2,
               "instructionCount": 2,
@@ -6425,24 +4445,6 @@
                 "DroidSwarm": 1,
                 "new max threads: ": 1
               },
-              "nGramTable": {
-                "nGramToCount": {
-                  "22 1a 70": 1,
-                  "54 38 54": 1,
-                  "54 52 6e": 1,
-                  "1a 70 6e": 1,
-                  "71 54 38": 1,
-                  "c 6e c": 1,
-                  "52 6e e": 1,
-                  "c 71 54": 1,
-                  "70 6e c": 1,
-                  "59 1a 22": 1,
-                  "1a 22 1a": 1,
-                  "38 54 52": 1,
-                  "6e c 71": 1,
-                  "6e c 6e": 1
-                }
-              },
               "size": 129,
               "debugItemCount": 6,
               "instructionCount": 16,
@@ -6476,29 +4478,6 @@
                 "6e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "54 38 54": 1,
-                  "54 12 4d": 1,
-                  "12 54 38": 1,
-                  "54 6e 28": 1,
-                  "54 70 54": 1,
-                  "54 54 70": 2,
-                  "70 e 54": 1,
-                  "4d 54 54": 2,
-                  "4d 54 12": 1,
-                  "71 c 4d": 1,
-                  "e 54 62": 1,
-                  "62 4d 54": 1,
-                  "12 4d 54": 1,
-                  "54 62 4d": 1,
-                  "70 54 6e": 1,
-                  "38 54 71": 1,
-                  "c 4d 54": 1,
-                  "54 70 e": 1,
-                  "54 71 c": 1
-                }
-              },
               "size": 155,
               "debugItemCount": 9,
               "instructionCount": 23,
@@ -6518,9 +4497,6 @@
                 "54": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {}
-              },
               "size": 62,
               "debugItemCount": 2,
               "instructionCount": 2,
@@ -6540,11 +4516,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "6e 6e e": 1
-                }
-              },
               "size": 63,
               "debugItemCount": 4,
               "instructionCount": 3,
@@ -6584,33 +4555,6 @@
                 "setForeground": 1,
                 "startForeground": 1,
                 "stopForeground": 1
-              },
-              "nGramTable": {
-                "nGramToCount": {
-                  "22 1a 70": 1,
-                  "5b 28 d": 1,
-                  "d 22 1a": 1,
-                  "12 5b 5b": 1,
-                  "c 1f 5b": 1,
-                  "1a 62 6e": 3,
-                  "1a 70 27": 1,
-                  "5b e d": 1,
-                  "6e c 1a": 3,
-                  "5b 6e c": 3,
-                  "62 6e c": 3,
-                  "1a 6e c": 1,
-                  "1f 5b 6e": 1,
-                  "28 d 22": 1,
-                  "d 12 5b": 1,
-                  "c 1a 62": 3,
-                  "c 5b 28": 1,
-                  "6e c 5b": 3,
-                  "e d 12": 1,
-                  "5b 5b 6e": 1,
-                  "c 5b e": 1,
-                  "c 5b 6e": 1,
-                  "6e c 1f": 1
-                }
               },
               "size": 234,
               "debugItemCount": 19,
@@ -6659,41 +4603,6 @@
                 "DroidSwarm": 1,
                 "Swarm beginning!": 1
               },
-              "nGramTable": {
-                "nGramToCount": {
-                  "38 e 1a": 1,
-                  "62 76 5b": 1,
-                  "70 22 70": 1,
-                  "70 5b 22": 1,
-                  "12 52 16": 1,
-                  "76 5b 22": 1,
-                  "62 70 5b": 1,
-                  "71 22 13": 1,
-                  "52 16 62": 1,
-                  "70 22 12": 1,
-                  "16 62 76": 1,
-                  "1a 1a 71": 1,
-                  "6e 54 6e": 1,
-                  "54 62 70": 1,
-                  "22 12 52": 1,
-                  "13 70 22": 1,
-                  "22 13 70": 1,
-                  "54 70 5b": 1,
-                  "55 38 e": 1,
-                  "6e 5c 28": 1,
-                  "22 70 22": 1,
-                  "22 54 70": 1,
-                  "54 6e 5c": 1,
-                  "22 54 62": 1,
-                  "5b 54 6e": 1,
-                  "54 6e 54": 1,
-                  "e 1a 1a": 1,
-                  "1a 71 22": 1,
-                  "12 55 38": 1,
-                  "70 5b 54": 1,
-                  "5b 22 54": 2
-                }
-              },
               "size": 225,
               "debugItemCount": 20,
               "instructionCount": 34,
@@ -6722,17 +4631,6 @@
               "stringReferenceCounts": {
                 "ApiDemos": 2,
                 "Unable to invoke method": 2
-              },
-              "nGramTable": {
-                "nGramToCount": {
-                  "1a 1a 71": 2,
-                  "71 28 d": 1,
-                  "e d 1a": 1,
-                  "d 1a 1a": 2,
-                  "6e e d": 1,
-                  "28 d 1a": 1,
-                  "1a 71 28": 2
-                }
               },
               "size": 137,
               "debugItemCount": 10,
@@ -6784,43 +4682,6 @@
                 ": ": 1,
                 "Received start id ": 1
               },
-              "nGramTable": {
-                "nGramToCount": {
-                  "14 14 1a": 1,
-                  "52 de 59": 1,
-                  "14 1a 22": 1,
-                  "71 22 14": 1,
-                  "c 6e c": 4,
-                  "c 71 22": 1,
-                  "12 15 71": 1,
-                  "6e 12 f": 1,
-                  "6e 52 de": 1,
-                  "70 6e c": 1,
-                  "70 12 15": 1,
-                  "1c 70 12": 1,
-                  "de 59 70": 1,
-                  "c 6e 52": 1,
-                  "22 14 6e": 1,
-                  "70 22 1c": 1,
-                  "c 1a 6e": 1,
-                  "c 71 b": 1,
-                  "22 1a 70": 1,
-                  "15 71 c": 1,
-                  "59 70 6e": 1,
-                  "1a 70 6e": 1,
-                  "14 6e c": 1,
-                  "6e c 1a": 1,
-                  "1a 6e c": 1,
-                  "70 6e 12": 1,
-                  "71 c 6e": 1,
-                  "71 b 70": 1,
-                  "b 70 22": 1,
-                  "1a 22 1a": 1,
-                  "6e c 71": 2,
-                  "6e c 6e": 4,
-                  "22 1c 70": 1
-                }
-              },
               "size": 277,
               "debugItemCount": 20,
               "instructionCount": 42,
@@ -6849,19 +4710,6 @@
                 "5c": 2
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "e 12 5c": 1,
-                  "6e 54 12": 1,
-                  "5c 54 6e": 2,
-                  "12 5c 54": 2,
-                  "39 e 12": 1,
-                  "54 6e 28": 1,
-                  "54 6e 54": 1,
-                  "54 12 5c": 1,
-                  "55 39 e": 1
-                }
-              },
               "size": 104,
               "debugItemCount": 7,
               "instructionCount": 13,
@@ -6893,23 +4741,6 @@
                 "62": 2
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "70 e 54": 1,
-                  "4d 54 54": 2,
-                  "6e 54 62": 1,
-                  "e 54 6e": 1,
-                  "54 38 54": 1,
-                  "62 4d 54": 2,
-                  "54 62 4d": 2,
-                  "12 54 38": 1,
-                  "54 6e 54": 1,
-                  "54 70 28": 1,
-                  "38 54 62": 1,
-                  "54 70 e": 1,
-                  "54 54 70": 2
-                }
-              },
               "size": 136,
               "debugItemCount": 8,
               "instructionCount": 19,
@@ -6937,22 +4768,6 @@
                 "1c": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "62 4d 1c": 1,
-                  "4d 69 23": 1,
-                  "62 4d 69": 2,
-                  "4d 69 12": 1,
-                  "4d 1c 4d": 1,
-                  "12 12 23": 1,
-                  "69 23 62": 1,
-                  "1c 4d 69": 1,
-                  "12 23 62": 2,
-                  "69 12 23": 1,
-                  "23 62 4d": 3,
-                  "4d 69 e": 1
-                }
-              },
               "size": 120,
               "debugItemCount": 7,
               "instructionCount": 18,
@@ -6994,32 +4809,6 @@
                 "Destroying service.": 1,
                 "Error saving targets: ": 1
               },
-              "nGramTable": {
-                "nGramToCount": {
-                  "22 1a 70": 2,
-                  "d 22 1a": 1,
-                  "1a 70 6e": 2,
-                  "6e 1a 22": 1,
-                  "c 6e 1a": 1,
-                  "c 6e c": 2,
-                  "c 12 71": 1,
-                  "71 c 6e": 1,
-                  "70 6e c": 2,
-                  "70 e d": 1,
-                  "1a 1a 71": 1,
-                  "c 71 28": 1,
-                  "12 71 c": 1,
-                  "e d 22": 1,
-                  "1a 22 1a": 1,
-                  "71 14 70": 1,
-                  "1a 71 71": 1,
-                  "6e c 71": 1,
-                  "6e c 12": 1,
-                  "6e c 6e": 2,
-                  "71 71 14": 1,
-                  "14 70 e": 1
-                }
-              },
               "size": 199,
               "debugItemCount": 10,
               "instructionCount": 29,
@@ -7047,24 +4836,6 @@
                 "5c": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {
-                  "5c 23 5b": 1,
-                  "70 22 70": 1,
-                  "23 5b 12": 1,
-                  "12 5c 23": 1,
-                  "59 12 5c": 1,
-                  "23 5b 23": 1,
-                  "70 5b 59": 1,
-                  "5b 12 23": 1,
-                  "22 70 5b": 1,
-                  "12 23 5b": 1,
-                  "5b 23 5b": 1,
-                  "23 5b e": 1,
-                  "12 70 22": 1,
-                  "5b 59 12": 1
-                }
-              },
               "size": 119,
               "debugItemCount": 9,
               "instructionCount": 16,
@@ -7110,19 +4881,6 @@
                 "DroidSwarm": 1,
                 "Watching storage: ": 1
               },
-              "nGramTable": {
-                "nGramToCount": {
-                  "70 6e c": 1,
-                  "22 1a 70": 1,
-                  "c 71 71": 1,
-                  "1a 70 6e": 1,
-                  "71 71 e": 1,
-                  "c 6e c": 2,
-                  "1a 22 1a": 1,
-                  "6e c 71": 1,
-                  "6e c 6e": 2
-                }
-              },
               "size": 118,
               "debugItemCount": 4,
               "instructionCount": 13,
@@ -7144,9 +4902,6 @@
                 "e": 1
               },
               "stringReferenceCounts": {},
-              "nGramTable": {
-                "nGramToCount": {}
-              },
               "size": 59,
               "debugItemCount": 3,
               "instructionCount": 2,
@@ -7195,19 +4950,6 @@
             "DroidSwarm": 1,
             "Watching storage: ": 1
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "70 6e c": 1,
-              "22 1a 70": 1,
-              "c 71 71": 1,
-              "1a 70 6e": 1,
-              "71 71 e": 1,
-              "c 6e c": 2,
-              "1a 22 1a": 1,
-              "6e c 71": 1,
-              "6e c 6e": 2
-            }
-          },
           "size": 118,
           "debugItemCount": 4,
           "instructionCount": 13,
@@ -7255,44 +4997,6 @@
             "ds-targets.xml": 1,
             "/": 1
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "e 22 6e": 1,
-              "63 38 71": 1,
-              "54 14 6e": 2,
-              "38 12 6e": 1,
-              "c 1f 63": 1,
-              "c 6e 28": 1,
-              "c 6e c": 1,
-              "c 1f 6e": 1,
-              "70 1a 6e": 1,
-              "22 6e c": 1,
-              "c 22 1a": 1,
-              "a 38 6e": 1,
-              "70 6e a": 1,
-              "6e e 22": 1,
-              "c 6e e": 1,
-              "6e 54 14": 1,
-              "1f 6e a": 1,
-              "6e c 1f": 2,
-              "c 71 c": 1,
-              "38 6e c": 1,
-              "22 1a 70": 1,
-              "1f 63 38": 1,
-              "1a 70 6e": 1,
-              "6e a 38": 2,
-              "14 6e c": 2,
-              "1a 6e c": 1,
-              "38 71 c": 1,
-              "71 c 70": 1,
-              "71 c 22": 1,
-              "c 70 1a": 1,
-              "a 38 12": 1,
-              "6e c 71": 1,
-              "6e c 6e": 3,
-              "12 6e 54": 1
-            }
-          },
           "size": 269,
           "debugItemCount": 20,
           "instructionCount": 42,
@@ -7313,11 +5017,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "54 71 e": 1
-            }
-          },
           "size": 69,
           "debugItemCount": 3,
           "instructionCount": 3,
@@ -7337,9 +5036,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {}
-          },
           "size": 63,
           "debugItemCount": 2,
           "instructionCount": 2,
@@ -7391,46 +5087,6 @@
             "Ok": 1,
             "": 1
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "6e 1a 22": 1,
-              "c 6e 1a": 1,
-              "72 22 70": 1,
-              "c 6e a": 1,
-              "c 6e c": 1,
-              "70 6e 6e": 1,
-              "70 6e c": 1,
-              "1a 1a 72": 1,
-              "6e 14 6e": 1,
-              "72 c 1a": 1,
-              "c 1a 72": 1,
-              "72 72 22": 1,
-              "1a 72 72": 1,
-              "1a 72 c": 1,
-              "12 12 6e": 1,
-              "6e 6e e": 1,
-              "1a 6e 14": 1,
-              "c 1a 6e": 1,
-              "39 72 c": 1,
-              "1a 22 70": 1,
-              "14 6e c": 1,
-              "6e a 39": 1,
-              "54 6e c": 1,
-              "6e c 1a": 2,
-              "e d 28": 1,
-              "12 6e c": 2,
-              "72 c 6e": 1,
-              "c 54 6e": 1,
-              "a 39 72": 1,
-              "c 1a 1a": 1,
-              "c 12 6e": 1,
-              "22 70 6e": 2,
-              "6e c 54": 1,
-              "6e c 12": 1,
-              "6e c 6e": 2,
-              "6e e d": 1
-            }
-          },
           "size": 292,
           "debugItemCount": 28,
           "instructionCount": 42,
@@ -7450,9 +5106,6 @@
             "54": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {}
-          },
           "size": 60,
           "debugItemCount": 2,
           "instructionCount": 2,
@@ -7521,81 +5174,6 @@
             "Exported ": 1,
             "Error saving export: ": 1
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "f 63 39": 1,
-              "c 62 6e": 1,
-              "70 22 70": 1,
-              "38 7 1f": 1,
-              "6e 1a 22": 1,
-              "c 6e 1a": 1,
-              "c 6e c": 5,
-              "c 71 12": 1,
-              "71 12 29": 1,
-              "63 39 1a": 2,
-              "6e 12 f": 1,
-              "39 1a 12": 2,
-              "12 6e a": 1,
-              "6e c 1c": 1,
-              "72 22 1a": 1,
-              "c 6e 12": 3,
-              "c 72 c": 1,
-              "70 12 12": 1,
-              "6e c 1f": 1,
-              "38 6e d8": 1,
-              "38 6e c": 1,
-              "22 1a 70": 3,
-              "1f 22 70": 1,
-              "6e a 38": 2,
-              "1c 6e a": 1,
-              "14 6e c": 1,
-              "c 12 71": 1,
-              "1a 6e c": 1,
-              "6e c 38": 1,
-              "71 c 22": 1,
-              "6e 12 28": 2,
-              "71 c 6e": 4,
-              "72 c 62": 1,
-              "c 38 6e": 1,
-              "12 71 c": 4,
-              "6e a 34": 1,
-              "6e c 71": 1,
-              "d8 d8 28": 1,
-              "6e c 72": 1,
-              "6e c 6e": 5,
-              "28 14 6e": 1,
-              "22 70 72": 1,
-              "34 71 c": 1,
-              "12 f 63": 1,
-              "28 6e c": 1,
-              "c 1f 22": 1,
-              "d 1a 12": 1,
-              "6e d8 d8": 1,
-              "a 34 71": 1,
-              "62 6e c": 1,
-              "c 22 1a": 1,
-              "a 38 6e": 1,
-              "70 6e c": 2,
-              "7 1f 6e": 1,
-              "a 38 7": 1,
-              "12 28 14": 1,
-              "12 12 6e": 1,
-              "c 1c 6e": 1,
-              "c 1a 6e": 1,
-              "70 72 22": 1,
-              "1f 6e a": 1,
-              "12 28 6e": 1,
-              "d8 28 d": 1,
-              "1a 70 6e": 2,
-              "6e c 1a": 1,
-              "1a 22 1a": 1,
-              "1a 12 71": 3,
-              "6e c 12": 1,
-              "1a 70 22": 1,
-              "22 70 12": 1,
-              "28 d 1a": 1
-            }
-          },
           "size": 580,
           "debugItemCount": 54,
           "instructionCount": 99,
@@ -7618,11 +5196,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "5b 70 e": 1
-            }
-          },
           "size": 70,
           "debugItemCount": 3,
           "instructionCount": 3,
@@ -7653,22 +5226,6 @@
             "1d": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "a 3a 54": 1,
-              "e 54 6e": 1,
-              "1d 6e a": 1,
-              "28 d 1e": 1,
-              "54 6e 28": 1,
-              "54 6e 1e": 1,
-              "6e a 3a": 1,
-              "3a 54 6e": 1,
-              "1e e 54": 1,
-              "6e 1e e": 1,
-              "d 1e 27": 1,
-              "6e 28 d": 1
-            }
-          },
           "size": 138,
           "debugItemCount": 9,
           "instructionCount": 14,
@@ -7690,9 +5247,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {}
-          },
           "size": 57,
           "debugItemCount": 2,
           "instructionCount": 2,
@@ -7778,149 +5332,6 @@
             "At least one URL required.": 1,
             "Name required.": 1
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "78 c 6e": 1,
-              "78 c 1a": 1,
-              "77 13 29": 1,
-              "74 13 f": 1,
-              "46 6e d8": 1,
-              "77 b 14": 2,
-              "46 74 d8": 1,
-              "78 c 77": 3,
-              "2 2 6e": 1,
-              "2 2 32": 1,
-              "76 8 5b": 1,
-              "76 8 6e": 2,
-              "78 c 74": 2,
-              "71 c 74": 10,
-              "71 c 14": 1,
-              "76 22 70": 1,
-              "74 a 39": 2,
-              "2 8 59": 1,
-              "6e a 2": 1,
-              "6e c 21": 1,
-              "77 b 31": 1,
-              "74 13 28": 3,
-              "74 c 13": 6,
-              "77 a 71": 1,
-              "6e c 1f": 7,
-              "74 13 29": 5,
-              "5b 62 8": 1,
-              "6e a 3d": 1,
-              "a 2 2": 1,
-              "6e a 38": 1,
-              "2 13 2": 3,
-              "6e c 77": 1,
-              "6e c 78": 7,
-              "62 8 8": 1,
-              "6e c 74": 6,
-              "a d8 2": 1,
-              "8 8 2": 10,
-              "5a 8 8": 1,
-              "74 d8 28": 1,
-              "1a 8 8": 1,
-              "5b 2 8": 1,
-              "c 1f 13": 1,
-              "1a 13 8": 4,
-              "c 1f 6e": 6,
-              "6e d8 28": 1,
-              "21 2 13": 3,
-              "59 8 8": 1,
-              "c 1a 8": 2,
-              "13 1a 8": 1,
-              "14 8 2": 7,
-              "f d 22": 1,
-              "13 29 46": 2,
-              "13 f d": 1,
-              "13 2 2": 3,
-              "13 22 76": 1,
-              "c 21 2": 1,
-              "1a 8 6e": 5,
-              "16 31 3c": 1,
-              "6e a d8": 1,
-              "3d 1a 13": 1,
-              "c 8 21": 2,
-              "13 8 8": 10,
-              "8 21 2": 2,
-              "2 71 c": 10,
-              "2 2 34": 2,
-              "b 14 8": 2,
-              "c 13 8": 6,
-              "c 14 8": 1,
-              "8 6e 77": 1,
-              "8 6e c": 8,
-              "8 6e a": 3,
-              "a 71 c": 1,
-              "c 6e a": 1,
-              "2 6e c": 10,
-              "c 77 a": 1,
-              "39 1a 13": 2,
-              "c 74 a": 2,
-              "34 22 76": 1,
-              "3c 1a 13": 1,
-              "3d 1a 8": 1,
-              "c 74 c": 6,
-              "29 46 74": 1,
-              "c 74 28": 1,
-              "34 14 8": 1,
-              "31 3c 1a": 1,
-              "22 1a 76": 6,
-              "31 3d 1a": 1,
-              "29 46 6e": 1,
-              "29 16 31": 1,
-              "c 77 b": 3,
-              "c 78 c": 7,
-              "d8 2 6e": 1,
-              "8 5b 8": 3,
-              "8 5b 2": 1,
-              "c 74 13": 9,
-              "22 70 6e": 1,
-              "6e 77 13": 1,
-              "b 31 3d": 1,
-              "32 13 1a": 1,
-              "8 5a 8": 3,
-              "38 1a 8": 1,
-              "8 59 8": 1,
-              "5b 8 5b": 2,
-              "5b 8 5a": 1,
-              "d 22 1a": 6,
-              "5a 8 5a": 2,
-              "2 32 13": 1,
-              "2 34 22": 1,
-              "22 76 22": 1,
-              "2 34 14": 1,
-              "13 28 d": 1,
-              "70 6e c": 1,
-              "13 29 d": 2,
-              "1f 6e c": 6,
-              "a 3d 1a": 1,
-              "1a 76 8": 6,
-              "29 d 22": 2,
-              "d8 28 d": 2,
-              "8 8 6e": 5,
-              "29 14 8": 1,
-              "8 8 5b": 2,
-              "6e c 1a": 1,
-              "8 2 71": 10,
-              "28 14 8": 1,
-              "6e c 8": 2,
-              "28 d 22": 3,
-              "13 28 1a": 1,
-              "13 28 14": 1,
-              "13 29 14": 1,
-              "a 39 1a": 2,
-              "8 2 6e": 8,
-              "8 5b 62": 1,
-              "76 8 2": 1,
-              "a 38 1a": 1,
-              "13 29 16": 1,
-              "76 8 8": 3,
-              "22 76 8": 1,
-              "28 1a 8": 1,
-              "1f 13 22": 1
-            }
-          },
           "size": 1838,
           "debugItemCount": 138,
           "instructionCount": 343,
@@ -7947,16 +5358,6 @@
             "22": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "5a 5b e": 1,
-              "70 22 70": 1,
-              "5b 16 5a": 1,
-              "16 5a 5b": 1,
-              "22 70 5b": 1,
-              "70 5b 16": 1
-            }
-          },
           "size": 97,
           "debugItemCount": 6,
           "instructionCount": 8,
@@ -7980,14 +5381,6 @@
             "22": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "12 6a e": 1,
-              "69 12 6a": 1,
-              "70 69 12": 1,
-              "22 70 69": 1
-            }
-          },
           "size": 75,
           "debugItemCount": 4,
           "instructionCount": 6,
@@ -8025,32 +5418,6 @@
             "1": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "54 54 6e": 1,
-              "d8 28 d": 1,
-              "28 d 1e": 1,
-              "6e a 38": 1,
-              "54 6e c": 1,
-              "34 1e f": 1,
-              "54 6e a": 2,
-              "12 12 54": 1,
-              "1 28 d8": 1,
-              "1e f 54": 1,
-              "1d 12 12": 1,
-              "1f 54 54": 1,
-              "f 54 6e": 1,
-              "a 38 1": 1,
-              "38 1 28": 1,
-              "6e a 34": 1,
-              "c 1f 54": 1,
-              "28 d8 28": 1,
-              "a 34 1e": 1,
-              "12 54 6e": 1,
-              "d 1e 27": 1,
-              "6e c 1f": 1
-            }
-          },
           "size": 186,
           "debugItemCount": 14,
           "instructionCount": 25,
@@ -8078,21 +5445,6 @@
             "Edit": 1,
             "Remove": 1,
             "Export": 1
-          },
-          "nGramTable": {
-            "nGramToCount": {
-              "12 1a 4d": 2,
-              "69 6a 12": 1,
-              "4d 12 1a": 2,
-              "12 69 e": 1,
-              "1a 4d 69": 1,
-              "23 1a 4d": 1,
-              "4d 69 6a": 1,
-              "1a 4d 12": 2,
-              "6a 12 69": 1,
-              "12 12 23": 1,
-              "12 23 1a": 1
-            }
           },
           "size": 108,
           "debugItemCount": 7,
@@ -8126,24 +5478,6 @@
           "stringReferenceCounts": {
             "mounted": 1,
             "mounted_ro": 1
-          },
-          "nGramTable": {
-            "nGramToCount": {
-              "6a 6a 28": 2,
-              "6a 6a e": 1,
-              "28 6a 6a": 1,
-              "6a e 1a": 1,
-              "38 6a 6a": 2,
-              "1a 6e a": 2,
-              "6a 28 6a": 1,
-              "6e a 38": 2,
-              "71 c 1a": 1,
-              "a 38 6a": 2,
-              "12 71 c": 1,
-              "e 1a 6e": 1,
-              "12 12 71": 1,
-              "c 1a 6e": 1
-            }
           },
           "size": 134,
           "debugItemCount": 10,
@@ -8201,51 +5535,6 @@
             "failed": 1,
             "reqs": 1
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "6e 62 54": 1,
-              "70 1a 54": 1,
-              "6e 28 72": 1,
-              "c 6e 1a": 1,
-              "c 6e c": 2,
-              "6e 1a 22": 2,
-              "c 6e 28": 1,
-              "70 16 71": 1,
-              "c 1f 22": 1,
-              "22 70 5b": 1,
-              "28 72 c": 1,
-              "5b 54 71": 1,
-              "6e 28 d": 1,
-              "22 70 1a": 1,
-              "72 c 1f": 1,
-              "62 38 6e": 1,
-              "72 a 39": 1,
-              "a 39 22": 1,
-              "6e 6e 28": 1,
-              "70 53 6e": 2,
-              "c 6e 6e": 1,
-              "62 54 6e": 1,
-              "c 72 a": 1,
-              "71 62 38": 1,
-              "38 6e 62": 1,
-              "28 d 28": 1,
-              "16 71 62": 1,
-              "1f 22 70": 1,
-              "1a 22 70": 2,
-              "54 6e 1a": 1,
-              "54 6e c": 1,
-              "53 6e c": 2,
-              "39 22 70": 1,
-              "71 c 6e": 1,
-              "22 70 16": 1,
-              "6e c 6e": 4,
-              "22 70 53": 2,
-              "1a 54 6e": 1,
-              "6e c 72": 1,
-              "70 5b 54": 1,
-              "54 71 c": 1
-            }
-          },
           "size": 338,
           "debugItemCount": 23,
           "instructionCount": 52,
@@ -8265,9 +5554,6 @@
             "54": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {}
-          },
           "size": 62,
           "debugItemCount": 2,
           "instructionCount": 2,
@@ -8290,11 +5576,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "5b 70 e": 1
-            }
-          },
           "size": 70,
           "debugItemCount": 3,
           "instructionCount": 3,
@@ -8314,9 +5595,6 @@
             "54": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {}
-          },
           "size": 60,
           "debugItemCount": 2,
           "instructionCount": 2,
@@ -8358,32 +5636,6 @@
             "Error loading saved targets:\n": 1,
             "Error loading saved targets.": 1
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "22 1a 70": 1,
-              "1a 70 6e": 1,
-              "c 6e c": 1,
-              "6e 1a 22": 1,
-              "c 6e 1a": 1,
-              "d 1a 12": 1,
-              "1a 71 28": 1,
-              "70 6e c": 1,
-              "71 c 6e": 1,
-              "1a 1a 71": 1,
-              "71 6e 28": 1,
-              "71 e d": 1,
-              "71 28 d": 1,
-              "12 71 c": 1,
-              "e d 1a": 1,
-              "1a 22 1a": 1,
-              "1a 12 71": 1,
-              "6e c 71": 1,
-              "6e c 6e": 1,
-              "d 1a 1a": 1,
-              "c 71 6e": 1,
-              "28 d 1a": 1
-            }
-          },
           "size": 183,
           "debugItemCount": 15,
           "instructionCount": 24,
@@ -8406,11 +5658,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "5b 70 e": 1
-            }
-          },
           "size": 70,
           "debugItemCount": 3,
           "instructionCount": 3,
@@ -8431,12 +5678,6 @@
             "6a": 2
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "6a 6a e": 1,
-              "12 6a 6a": 1
-            }
-          },
           "size": 62,
           "debugItemCount": 4,
           "instructionCount": 4,
@@ -8459,11 +5700,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "5b 70 e": 1
-            }
-          },
           "size": 68,
           "debugItemCount": 2,
           "instructionCount": 3,
@@ -8498,22 +5734,6 @@
             "DroidSwarm": 1,
             "Unbinding service.": 1
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "12 6a 12": 1,
-              "6e 12 6a": 1,
-              "1a 1a 71": 1,
-              "63 38 1a": 1,
-              "c 54 6e": 1,
-              "71 6e c": 1,
-              "12 69 e": 1,
-              "38 1a 1a": 1,
-              "6e c 54": 1,
-              "6a 12 69": 1,
-              "54 6e 12": 1,
-              "1a 71 6e": 1
-            }
-          },
           "size": 106,
           "debugItemCount": 7,
           "instructionCount": 14,
@@ -8534,11 +5754,6 @@
             "a": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "70 a f": 1
-            }
-          },
           "size": 64,
           "debugItemCount": 2,
           "instructionCount": 3,
@@ -8608,103 +5823,6 @@
             "File not found.": 2,
             "DroidSwarm": 4
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "8 6e c": 2,
-              "8 70 c": 1,
-              "70 1c 72": 1,
-              "70 22 70": 1,
-              "6e 1a 22": 2,
-              "c 6e 1a": 3,
-              "c 6e c": 6,
-              "c 71 12": 2,
-              "72 c 1f": 1,
-              "39 12 29": 1,
-              "71 12 29": 2,
-              "71 12 28": 1,
-              "8 71 c": 4,
-              "29 1c 72": 1,
-              "72 a 39": 1,
-              "70 c 39": 1,
-              "c 6e 12": 1,
-              "12 54 6e": 1,
-              "c 71 6e": 1,
-              "c 72 a": 1,
-              "c 72 c": 1,
-              "f 6e a": 1,
-              "6e c 1f": 2,
-              "22 1a 70": 6,
-              "54 6e c": 2,
-              "22 22 70": 1,
-              "6e a 38": 1,
-              "6e a 39": 1,
-              "1a 6e c": 1,
-              "1f 14 8": 1,
-              "6e 12 28": 1,
-              "71 c 6e": 4,
-              "70 70 1c": 1,
-              "72 c 22": 1,
-              "12 8 71": 4,
-              "22 70 6e": 1,
-              "14 8 6e": 2,
-              "6e 1a 1a": 1,
-              "c 1f 1a": 1,
-              "1f 7 12": 1,
-              "c 1f 14": 1,
-              "6e c 71": 3,
-              "6e c 6e": 6,
-              "22 70 70": 1,
-              "39 12 f": 1,
-              "6e c 72": 2,
-              "6e 62 6e": 1,
-              "d 22 1a": 2,
-              "c 22 70": 1,
-              "29 72 c": 1,
-              "1f 7 29": 1,
-              "1a 12 8": 1,
-              "7 29 d": 1,
-              "c 1f 6e": 1,
-              "d 1a 12": 1,
-              "1a 1a 71": 1,
-              "70 6e c": 5,
-              "70 6e a": 1,
-              "1f 6e c": 1,
-              "12 29 72": 1,
-              "a 39 22": 1,
-              "12 f 6e": 1,
-              "6e d8 29": 1,
-              "71 6e 62": 1,
-              "a 38 22": 1,
-              "12 29 8": 1,
-              "70 54 6e": 1,
-              "1a 70 54": 1,
-              "1a 71 12": 1,
-              "29 8 70": 1,
-              "c 1a 6e": 1,
-              "1c 72 c": 2,
-              "12 28 d": 2,
-              "22 70 22": 1,
-              "29 d 22": 1,
-              "1a 70 6e": 5,
-              "c 7 1f": 2,
-              "1f 1a 22": 1,
-              "6e c 1a": 1,
-              "38 22 22": 1,
-              "28 d 22": 1,
-              "c 39 12": 1,
-              "7 1f 7": 2,
-              "a 39 12": 1,
-              "62 6e d8": 1,
-              "c 12 8": 3,
-              "1a 22 1a": 3,
-              "6e c 12": 3,
-              "39 22 1a": 1,
-              "7 12 54": 1,
-              "72 c 7": 2,
-              "12 29 1c": 1,
-              "28 d 1a": 1
-            }
-          },
           "size": 819,
           "debugItemCount": 67,
           "instructionCount": 151,
@@ -8742,25 +5860,6 @@
             "0": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "c 6e 28": 1,
-              "54 1f 6e": 1,
-              "6e 28 0": 1,
-              "c 54 1f": 1,
-              "71 c 54": 1,
-              "71 c 6e": 2,
-              "28 0 100": 1,
-              "1f 6e 54": 1,
-              "6e 54 71": 2,
-              "e 54 71": 1,
-              "6f e 54": 1,
-              "52 2b 6f": 1,
-              "c 6e 54": 1,
-              "2b 6f e": 1,
-              "54 71 c": 3
-            }
-          },
           "size": 163,
           "debugItemCount": 9,
           "instructionCount": 21,
@@ -8787,22 +5886,6 @@
             "62": 3
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "6e 12 69": 1,
-              "a 38 54": 1,
-              "62 6e 12": 1,
-              "71 a 38": 1,
-              "62 38 62": 1,
-              "54 6e e": 1,
-              "69 54 71": 1,
-              "62 62 6e": 1,
-              "38 54 6e": 1,
-              "54 71 a": 1,
-              "38 62 62": 1,
-              "12 69 54": 1
-            }
-          },
           "size": 114,
           "debugItemCount": 7,
           "instructionCount": 14,
@@ -8850,41 +5933,6 @@
             "s": 1,
             "": 2
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "6e 62 38": 1,
-              "54 14 6e": 1,
-              "62 38 62": 1,
-              "c 6e c": 1,
-              "c 1f 6e": 1,
-              "37 1a 6e": 1,
-              "62 6e e": 1,
-              "70 1a 6e": 1,
-              "d8 1a 6e": 1,
-              "a 35 22": 1,
-              "6e e 1a": 1,
-              "38 62 6e": 1,
-              "c 12 37": 1,
-              "c 54 14": 1,
-              "e 1a 28": 1,
-              "6e c 1f": 1,
-              "35 22 71": 1,
-              "1a 6e a": 1,
-              "12 37 1a": 1,
-              "1a 28 1a": 1,
-              "14 6e c": 1,
-              "1a 6e c": 2,
-              "1f 6e 62": 1,
-              "71 c 70": 1,
-              "6e c 54": 1,
-              "c 70 1a": 1,
-              "22 71 c": 1,
-              "6e a 35": 1,
-              "6e c 6e": 1,
-              "6e c 12": 1,
-              "28 1a 28": 1
-            }
-          },
           "size": 226,
           "debugItemCount": 17,
           "instructionCount": 34,
@@ -8924,35 +5972,6 @@
           "stringReferenceCounts": {
             "No targets.": 1
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "6e 22 1c": 1,
-              "39 6e 22": 1,
-              "63 39 6e": 1,
-              "e 63 39": 1,
-              "1a 71 c": 1,
-              "6e a 39": 1,
-              "54 6e a": 1,
-              "12 70 28": 1,
-              "62 6e 6e": 1,
-              "6e e 63": 1,
-              "6e 12 70": 1,
-              "70 6e 70": 1,
-              "71 c 6e": 1,
-              "6e 70 28": 1,
-              "a 39 1a": 1,
-              "6e 6e 12": 1,
-              "28 62 6e": 1,
-              "39 1a 71": 1,
-              "c 6e e": 1,
-              "39 54 6e": 1,
-              "12 62 39": 1,
-              "70 28 62": 1,
-              "1c 70 6e": 1,
-              "22 1c 70": 1,
-              "62 39 54": 1
-            }
-          },
           "size": 175,
           "debugItemCount": 12,
           "instructionCount": 27,
@@ -8977,13 +5996,6 @@
             "22": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "70 22 70": 1,
-              "22 70 5b": 1,
-              "70 5b e": 1
-            }
-          },
           "size": 73,
           "debugItemCount": 4,
           "instructionCount": 5,
@@ -9004,11 +6016,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "54 71 e": 1
-            }
-          },
           "size": 69,
           "debugItemCount": 3,
           "instructionCount": 3,
@@ -9028,9 +6035,6 @@
             "62": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {}
-          },
           "size": 53,
           "debugItemCount": 2,
           "instructionCount": 2,
@@ -9057,18 +6061,6 @@
             "bb": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "1d 53 16": 1,
-              "bb 5a 1e": 1,
-              "5a 1e 10": 1,
-              "1e 10 d": 1,
-              "53 16 bb": 1,
-              "10 d 1e": 1,
-              "16 bb 5a": 1,
-              "d 1e 27": 1
-            }
-          },
           "size": 87,
           "debugItemCount": 2,
           "instructionCount": 10,
@@ -9090,11 +6082,6 @@
           },
           "stringReferenceCounts": {
             "": 1
-          },
-          "nGramTable": {
-            "nGramToCount": {
-              "1a 69 e": 1
-            }
           },
           "size": 59,
           "debugItemCount": 3,
@@ -9122,15 +6109,6 @@
           },
           "stringReferenceCounts": {
             "wifi": 1
-          },
-          "nGramTable": {
-            "nGramToCount": {
-              "1f 12 6e": 1,
-              "c 1f 12": 1,
-              "12 6e e": 1,
-              "1a 6e c": 1,
-              "6e c 1f": 1
-            }
           },
           "size": 80,
           "debugItemCount": 5,
@@ -9160,19 +6138,6 @@
             "1d": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "a 3a 54": 1,
-              "1d 6e a": 1,
-              "54 6e 1e": 1,
-              "6e a 3a": 1,
-              "3a 54 6e": 1,
-              "1e e d": 1,
-              "6e 1e e": 1,
-              "d 1e 27": 1,
-              "e d 1e": 1
-            }
-          },
           "size": 114,
           "debugItemCount": 8,
           "instructionCount": 11,
@@ -9213,33 +6178,6 @@
             "startForeground": 1,
             "stopForeground": 1
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "22 1a 70": 1,
-              "5b 28 d": 1,
-              "d 22 1a": 1,
-              "12 5b 5b": 1,
-              "c 1f 5b": 1,
-              "1a 62 6e": 3,
-              "1a 70 27": 1,
-              "5b e d": 1,
-              "6e c 1a": 3,
-              "5b 6e c": 3,
-              "62 6e c": 3,
-              "1a 6e c": 1,
-              "1f 5b 6e": 1,
-              "28 d 22": 1,
-              "d 12 5b": 1,
-              "c 1a 62": 3,
-              "c 5b 28": 1,
-              "6e c 5b": 3,
-              "e d 12": 1,
-              "5b 5b 6e": 1,
-              "c 5b e": 1,
-              "c 5b 6e": 1,
-              "6e c 1f": 1
-            }
-          },
           "size": 234,
           "debugItemCount": 19,
           "instructionCount": 37,
@@ -9261,9 +6199,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {}
-          },
           "size": 57,
           "debugItemCount": 2,
           "instructionCount": 2,
@@ -9290,14 +6225,6 @@
           "stringReferenceCounts": {
             "DroidSwarm": 1,
             "Service disconnected.": 1
-          },
-          "nGramTable": {
-            "nGramToCount": {
-              "1a 1a 71": 1,
-              "69 1a 1a": 1,
-              "12 69 1a": 1,
-              "1a 71 e": 1
-            }
           },
           "size": 78,
           "debugItemCount": 4,
@@ -9335,21 +6262,6 @@
           "stringReferenceCounts": {
             " has been rejected from queue": 1
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "71 c 70": 1,
-              "c 70 1a": 1,
-              "c 6e e": 1,
-              "c 6e c": 1,
-              "62 22 6e": 1,
-              "6e c 6e": 2,
-              "6e c 71": 1,
-              "1a 6e c": 1,
-              "70 1a 6e": 1,
-              "22 6e c": 1,
-              "c 71 c": 1
-            }
-          },
           "size": 120,
           "debugItemCount": 5,
           "instructionCount": 14,
@@ -9378,18 +6290,6 @@
             "1d": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "1d 54 6e": 1,
-              "1e 11 d": 1,
-              "1f 1e 11": 1,
-              "11 d 1e": 1,
-              "54 6e c": 1,
-              "c 1f 1e": 1,
-              "d 1e 27": 1,
-              "6e c 1f": 1
-            }
-          },
           "size": 95,
           "debugItemCount": 2,
           "instructionCount": 10,
@@ -9433,36 +6333,6 @@
             "Remove": 1,
             "Export": 1
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "69 70 28": 1,
-              "6e 28 1a": 1,
-              "c 1f 72": 1,
-              "f 1a 6e": 1,
-              "12 f 1a": 1,
-              "72 c 1f": 1,
-              "46 62 52": 1,
-              "72 a 62": 1,
-              "c 54 1a": 1,
-              "1f 72 a": 1,
-              "62 6e 28": 1,
-              "38 62 6e": 1,
-              "70 12 f": 1,
-              "a 38 62": 1,
-              "a 38 69": 2,
-              "62 52 6e": 1,
-              "a 62 46": 1,
-              "69 70 12": 1,
-              "62 46 62": 1,
-              "1a 6e a": 3,
-              "6e a 38": 3,
-              "28 1a 6e": 1,
-              "52 6e c": 1,
-              "6e c 54": 1,
-              "54 1a 6e": 1,
-              "38 69 70": 2
-            }
-          },
           "size": 233,
           "debugItemCount": 22,
           "instructionCount": 34,
@@ -9492,19 +6362,6 @@
             "8b": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "53 86 cd": 1,
-              "16 54 6e": 1,
-              "86 cd 8b": 1,
-              "54 53 86": 1,
-              "54 6e b": 1,
-              "6e b 54": 1,
-              "b 54 53": 1,
-              "8b bb 10": 1,
-              "cd 8b bb": 1
-            }
-          },
           "size": 80,
           "debugItemCount": 2,
           "instructionCount": 11,
@@ -9538,31 +6395,6 @@
           "stringReferenceCounts": {
             "": 2
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "70 1a 5b": 1,
-              "70 5b 5a": 1,
-              "70 5b 22": 2,
-              "5b 22 70": 2,
-              "5a 22 70": 1,
-              "16 5a 22": 1,
-              "22 70 5b": 3,
-              "13 59 1a": 1,
-              "5a 5a e": 1,
-              "5a 5a 5a": 1,
-              "1a 5b 16": 1,
-              "5b 5a 5a": 1,
-              "59 1a 5b": 1,
-              "1a 5b 13": 1,
-              "5a 17 5a": 1,
-              "5b 16 5a": 1,
-              "16 5a 17": 1,
-              "17 5a 16": 1,
-              "5b 13 59": 1,
-              "5a 16 5a": 1,
-              "16 70 1a": 1
-            }
-          },
           "size": 180,
           "debugItemCount": 15,
           "instructionCount": 27,
@@ -9587,14 +6419,6 @@
             "22": 2
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "70 6e e": 1,
-              "22 22 70": 1,
-              "22 70 70": 1,
-              "70 70 6e": 1
-            }
-          },
           "size": 79,
           "debugItemCount": 4,
           "instructionCount": 6,
@@ -9626,18 +6450,6 @@
           "stringReferenceCounts": {
             "target_list.xml": 1
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "70 1a 12": 1,
-              "62 72 6e": 1,
-              "1a 12 6e": 1,
-              "6e c 62": 1,
-              "72 6e e": 1,
-              "c 62 72": 1,
-              "12 6e c": 1,
-              "22 70 1a": 1
-            }
-          },
           "size": 111,
           "debugItemCount": 8,
           "instructionCount": 10,
@@ -9665,24 +6477,6 @@
             "5c": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "5c 23 5b": 1,
-              "70 22 70": 1,
-              "23 5b 12": 1,
-              "12 5c 23": 1,
-              "59 12 5c": 1,
-              "23 5b 23": 1,
-              "70 5b 59": 1,
-              "5b 12 23": 1,
-              "22 70 5b": 1,
-              "12 23 5b": 1,
-              "5b 23 5b": 1,
-              "23 5b e": 1,
-              "12 70 22": 1,
-              "5b 59 12": 1
-            }
-          },
           "size": 119,
           "debugItemCount": 9,
           "instructionCount": 16,
@@ -9707,13 +6501,6 @@
             "8d": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "6e a 8d": 1,
-              "54 6e a": 1,
-              "a 8d f": 1
-            }
-          },
           "size": 62,
           "debugItemCount": 2,
           "instructionCount": 5,
@@ -9733,9 +6520,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {}
-          },
           "size": 55,
           "debugItemCount": 2,
           "instructionCount": 2,
@@ -9754,9 +6538,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {}
-          },
           "size": 67,
           "debugItemCount": 2,
           "instructionCount": 1,
@@ -9777,11 +6558,6 @@
             "a": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "70 a f": 1
-            }
-          },
           "size": 64,
           "debugItemCount": 2,
           "instructionCount": 3,
@@ -9841,75 +6617,6 @@
             "Error opening socketet: ": 1,
             "Error writing header: ": 1
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "54 54 52": 1,
-              "54 52 70": 1,
-              "54 54 54": 1,
-              "c 6e c": 7,
-              "6e 1a 22": 3,
-              "c 6e a": 1,
-              "6e 29 d": 1,
-              "d 6e 29": 1,
-              "6e 27 d": 1,
-              "b 71 28": 1,
-              "d 6e 27": 1,
-              "6e 28 d": 1,
-              "d 54 6e": 3,
-              "70 c 22": 1,
-              "71 28 d": 3,
-              "c 71 29": 3,
-              "c 71 28": 3,
-              "c 6e 53": 1,
-              "b 70 c": 1,
-              "c 71 6e": 1,
-              "3b 71 c": 1,
-              "a 6e 54": 1,
-              "71 28 70": 1,
-              "71 29 d": 2,
-              "22 1a 70": 7,
-              "38 6e e": 1,
-              "29 d 6e": 2,
-              "31 3b 71": 1,
-              "54 6e 1a": 3,
-              "6e a 38": 1,
-              "5a 70 b": 1,
-              "22 54 54": 1,
-              "71 c 6e": 1,
-              "70 b 70": 1,
-              "70 b 71": 1,
-              "54 6e 53": 1,
-              "16 bb 5a": 1,
-              "6e c 71": 7,
-              "6e c 6e": 8,
-              "70 a 6e": 1,
-              "c 22 54": 1,
-              "53 16 bb": 1,
-              "28 70 a": 1,
-              "d 1a 22": 4,
-              "a 38 6e": 1,
-              "70 6e c": 8,
-              "6e 53 16": 1,
-              "71 6e 28": 1,
-              "6e 54 6e": 1,
-              "6e 53 31": 1,
-              "53 31 3b": 1,
-              "6e 6e c": 1,
-              "bb 5a 70": 1,
-              "27 d 1a": 1,
-              "29 d 1a": 1,
-              "28 d 54": 2,
-              "1a 70 6e": 7,
-              "e d 54": 1,
-              "c 54 6e": 1,
-              "6e c 54": 1,
-              "52 70 6e": 1,
-              "1a 22 1a": 7,
-              "54 6e 6e": 1,
-              "6e e d": 1,
-              "28 d 1a": 2
-            }
-          },
           "size": 800,
           "debugItemCount": 56,
           "instructionCount": 130,
@@ -9951,32 +6658,6 @@
             "Destroying service.": 1,
             "Error saving targets: ": 1
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "22 1a 70": 2,
-              "d 22 1a": 1,
-              "1a 70 6e": 2,
-              "6e 1a 22": 1,
-              "c 6e 1a": 1,
-              "c 6e c": 2,
-              "c 12 71": 1,
-              "71 c 6e": 1,
-              "70 6e c": 2,
-              "70 e d": 1,
-              "1a 1a 71": 1,
-              "c 71 28": 1,
-              "12 71 c": 1,
-              "e d 22": 1,
-              "1a 22 1a": 1,
-              "71 14 70": 1,
-              "1a 71 71": 1,
-              "6e c 71": 1,
-              "6e c 12": 1,
-              "6e c 6e": 2,
-              "71 71 14": 1,
-              "14 70 e": 1
-            }
-          },
           "size": 199,
           "debugItemCount": 10,
           "instructionCount": 29,
@@ -10016,25 +6697,6 @@
             "Wifi Not Connected!": 1,
             "Yes": 1
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "1a 22 70": 2,
-              "6e 1a 22": 2,
-              "c 6e 1a": 1,
-              "14 6e c": 1,
-              "12 22 70": 1,
-              "6e 6e 14": 1,
-              "1a 6e 6e": 1,
-              "70 6e 6e": 1,
-              "70 6e 1a": 2,
-              "6e 14 6e": 1,
-              "22 70 6e": 3,
-              "c 6e e": 1,
-              "6e 1a 6e": 1,
-              "6e c 6e": 2,
-              "6e 6e c": 1
-            }
-          },
           "size": 176,
           "debugItemCount": 13,
           "instructionCount": 23,
@@ -10072,24 +6734,6 @@
             "DroidSwarm": 1,
             "new max threads: ": 1
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "22 1a 70": 1,
-              "54 38 54": 1,
-              "54 52 6e": 1,
-              "1a 70 6e": 1,
-              "71 54 38": 1,
-              "c 6e c": 1,
-              "52 6e e": 1,
-              "c 71 54": 1,
-              "70 6e c": 1,
-              "59 1a 22": 1,
-              "1a 22 1a": 1,
-              "38 54 52": 1,
-              "6e c 71": 1,
-              "6e c 6e": 1
-            }
-          },
           "size": 129,
           "debugItemCount": 6,
           "instructionCount": 16,
@@ -10109,9 +6753,6 @@
             "54": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {}
-          },
           "size": 61,
           "debugItemCount": 2,
           "instructionCount": 2,
@@ -10133,9 +6774,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {}
-          },
           "size": 57,
           "debugItemCount": 2,
           "instructionCount": 2,
@@ -10156,11 +6794,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "54 71 e": 1
-            }
-          },
           "size": 69,
           "debugItemCount": 3,
           "instructionCount": 3,
@@ -10193,26 +6826,6 @@
           "stringReferenceCounts": {
             "DroidSwarm": 1
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "c 69 1a": 1,
-              "39 70 e": 1,
-              "1a 6e 70": 1,
-              "6e c 69": 1,
-              "71 6e 70": 1,
-              "70 70 70": 4,
-              "6e 70 70": 1,
-              "69 1a 6e": 1,
-              "70 71 6e": 1,
-              "70 a 39": 1,
-              "6f 14 6e": 1,
-              "70 70 71": 1,
-              "a 39 70": 1,
-              "14 6e 6e": 1,
-              "6e 6e c": 1,
-              "6e 70 a": 1
-            }
-          },
           "size": 176,
           "debugItemCount": 16,
           "instructionCount": 21,
@@ -10235,11 +6848,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "5b 70 e": 1
-            }
-          },
           "size": 72,
           "debugItemCount": 3,
           "instructionCount": 3,
@@ -10267,24 +6875,6 @@
             "1f": 2
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "c 6e 28": 1,
-              "1f 38 14": 1,
-              "14 6e c": 6,
-              "6e e 14": 1,
-              "e 14 6e": 1,
-              "6e 14 6e": 2,
-              "1f 14 6e": 1,
-              "c 6e e": 1,
-              "c 6e 14": 2,
-              "c 1f 38": 1,
-              "c 1f 14": 1,
-              "6e c 6e": 4,
-              "38 14 6e": 1,
-              "6e c 1f": 2
-            }
-          },
           "size": 196,
           "debugItemCount": 11,
           "instructionCount": 27,
@@ -10307,11 +6897,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "5b 70 e": 1
-            }
-          },
           "size": 72,
           "debugItemCount": 3,
           "instructionCount": 3,
@@ -10334,11 +6919,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "5b 70 e": 1
-            }
-          },
           "size": 72,
           "debugItemCount": 3,
           "instructionCount": 3,
@@ -10361,11 +6941,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "5b 70 e": 1
-            }
-          },
           "size": 72,
           "debugItemCount": 3,
           "instructionCount": 3,
@@ -10388,11 +6963,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "5b 70 e": 1
-            }
-          },
           "size": 72,
           "debugItemCount": 3,
           "instructionCount": 3,
@@ -10440,41 +7010,6 @@
             "DroidSwarm": 1,
             "Swarm beginning!": 1
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "38 e 1a": 1,
-              "62 76 5b": 1,
-              "70 22 70": 1,
-              "70 5b 22": 1,
-              "12 52 16": 1,
-              "76 5b 22": 1,
-              "62 70 5b": 1,
-              "71 22 13": 1,
-              "52 16 62": 1,
-              "70 22 12": 1,
-              "16 62 76": 1,
-              "1a 1a 71": 1,
-              "6e 54 6e": 1,
-              "54 62 70": 1,
-              "22 12 52": 1,
-              "13 70 22": 1,
-              "22 13 70": 1,
-              "54 70 5b": 1,
-              "55 38 e": 1,
-              "6e 5c 28": 1,
-              "22 70 22": 1,
-              "22 54 70": 1,
-              "54 6e 5c": 1,
-              "22 54 62": 1,
-              "5b 54 6e": 1,
-              "54 6e 54": 1,
-              "e 1a 1a": 1,
-              "1a 71 22": 1,
-              "12 55 38": 1,
-              "70 5b 54": 1,
-              "5b 22 54": 2
-            }
-          },
           "size": 225,
           "debugItemCount": 20,
           "instructionCount": 34,
@@ -10502,22 +7037,6 @@
             "1c": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "62 4d 1c": 1,
-              "4d 69 23": 1,
-              "62 4d 69": 2,
-              "4d 69 12": 1,
-              "4d 1c 4d": 1,
-              "12 12 23": 1,
-              "69 23 62": 1,
-              "1c 4d 69": 1,
-              "12 23 62": 2,
-              "69 12 23": 1,
-              "23 62 4d": 3,
-              "4d 69 e": 1
-            }
-          },
           "size": 120,
           "debugItemCount": 7,
           "instructionCount": 18,
@@ -10537,9 +7056,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {}
-          },
           "size": 66,
           "debugItemCount": 2,
           "instructionCount": 2,
@@ -10559,11 +7075,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "6e 6e e": 1
-            }
-          },
           "size": 63,
           "debugItemCount": 4,
           "instructionCount": 3,
@@ -10597,27 +7108,6 @@
           "stringReferenceCounts": {
             "Error saving targets after import.": 1
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "c 6e 28": 1,
-              "c 71 54": 1,
-              "38 71 c": 1,
-              "71 c 6e": 1,
-              "71 c 1a": 1,
-              "71 c 71": 1,
-              "d 71 c": 1,
-              "c 1a 12": 1,
-              "e d 71": 1,
-              "a 38 71": 1,
-              "71 a 38": 1,
-              "12 71 c": 1,
-              "1a 12 71": 1,
-              "54 6e e": 1,
-              "71 54 6e": 1,
-              "54 71 a": 1,
-              "6e e d": 1
-            }
-          },
           "size": 154,
           "debugItemCount": 8,
           "instructionCount": 19,
@@ -10640,11 +7130,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "5b 70 e": 1
-            }
-          },
           "size": 72,
           "debugItemCount": 3,
           "instructionCount": 3,
@@ -10669,15 +7154,6 @@
             "22": 3
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "70 22 70": 1,
-              "70 5b 22": 2,
-              "5b 22 70": 2,
-              "22 70 5b": 3,
-              "70 5b e": 1
-            }
-          },
           "size": 110,
           "debugItemCount": 6,
           "instructionCount": 11,
@@ -10728,43 +7204,6 @@
             ": ": 1,
             "Received start id ": 1
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "14 14 1a": 1,
-              "52 de 59": 1,
-              "14 1a 22": 1,
-              "71 22 14": 1,
-              "c 6e c": 4,
-              "c 71 22": 1,
-              "12 15 71": 1,
-              "6e 12 f": 1,
-              "6e 52 de": 1,
-              "70 6e c": 1,
-              "70 12 15": 1,
-              "1c 70 12": 1,
-              "de 59 70": 1,
-              "c 6e 52": 1,
-              "22 14 6e": 1,
-              "70 22 1c": 1,
-              "c 1a 6e": 1,
-              "c 71 b": 1,
-              "22 1a 70": 1,
-              "15 71 c": 1,
-              "59 70 6e": 1,
-              "1a 70 6e": 1,
-              "14 6e c": 1,
-              "6e c 1a": 1,
-              "1a 6e c": 1,
-              "70 6e 12": 1,
-              "71 c 6e": 1,
-              "71 b 70": 1,
-              "b 70 22": 1,
-              "1a 22 1a": 1,
-              "6e c 71": 2,
-              "6e c 6e": 4,
-              "22 1c 70": 1
-            }
-          },
           "size": 277,
           "debugItemCount": 20,
           "instructionCount": 42,
@@ -10786,9 +7225,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {}
-          },
           "size": 55,
           "debugItemCount": 2,
           "instructionCount": 2,
@@ -10841,68 +7277,6 @@
             "\n": 2,
             "": 2
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "6e 1a 54": 1,
-              "c 6e 1a": 1,
-              "c 6e c": 6,
-              "70 1a 6e": 1,
-              "72 c 1f": 2,
-              "72 a 39": 2,
-              "e 54 6e": 1,
-              "6e 14 6e": 5,
-              "1f 52 13": 1,
-              "1f 54 6e": 1,
-              "c 6e 14": 3,
-              "32 22 54": 1,
-              "6e 29 72": 1,
-              "c 72 a": 2,
-              "c 70 6e": 2,
-              "6e c 1f": 7,
-              "39 6e 14": 1,
-              "1f 22 71": 2,
-              "1f 22 70": 3,
-              "54 6e c": 2,
-              "14 6e c": 7,
-              "6e c 29": 1,
-              "53 6e c": 3,
-              "13 32 22": 1,
-              "52 6e c": 1,
-              "1a 6e c": 3,
-              "6e c 28": 1,
-              "71 c 70": 3,
-              "a 39 6e": 1,
-              "c 70 1a": 1,
-              "54 6e 14": 1,
-              "c 1f 1a": 1,
-              "c 1f 54": 1,
-              "6e c 72": 2,
-              "1a 54 6e": 2,
-              "6e c 6e": 10,
-              "54 71 c": 1,
-              "c 29 72": 1,
-              "29 72 c": 2,
-              "c 1f 6e": 1,
-              "c 1f 22": 5,
-              "52 13 32": 1,
-              "c 1f 52": 1,
-              "70 6e c": 2,
-              "70 53 6e": 3,
-              "1f 6e e": 1,
-              "c 1a 6e": 2,
-              "1f 1a 54": 1,
-              "54 6e 29": 1,
-              "6e c 1a": 2,
-              "22 54 71": 1,
-              "6e e 54": 1,
-              "c 52 6e": 1,
-              "22 71 c": 2,
-              "39 14 6e": 1,
-              "22 70 53": 3,
-              "6e c 52": 1,
-              "a 39 14": 1
-            }
-          },
           "size": 685,
           "debugItemCount": 48,
           "instructionCount": 121,
@@ -10921,9 +7295,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {}
-          },
           "size": 57,
           "debugItemCount": 2,
           "instructionCount": 1,
@@ -10946,11 +7317,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "5b 70 e": 1
-            }
-          },
           "size": 72,
           "debugItemCount": 3,
           "instructionCount": 3,
@@ -10970,9 +7336,6 @@
             "54": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {}
-          },
           "size": 53,
           "debugItemCount": 2,
           "instructionCount": 2,
@@ -10995,11 +7358,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "5b 70 e": 1
-            }
-          },
           "size": 72,
           "debugItemCount": 3,
           "instructionCount": 3,
@@ -11022,11 +7380,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "5b 70 e": 1
-            }
-          },
           "size": 72,
           "debugItemCount": 3,
           "instructionCount": 3,
@@ -11075,44 +7428,6 @@
           "stringReferenceCounts": {
             ":": 1
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "39 54 22": 1,
-              "c 1f 6e": 1,
-              "6e 28 d": 1,
-              "72 c 1f": 1,
-              "e 72 c": 1,
-              "72 a 39": 1,
-              "1d 54 6e": 1,
-              "1f 6e 28": 1,
-              "6e 54 6e": 1,
-              "a 39 1e": 1,
-              "54 22 70": 1,
-              "c 72 a": 1,
-              "d 1e 27": 1,
-              "6e c 1f": 1,
-              "39 1e e": 1,
-              "28 d 1e": 1,
-              "6e a 39": 1,
-              "54 6e a": 1,
-              "54 6e c": 2,
-              "1f 1a 12": 1,
-              "12 6e c": 1,
-              "70 6e 54": 1,
-              "c 54 6e": 1,
-              "12 46 6e": 1,
-              "c 12 46": 1,
-              "1e e 72": 1,
-              "22 70 6e": 1,
-              "6e c 54": 1,
-              "1a 12 6e": 1,
-              "c 1f 1a": 1,
-              "6e c 12": 1,
-              "6e c 72": 1,
-              "46 6e c": 1,
-              "a 39 54": 1
-            }
-          },
           "size": 237,
           "debugItemCount": 16,
           "instructionCount": 37,
@@ -11133,11 +7448,6 @@
             "a": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "70 a f": 1
-            }
-          },
           "size": 63,
           "debugItemCount": 2,
           "instructionCount": 3,
@@ -11160,12 +7470,6 @@
             "62": 2
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "62 62 6e": 1,
-              "62 6e e": 1
-            }
-          },
           "size": 63,
           "debugItemCount": 3,
           "instructionCount": 4,
@@ -11187,9 +7491,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {}
-          },
           "size": 56,
           "debugItemCount": 2,
           "instructionCount": 2,
@@ -11227,25 +7528,6 @@
           "stringReferenceCounts": {
             "Select Action": 1
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "46 72 d8": 1,
-              "72 d8 28": 1,
-              "33 1a 72": 1,
-              "62 21 34": 1,
-              "12 62 21": 1,
-              "a 14 33": 1,
-              "e 12 62": 1,
-              "12 62 46": 1,
-              "34 e 12": 1,
-              "21 34 e": 1,
-              "72 12 62": 1,
-              "1a 72 12": 1,
-              "6e a 14": 1,
-              "62 46 72": 1,
-              "14 33 1a": 1
-            }
-          },
           "size": 142,
           "debugItemCount": 10,
           "instructionCount": 17,
@@ -11270,13 +7552,6 @@
             "1c": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "70 6e e": 1,
-              "1c 70 6e": 1,
-              "22 1c 70": 1
-            }
-          },
           "size": 76,
           "debugItemCount": 5,
           "instructionCount": 5,
@@ -11306,18 +7581,6 @@
           "stringReferenceCounts": {
             "connectivity": 1
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "1f 12 6e": 1,
-              "6e a f": 1,
-              "c 6e a": 1,
-              "c 1f 12": 1,
-              "6e c 6e": 1,
-              "12 6e c": 1,
-              "1a 6e c": 1,
-              "6e c 1f": 1
-            }
-          },
           "size": 95,
           "debugItemCount": 6,
           "instructionCount": 10,
@@ -11339,9 +7602,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {}
-          },
           "size": 57,
           "debugItemCount": 2,
           "instructionCount": 2,
@@ -11363,9 +7623,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {}
-          },
           "size": 59,
           "debugItemCount": 3,
           "instructionCount": 2,
@@ -11388,11 +7645,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "5b 70 e": 1
-            }
-          },
           "size": 72,
           "debugItemCount": 3,
           "instructionCount": 3,
@@ -11411,9 +7663,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {}
-          },
           "size": 62,
           "debugItemCount": 2,
           "instructionCount": 1,
@@ -11435,9 +7684,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {}
-          },
           "size": 57,
           "debugItemCount": 2,
           "instructionCount": 2,
@@ -11454,9 +7700,6 @@
           "frameworkFieldReferenceCounts": {},
           "opCounts": {},
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {}
-          },
           "size": 24,
           "debugItemCount": 0,
           "instructionCount": 0,
@@ -11489,22 +7732,6 @@
             "android.intent.action.MEDIA_REMOVED": 1,
             "android.intent.action.MEDIA_MOUNTED": 1
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "6e 62 62": 1,
-              "6e 71 e": 1,
-              "62 6e 71": 1,
-              "1a 6e 62": 1,
-              "1a 6e 1a": 1,
-              "62 62 6e": 1,
-              "6e 1a 6e": 1,
-              "70 69 22": 1,
-              "70 1a 6e": 1,
-              "22 70 1a": 1,
-              "69 22 70": 1,
-              "22 70 69": 1
-            }
-          },
           "size": 123,
           "debugItemCount": 9,
           "instructionCount": 14,
@@ -11536,25 +7763,6 @@
             "39": 2
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "39 6e a": 1,
-              "1f 22 70": 2,
-              "6e a 39": 2,
-              "14 6e c": 2,
-              "c 1f 22": 2,
-              "12 6e e": 1,
-              "70 6e 6e": 1,
-              "70 6e 14": 1,
-              "6e 14 6e": 1,
-              "a 39 12": 1,
-              "a 39 6e": 1,
-              "6e 6e a": 1,
-              "22 70 6e": 2,
-              "39 12 6e": 1,
-              "6e c 1f": 2
-            }
-          },
           "size": 169,
           "debugItemCount": 10,
           "instructionCount": 23,
@@ -11574,9 +7782,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {}
-          },
           "size": 63,
           "debugItemCount": 2,
           "instructionCount": 2,
@@ -11603,18 +7808,6 @@
             "bb": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "1d 53 16": 1,
-              "bb 5a 1e": 1,
-              "5a 1e 10": 1,
-              "1e 10 d": 1,
-              "53 16 bb": 1,
-              "10 d 1e": 1,
-              "16 bb 5a": 1,
-              "d 1e 27": 1
-            }
-          },
           "size": 88,
           "debugItemCount": 2,
           "instructionCount": 10,
@@ -11633,9 +7826,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {}
-          },
           "size": 57,
           "debugItemCount": 2,
           "instructionCount": 1,
@@ -11684,48 +7874,6 @@
             "ds-targets.xml": 1,
             "/": 1
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "e 22 6e": 1,
-              "63 38 71": 1,
-              "c 1f 63": 1,
-              "c 6e 28": 1,
-              "c 6e c": 1,
-              "c 1f 22": 1,
-              "70 1a 6e": 1,
-              "22 6e c": 1,
-              "c 22 1a": 1,
-              "a 38 6e": 1,
-              "70 6e a": 1,
-              "6e 14 6e": 2,
-              "6f 14 6e": 1,
-              "6e 70 e": 1,
-              "c 6e 70": 1,
-              "6e 1a 6e": 1,
-              "1a 6e 14": 1,
-              "69 6f 14": 1,
-              "6e c 1f": 2,
-              "c 71 c": 1,
-              "38 6e c": 1,
-              "22 1a 70": 1,
-              "1f 63 38": 1,
-              "1a 70 6e": 1,
-              "1f 22 70": 1,
-              "6e a 38": 1,
-              "14 6e c": 2,
-              "14 6e 1a": 1,
-              "1a 6e c": 1,
-              "38 71 c": 1,
-              "71 c 70": 1,
-              "70 e 22": 1,
-              "71 c 22": 1,
-              "70 6e 14": 1,
-              "c 70 1a": 1,
-              "22 70 6e": 1,
-              "6e c 71": 1,
-              "6e c 6e": 3
-            }
-          },
           "size": 303,
           "debugItemCount": 24,
           "instructionCount": 45,
@@ -11752,18 +7900,6 @@
             "70": 3
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "70 6e e": 1,
-              "70 6e 14": 2,
-              "6e 14 6e": 2,
-              "22 70 6e": 3,
-              "1f 22 70": 3,
-              "14 6e c": 3,
-              "c 1f 22": 3,
-              "6e c 1f": 3
-            }
-          },
           "size": 174,
           "debugItemCount": 13,
           "instructionCount": 22,
@@ -11786,11 +7922,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "6f 6e e": 1
-            }
-          },
           "size": 63,
           "debugItemCount": 4,
           "instructionCount": 3,
@@ -11810,9 +7941,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {}
-          },
           "size": 63,
           "debugItemCount": 2,
           "instructionCount": 2,
@@ -11840,17 +7968,6 @@
             "1d": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "1d 54 6e": 1,
-              "f d 1e": 1,
-              "1e f d": 1,
-              "a 1e f": 1,
-              "6e a 1e": 1,
-              "54 6e a": 1,
-              "d 1e 27": 1
-            }
-          },
           "size": 83,
           "debugItemCount": 2,
           "instructionCount": 9,
@@ -11886,22 +8003,6 @@
             "DroidSwarm": 1,
             "Binding service.": 1
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "12 6a e": 1,
-              "6e 12 6a": 1,
-              "1a 1a 71": 1,
-              "71 6e c": 1,
-              "12 6e 12": 1,
-              "54 12 6e": 1,
-              "70 54 12": 1,
-              "1c 70 54": 1,
-              "6e c 22": 1,
-              "1a 71 6e": 1,
-              "c 22 1c": 1,
-              "22 1c 70": 1
-            }
-          },
           "size": 109,
           "debugItemCount": 7,
           "instructionCount": 14,
@@ -11925,15 +8026,6 @@
             "a": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "a 38 54": 1,
-              "71 a 38": 1,
-              "54 6e e": 1,
-              "38 54 6e": 1,
-              "54 71 a": 1
-            }
-          },
           "size": 84,
           "debugItemCount": 4,
           "instructionCount": 7,
@@ -11965,23 +8057,6 @@
             "62": 2
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "70 e 54": 1,
-              "4d 54 54": 2,
-              "6e 54 62": 1,
-              "e 54 6e": 1,
-              "54 38 54": 1,
-              "62 4d 54": 2,
-              "54 62 4d": 2,
-              "12 54 38": 1,
-              "54 6e 54": 1,
-              "54 70 28": 1,
-              "38 54 62": 1,
-              "54 70 e": 1,
-              "54 54 70": 2
-            }
-          },
           "size": 136,
           "debugItemCount": 8,
           "instructionCount": 19,
@@ -12018,29 +8093,6 @@
             "DroidSwarm": 1,
             "Service connected.": 1
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "d8 6e 1a": 1,
-              "1f 62 52": 1,
-              "54 14 6e": 1,
-              "55 71 e": 1,
-              "1a 71 54": 1,
-              "c 69 54": 1,
-              "71 54 62": 1,
-              "62 52 d8": 1,
-              "14 6e c": 1,
-              "69 54 14": 1,
-              "c 1f 62": 1,
-              "6e c 69": 1,
-              "62 55 71": 1,
-              "52 d8 6e": 1,
-              "1a 1a 71": 1,
-              "1f 6e c": 1,
-              "54 62 55": 1,
-              "6e 1a 1a": 1,
-              "6e c 1f": 1
-            }
-          },
           "size": 163,
           "debugItemCount": 9,
           "instructionCount": 21,
@@ -12062,9 +8114,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {}
-          },
           "size": 56,
           "debugItemCount": 2,
           "instructionCount": 2,
@@ -12086,9 +8135,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {}
-          },
           "size": 57,
           "debugItemCount": 2,
           "instructionCount": 2,
@@ -12110,9 +8156,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {}
-          },
           "size": 69,
           "debugItemCount": 3,
           "instructionCount": 2,
@@ -12146,29 +8189,6 @@
             "6e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "54 38 54": 1,
-              "54 12 4d": 1,
-              "12 54 38": 1,
-              "54 6e 28": 1,
-              "54 70 54": 1,
-              "54 54 70": 2,
-              "70 e 54": 1,
-              "4d 54 54": 2,
-              "4d 54 12": 1,
-              "71 c 4d": 1,
-              "e 54 62": 1,
-              "62 4d 54": 1,
-              "12 4d 54": 1,
-              "54 62 4d": 1,
-              "70 54 6e": 1,
-              "38 54 71": 1,
-              "c 4d 54": 1,
-              "54 70 e": 1,
-              "54 71 c": 1
-            }
-          },
           "size": 155,
           "debugItemCount": 9,
           "instructionCount": 23,
@@ -12195,16 +8215,6 @@
             "70": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "70 6e e": 1,
-              "22 70 6e": 1,
-              "1f 22 70": 1,
-              "14 6e c": 1,
-              "c 1f 22": 1,
-              "6e c 1f": 1
-            }
-          },
           "size": 92,
           "debugItemCount": 5,
           "instructionCount": 8,
@@ -12242,29 +8252,6 @@
             "38": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "12 1e 11": 1,
-              "38 28 d": 1,
-              "28 d 1e": 1,
-              "6e a 38": 1,
-              "54 6e a": 1,
-              "54 6e c": 1,
-              "72 c 1f": 1,
-              "72 a 39": 1,
-              "1d 54 6e": 1,
-              "a 38 28": 1,
-              "1e 11 72": 1,
-              "a 39 12": 1,
-              "1f 54 6e": 1,
-              "11 72 c": 1,
-              "c 1f 54": 1,
-              "39 12 1e": 1,
-              "6e c 72": 1,
-              "c 72 a": 1,
-              "d 1e 27": 1
-            }
-          },
           "size": 156,
           "debugItemCount": 8,
           "instructionCount": 21,
@@ -12293,17 +8280,6 @@
           "stringReferenceCounts": {
             "ApiDemos": 2,
             "Unable to invoke method": 2
-          },
-          "nGramTable": {
-            "nGramToCount": {
-              "1a 1a 71": 2,
-              "71 28 d": 1,
-              "e d 1a": 1,
-              "d 1a 1a": 2,
-              "6e e d": 1,
-              "28 d 1a": 1,
-              "1a 71 28": 2
-            }
           },
           "size": 137,
           "debugItemCount": 10,
@@ -12370,52 +8346,6 @@
             "\n": 1,
             "Accept-Language: en\n": 1
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "6e 62 38": 1,
-              "62 38 62": 1,
-              "c 6e 29": 1,
-              "c 6e c": 3,
-              "6e 29 d": 1,
-              "c 1f 22": 2,
-              "d 1a 22": 1,
-              "54 22 1a": 1,
-              "70 6e c": 2,
-              "70 6e e": 1,
-              "e 14 6e": 1,
-              "6e 14 6e": 5,
-              "38 62 6e": 1,
-              "c 71 28": 1,
-              "6e 1a 6e": 1,
-              "6f 15 6e": 1,
-              "c 1a 6e": 8,
-              "1a 6e 14": 3,
-              "6e c 1f": 6,
-              "22 1a 70": 2,
-              "29 d 1a": 1,
-              "1a 6e 62": 1,
-              "1a 70 6e": 2,
-              "1f 22 70": 2,
-              "15 6e 1a": 1,
-              "14 6e c": 6,
-              "6e c 1a": 8,
-              "1f 1a 6e": 4,
-              "12 6e c": 1,
-              "1a 6e c": 9,
-              "6e e 14": 1,
-              "70 6e 14": 1,
-              "c 54 22": 1,
-              "c 12 6e": 1,
-              "6e c 54": 1,
-              "22 70 6e": 2,
-              "1a 22 1a": 1,
-              "c 1f 1a": 4,
-              "6e c 71": 1,
-              "6e c 12": 1,
-              "6e c 6e": 4,
-              "62 6e 14": 1
-            }
-          },
           "size": 587,
           "debugItemCount": 44,
           "instructionCount": 99,
@@ -12440,13 +8370,6 @@
             "1c": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "70 6e e": 1,
-              "1c 70 6e": 1,
-              "22 1c 70": 1
-            }
-          },
           "size": 76,
           "debugItemCount": 5,
           "instructionCount": 5,
@@ -12471,14 +8394,6 @@
             "5c": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "12 5c 5b": 1,
-              "5c 5b 5b": 1,
-              "70 12 5c": 1,
-              "5b 5b e": 1
-            }
-          },
           "size": 89,
           "debugItemCount": 6,
           "instructionCount": 6,
@@ -12497,9 +8412,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {}
-          },
           "size": 67,
           "debugItemCount": 2,
           "instructionCount": 1,
@@ -12521,9 +8433,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {}
-          },
           "size": 57,
           "debugItemCount": 2,
           "instructionCount": 2,
@@ -12545,9 +8454,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {}
-          },
           "size": 56,
           "debugItemCount": 2,
           "instructionCount": 2,
@@ -12599,51 +8505,6 @@
             "Connection: keep-alive\r\nContent-Length: ": 1,
             "POST ": 1
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "54 54 6e": 3,
-              "a 6e a": 1,
-              "c 6e c": 6,
-              "c 1f 22": 1,
-              "a 6e c": 1,
-              "70 1a 6e": 1,
-              "72 c 1f": 1,
-              "70 6e c": 1,
-              "72 a 39": 1,
-              "72 c 72": 1,
-              "70 70 c": 1,
-              "a 39 22": 1,
-              "1f 54 6e": 1,
-              "1f 54 54": 1,
-              "c 54 54": 2,
-              "1a 70 70": 1,
-              "c 72 a": 1,
-              "c 72 c": 1,
-              "c 1a 6e": 7,
-              "c 70 6e": 1,
-              "6e c 1f": 2,
-              "22 1a 70": 1,
-              "1f 22 71": 1,
-              "6e a 6e": 2,
-              "54 6e a": 1,
-              "54 6e c": 3,
-              "6e c 1a": 7,
-              "c 11 72": 1,
-              "1a 6e c": 8,
-              "6e c 28": 1,
-              "39 22 71": 1,
-              "71 c 70": 2,
-              "70 c 6e": 1,
-              "11 72 c": 1,
-              "c 70 1a": 1,
-              "6e c 54": 2,
-              "22 71 c": 2,
-              "c 1f 54": 2,
-              "6e c 11": 1,
-              "6e c 72": 1,
-              "6e c 6e": 5
-            }
-          },
           "size": 433,
           "debugItemCount": 20,
           "instructionCount": 82,
@@ -12666,11 +8527,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "5b 70 e": 1
-            }
-          },
           "size": 71,
           "debugItemCount": 3,
           "instructionCount": 3,
@@ -12711,30 +8567,6 @@
             "DroidSwarm": 1,
             "Unable to get Inet address for: ": 1
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "22 1a 70": 1,
-              "28 d 1e": 1,
-              "c 6e c": 1,
-              "54 6e c": 1,
-              "d 1a 22": 1,
-              "71 c 5b": 1,
-              "1d 54 71": 1,
-              "71 28 d": 1,
-              "5b 1e e": 1,
-              "c 71 28": 1,
-              "e d 1a": 1,
-              "1a 22 1a": 1,
-              "6e c 71": 1,
-              "6e c 6e": 1,
-              "70 54 6e": 1,
-              "1a 70 54": 1,
-              "1e e d": 1,
-              "c 5b 1e": 1,
-              "d 1e 27": 1,
-              "54 71 c": 1
-            }
-          },
           "size": 162,
           "debugItemCount": 8,
           "instructionCount": 22,
@@ -12758,12 +8590,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "71 72 e": 1,
-              "54 71 72": 1
-            }
-          },
           "size": 80,
           "debugItemCount": 4,
           "instructionCount": 4,
@@ -12789,15 +8615,6 @@
             "1f": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "54 14 6e": 1,
-              "1f 6e e": 1,
-              "14 6e c": 1,
-              "c 1f 6e": 1,
-              "6e c 1f": 1
-            }
-          },
           "size": 90,
           "debugItemCount": 5,
           "instructionCount": 7,
@@ -12822,13 +8639,6 @@
             "1c": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "70 6e e": 1,
-              "1c 70 6e": 1,
-              "22 1c 70": 1
-            }
-          },
           "size": 76,
           "debugItemCount": 5,
           "instructionCount": 5,
@@ -12872,34 +8682,6 @@
           "stringReferenceCounts": {
             "target_list.xml": 1
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "e 22 70": 1,
-              "38 e 22": 1,
-              "63 38 e": 1,
-              "70 1c 1a": 1,
-              "6a 28 72": 1,
-              "54 6e c": 1,
-              "c 1f 6e": 1,
-              "39 12 6a": 1,
-              "22 70 1c": 1,
-              "28 72 c": 1,
-              "1a 6e c": 1,
-              "72 c 1f": 2,
-              "12 6a 28": 1,
-              "72 a 39": 1,
-              "1f 6e 28": 1,
-              "a 39 12": 1,
-              "69 62 54": 1,
-              "62 54 6e": 1,
-              "6e c 72": 2,
-              "c 1f 69": 1,
-              "c 72 a": 1,
-              "c 72 c": 1,
-              "1c 1a 6e": 1,
-              "1f 69 62": 1
-            }
-          },
           "size": 184,
           "debugItemCount": 11,
           "instructionCount": 28,
@@ -12929,22 +8711,6 @@
             "8b": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "bc 86 cd": 1,
-              "53 54 6e": 1,
-              "86 cd 8b": 1,
-              "54 53 bc": 1,
-              "54 53 54": 2,
-              "54 6e b": 1,
-              "6e b 54": 1,
-              "53 bc 86": 1,
-              "53 54 53": 1,
-              "b 54 53": 1,
-              "8b bb 10": 1,
-              "cd 8b bb": 1
-            }
-          },
           "size": 94,
           "debugItemCount": 2,
           "instructionCount": 15,
@@ -12967,11 +8733,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "5b 70 e": 1
-            }
-          },
           "size": 69,
           "debugItemCount": 3,
           "instructionCount": 3,
@@ -12994,11 +8755,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "5b 70 e": 1
-            }
-          },
           "size": 72,
           "debugItemCount": 3,
           "instructionCount": 3,
@@ -13031,23 +8787,6 @@
           },
           "stringReferenceCounts": {
             "http://": 1
-          },
-          "nGramTable": {
-            "nGramToCount": {
-              "54 14 6e": 2,
-              "38 12 6e": 1,
-              "a 38 12": 1,
-              "6e a 38": 1,
-              "14 6e c": 2,
-              "c 1f 1a": 1,
-              "c 1f 6e": 1,
-              "1f 1a 6e": 1,
-              "1a 6e e": 1,
-              "12 6e 54": 1,
-              "6e 54 14": 1,
-              "1f 6e a": 1,
-              "6e c 1f": 2
-            }
           },
           "size": 147,
           "debugItemCount": 9,
@@ -13094,36 +8833,6 @@
             "Importing URL: ": 1,
             "Error accessing URL:\n": 1
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "d 22 1a": 1,
-              "70 22 70": 1,
-              "12 22 70": 1,
-              "c 6e c": 2,
-              "c 71 12": 1,
-              "70 6e c": 2,
-              "72 c 11": 1,
-              "72 c 72": 2,
-              "c 6e 12": 1,
-              "c 72 c": 2,
-              "22 70 22": 1,
-              "22 1a 70": 2,
-              "1a 70 6e": 2,
-              "c 12 71": 1,
-              "70 72 c": 1,
-              "6e 12 28": 1,
-              "71 c 6e": 1,
-              "11 d 22": 1,
-              "12 71 c": 1,
-              "1a 22 1a": 1,
-              "6e c 12": 1,
-              "71 12 22": 1,
-              "6e c 71": 1,
-              "6e c 6e": 2,
-              "c 11 d": 1,
-              "22 70 72": 1
-            }
-          },
           "size": 256,
           "debugItemCount": 19,
           "instructionCount": 35,
@@ -13145,9 +8854,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {}
-          },
           "size": 57,
           "debugItemCount": 2,
           "instructionCount": 2,
@@ -13175,20 +8881,6 @@
             "1f": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "54 54 6e": 2,
-              "a 6e a": 1,
-              "54 54 54": 1,
-              "54 6e c": 1,
-              "6e a 54": 1,
-              "6e a 6e": 1,
-              "54 6e a": 1,
-              "c 1f 11": 1,
-              "6e c 1f": 1,
-              "a 54 54": 1
-            }
-          },
           "size": 102,
           "debugItemCount": 4,
           "instructionCount": 13,
@@ -13208,11 +8900,6 @@
             "54": 2
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "54 54 11": 1
-            }
-          },
           "size": 57,
           "debugItemCount": 2,
           "instructionCount": 3,
@@ -13241,19 +8928,6 @@
             "5c": 2
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "e 12 5c": 1,
-              "6e 54 12": 1,
-              "5c 54 6e": 2,
-              "12 5c 54": 2,
-              "39 e 12": 1,
-              "54 6e 28": 1,
-              "54 6e 54": 1,
-              "54 12 5c": 1,
-              "55 39 e": 1
-            }
-          },
           "size": 104,
           "debugItemCount": 7,
           "instructionCount": 13,
@@ -13303,45 +8977,6 @@
             "DroidSwarm - Export": 1,
             "": 1
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "c 1f 62": 1,
-              "c 1f 22": 2,
-              "72 c 1f": 1,
-              "e 72 c": 1,
-              "72 a 39": 1,
-              "39 1a 6e": 1,
-              "6e 14 6e": 2,
-              "6e 6e 28": 1,
-              "62 6e a": 1,
-              "54 62 6e": 1,
-              "6f 14 6e": 1,
-              "70 54 6e": 1,
-              "62 54 6e": 1,
-              "c 72 a": 1,
-              "6e c 1f": 2,
-              "1a 69 12": 1,
-              "1f 22 70": 2,
-              "6e a 38": 1,
-              "54 6e c": 1,
-              "14 6e c": 2,
-              "12 6e 6e": 1,
-              "1a 6e e": 1,
-              "1f 62 54": 1,
-              "70 6e 14": 1,
-              "6e 54 62": 1,
-              "a 39 1a": 1,
-              "38 1a 69": 1,
-              "6e e 72": 1,
-              "a 38 1a": 1,
-              "22 70 6e": 1,
-              "54 6e 54": 1,
-              "14 6e 14": 1,
-              "69 12 6e": 1,
-              "22 70 54": 1,
-              "6e c 72": 1
-            }
-          },
           "size": 278,
           "debugItemCount": 20,
           "instructionCount": 42,
@@ -13386,38 +9021,6 @@
             "failed": 1,
             "reqs": 1
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "12 1a 4d": 3,
-              "6e 22 54": 1,
-              "4d 23 26": 1,
-              "1a 4d 23": 1,
-              "7 76 5b": 1,
-              "54 14 23": 1,
-              "1a 4d 12": 2,
-              "76 5b 54": 1,
-              "c 1f 22": 1,
-              "70 6e 22": 1,
-              "4d 12 1a": 2,
-              "6e e 0": 1,
-              "14 62 70": 1,
-              "12 14 6e": 1,
-              "6e 6e e": 1,
-              "26 7 76": 1,
-              "14 23 12": 1,
-              "6e c 1f": 1,
-              "e 0 300": 1,
-              "14 6e c": 1,
-              "22 14 62": 1,
-              "23 26 7": 1,
-              "22 54 14": 1,
-              "1f 22 14": 1,
-              "5b 54 6e": 1,
-              "62 70 6e": 1,
-              "54 6e 6e": 1,
-              "23 12 1a": 1
-            }
-          },
           "size": 230,
           "debugItemCount": 17,
           "instructionCount": 34,
@@ -13444,18 +9047,6 @@
             "bb": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {
-              "1d 53 16": 1,
-              "bb 5a 1e": 1,
-              "5a 1e 10": 1,
-              "1e 10 d": 1,
-              "53 16 bb": 1,
-              "10 d 1e": 1,
-              "16 bb 5a": 1,
-              "d 1e 27": 1
-            }
-          },
           "size": 87,
           "debugItemCount": 2,
           "instructionCount": 10,
@@ -13477,9 +9068,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {}
-          },
           "size": 56,
           "debugItemCount": 2,
           "instructionCount": 2,
@@ -13544,78 +9132,6 @@
           "stringReferenceCounts": {
             "[swarm-mon] [%d/%d] active:%d, completed:%d task:%d isShutdown:%s isTerminated:%s": 1
           },
-          "nGramTable": {
-            "nGramToCount": {
-              "38 e 1": 1,
-              "94 54 6e": 1,
-              "54 54 6e": 1,
-              "a 71 c": 3,
-              "38 16 71": 1,
-              "1 71 c": 2,
-              "12 54 54": 1,
-              "4d 71 c": 1,
-              "c 6e 54": 1,
-              "12 62 1a": 1,
-              "12 54 6e": 7,
-              "b 71 c": 2,
-              "6e c 1f": 1,
-              "16 71 55": 1,
-              "6e a 39": 1,
-              "54 6e c": 1,
-              "6e a 37": 1,
-              "6e a 3d": 1,
-              "6e a 38": 3,
-              "54 6e b": 2,
-              "54 6e a": 12,
-              "55 38 28": 1,
-              "55 38 16": 1,
-              "70 6e d8": 1,
-              "71 c 6e": 1,
-              "38 1 71": 2,
-              "22 70 6e": 1,
-              "6e a 35": 1,
-              "39 54 6e": 1,
-              "6e a 71": 3,
-              "12 12 62": 1,
-              "c 1f 54": 1,
-              "d8 54 6e": 1,
-              "1f 54 22": 1,
-              "37 12 54": 1,
-              "6e b 71": 2,
-              "c 4d 12": 6,
-              "71 55 38": 1,
-              "35 55 38": 1,
-              "1a 12 23": 1,
-              "6e d8 54": 1,
-              "a 38 e": 1,
-              "3d 54 6e": 1,
-              "6e 54 6e": 1,
-              "54 22 70": 1,
-              "1 28 54": 1,
-              "a 38 1": 2,
-              "4d 12 54": 6,
-              "12 12 12": 1,
-              "12 23 12": 1,
-              "62 1a 12": 1,
-              "28 d 28": 1,
-              "38 28 d": 1,
-              "a 94 54": 1,
-              "23 12 54": 1,
-              "e 1 28": 1,
-              "71 c 4d": 7,
-              "a 3d 54": 1,
-              "a 35 55": 1,
-              "a 37 12": 1,
-              "28 1 28": 1,
-              "6e a 54": 1,
-              "6e a 94": 1,
-              "c 4d 71": 1,
-              "a 54 6e": 1,
-              "28 54 6e": 1,
-              "1 28 1": 1,
-              "a 39 54": 1
-            }
-          },
           "size": 540,
           "debugItemCount": 31,
           "instructionCount": 115,
@@ -13632,9 +9148,6 @@
           "frameworkFieldReferenceCounts": {},
           "opCounts": {},
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {}
-          },
           "size": 24,
           "debugItemCount": 0,
           "instructionCount": 0,
@@ -13654,9 +9167,6 @@
             "e": 1
           },
           "stringReferenceCounts": {},
-          "nGramTable": {
-            "nGramToCount": {}
-          },
           "size": 63,
           "debugItemCount": 2,
           "instructionCount": 2,

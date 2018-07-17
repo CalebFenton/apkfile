@@ -20,7 +20,7 @@ public class DexFile {
 
     private static final transient String SUPPORT_PACKAGE = "Landroid/support/";
 
-    static final transient int TARGET_API = 39;
+    public static final transient int TARGET_API = 39;
 
     private final transient Set<String> LOCAL_CLASS_PATHS;
     private transient DexBackedDexFile dexFile;
@@ -38,9 +38,8 @@ public class DexFile {
     private transient boolean shortMethodSignatures;
     private transient boolean filterSupportClasses;
     private transient boolean generateNGrams;
-    private transient int nGramSize;
 
-    DexFile(InputStream dexStream) throws IOException {
+    DexFile(InputStream dexStream) {
         this.dexStream = dexStream;
 
         classPathToClass = new HashMap<>();
@@ -79,7 +78,7 @@ public class DexFile {
 
             DexClass dexClass;
             try {
-                dexClass = new DexClass(classDef, shortMethodSignatures, filterSupportClasses, generateNGrams, nGramSize);
+                dexClass = new DexClass(classDef, shortMethodSignatures, filterSupportClasses);
             } catch (Exception e) {
                 Logger.warn("Failed to analyze class: " + classDef.getType() + "; skipping", e);
                 failedClassCount++;
@@ -174,11 +173,6 @@ public class DexFile {
 
     DexFile setGenerateNGrams(boolean generateNGrams) {
         this.generateNGrams = generateNGrams;
-        return this;
-    }
-
-    DexFile setNGramSize(int nGramSize) {
-        this.nGramSize = nGramSize;
         return this;
     }
 

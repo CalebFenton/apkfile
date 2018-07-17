@@ -16,8 +16,6 @@ public class DexClass {
     private final transient DexBackedClassDef classDef;
     private final transient boolean shortMethodSignatures;
     private final transient boolean filterSupport;
-    private final transient boolean generateNGrams;
-    private final transient int nGramSize;
 
     private final TObjectIntMap<String> methodAccessorCounts;
     private final Map<String, DexMethod> methodSignatureToMethod;
@@ -28,12 +26,10 @@ public class DexClass {
 
     private int failedMethodCount = 0;
 
-    DexClass(DexBackedClassDef classDef, boolean shortMethodSignatures, boolean filterSupport, boolean generateNGrams, int nGramSize) {
+    DexClass(DexBackedClassDef classDef, boolean shortMethodSignatures, boolean filterSupport) {
         this.classDef = classDef;
         this.shortMethodSignatures = shortMethodSignatures;
         this.filterSupport = filterSupport;
-        this.generateNGrams = generateNGrams;
-        this.nGramSize = nGramSize;
 
         methodSignatureToMethod = new HashMap<>();
         methodAccessorCounts = new TObjectIntHashMap<>();
@@ -53,7 +49,7 @@ public class DexClass {
 
             DexMethod dexMethod;
             try {
-                dexMethod = new DexMethod(dbm, shortMethodSignatures, generateNGrams, nGramSize);
+                dexMethod = new DexMethod(dbm, shortMethodSignatures);
             } catch (Exception e) {
                 Logger.warn("Failed to analyze method: " + ReferenceUtil.getMethodDescriptor(dbm) + "; skipping", e);
                 failedMethodCount += 1;

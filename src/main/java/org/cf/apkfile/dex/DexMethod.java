@@ -6,8 +6,6 @@ import gnu.trove.map.TObjectIntMap;
 import gnu.trove.map.hash.TIntIntHashMap;
 import gnu.trove.map.hash.TObjectIntHashMap;
 import org.cf.apkfile.analysis.DexReaderEntropyCalculator;
-import org.cf.apkfile.analysis.NGram;
-import org.cf.apkfile.analysis.NGramTable;
 import org.cf.apkfile.utils.Utils;
 import org.jf.dexlib2.Opcode;
 import org.jf.dexlib2.ReferenceType;
@@ -22,8 +20,6 @@ import org.jf.dexlib2.util.ReferenceUtil;
 
 import javax.annotation.Nonnull;
 import java.lang.reflect.Field;
-import java.util.ArrayList;
-import java.util.List;
 
 public class DexMethod {
 
@@ -35,8 +31,6 @@ public class DexMethod {
 
     private final transient DexBackedMethod method;
     private final transient boolean shortMethodSignatures;
-    private final transient boolean generateNGrams;
-    private final transient int nGramSize;
 
     private final int accessFlags;
     private final int annotationCount;
@@ -44,7 +38,6 @@ public class DexMethod {
     private final TObjectIntMap<FieldReference> frameworkFieldReferenceCounts;
     private final TIntIntMap opCounts;
     private final TObjectIntMap<StringReference> stringReferenceCounts;
-    private final NGramTable nGramTable;
     private final int size;
 
     private int debugItemCount = 0;
@@ -55,11 +48,9 @@ public class DexMethod {
     private double codeEntropy = 0.0D;
     private double codePerplexity = 0.0D;
 
-    DexMethod(DexBackedMethod method, boolean shortMethodSignatures, boolean generateNGrams, int nGramSize) {
+    DexMethod(DexBackedMethod method, boolean shortMethodSignatures) {
         this.method = method;
         this.shortMethodSignatures = shortMethodSignatures;
-        this.generateNGrams = generateNGrams;
-        this.nGramSize = nGramSize;
 
         size = method.getSize();
         accessFlags = method.getAccessFlags();
@@ -68,27 +59,8 @@ public class DexMethod {
         frameworkFieldReferenceCounts = new TObjectIntHashMap<>();
         opCounts = new TIntIntHashMap();
         stringReferenceCounts = new TObjectIntHashMap<>();
-        nGramTable = new NGramTable();
         if (method.getImplementation() != null) {
             analyze(method.getImplementation());
-        }
-    }
-
-    private void sequenceNGrams(Iterable<? extends Instruction> instructions) {
-        List<Short> opCodes = new ArrayList<>();
-        for (Instruction instruction : instructions) {
-            Opcode op = instruction.getOpcode();
-            opCodes.add(op.apiToValueMap.get(DexFile.TARGET_API));
-        }
-        for (int i = 0; i < opCodes.size(); i++) {
-            if (i + (nGramSize - 1) < opCodes.size()) {
-                int[] nGramOps = new int[nGramSize];
-                for (int j = 0; j < nGramOps.length; j++) {
-                    nGramOps[j] = opCodes.get(i + j);
-                }
-                NGram nGram = NGram.create(nGramSize, nGramOps);
-                nGramTable.add(nGram);
-            }
         }
     }
 
@@ -138,10 +110,6 @@ public class DexMethod {
                         break;
                 }
             }
-        }
-
-        if (generateNGrams) {
-            sequenceNGrams(implementation.getInstructions());
         }
 
         analyzeEntropy();
@@ -208,10 +176,6 @@ public class DexMethod {
 
     public double getCodePerplexity() {
         return codePerplexity;
-    }
-
-    public NGramTable getNGramTable() {
-        return nGramTable;
     }
 
     public int getRegisterCount() {
