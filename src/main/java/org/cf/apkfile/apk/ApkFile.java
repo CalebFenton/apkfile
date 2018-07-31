@@ -14,6 +14,8 @@ import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.security.NoSuchAlgorithmException;
+import java.security.cert.CertificateException;
 import java.util.*;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
@@ -54,12 +56,13 @@ public class ApkFile extends JarFile {
 
         if (parseCertificate) {
             parseCertificate();
+        } else {
+            certificate = null;
         }
 
         theFile = new File(apkPath);
         entryNameToDex = new HashMap<>();
         androidManifest = null;
-        certificate = null;
         resources = null;
     }
 
@@ -258,7 +261,7 @@ public class ApkFile extends JarFile {
 
         try {
             certificate = new Certificate(certStream);
-        } catch (CMSException e) {
+        } catch (CMSException | IOException | CertificateException | NoSuchAlgorithmException e) {
             throw new ParseException("Unable to parse signature: " + certEntry.getName(), e);
         }
     }

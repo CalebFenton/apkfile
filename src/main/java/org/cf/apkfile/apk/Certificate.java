@@ -7,33 +7,66 @@ import org.bouncycastle.asn1.x500.style.BCStyle;
 import org.bouncycastle.cert.X509CertificateHolder;
 import org.bouncycastle.cms.CMSException;
 import org.bouncycastle.cms.CMSSignedData;
+import org.cf.apkfile.utils.Utils;
 
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Field;
+import java.security.NoSuchAlgorithmException;
+import java.security.cert.CertificateException;
+import java.security.cert.CertificateFactory;
+import java.security.cert.X509Certificate;
 import java.util.*;
 
 public class Certificate {
 
     private final Collection<SubjectAndIssuerRdns> allRdns;
 
-    public Certificate(InputStream certStream) throws CMSException {
-        allRdns = extractAll(certStream);
+    private final Collection<String> publicKeyHashes;
+    private final Collection<String> signatureHashes;
+
+    public Certificate(InputStream certStream) throws CMSException, IOException, CertificateException, NoSuchAlgorithmException {
+        publicKeyHashes = new LinkedList<>();
+        signatureHashes = new LinkedList<>();
+        byte[] certBytes = Utils.readFully(certStream);
+        allRdns = extractAll(certBytes);
+        hashCertificates(certBytes);
     }
 
     public Collection<SubjectAndIssuerRdns> getAllRdns() {
         return allRdns;
     }
 
-    private static Collection<SubjectAndIssuerRdns> extractAll(InputStream certStream) throws CMSException {
+    public Collection<String> getPublicKeyHashes() {
+        return publicKeyHashes;
+    }
+
+    public Collection<String> getSignatureHashes() {
+        return signatureHashes;
+    }
+
+    private static Collection<SubjectAndIssuerRdns> extractAll(byte[] certBytes) throws CMSException, IOException {
         List<SubjectAndIssuerRdns> allRdns = new LinkedList<>();
-        CMSSignedData data = new CMSSignedData(certStream);
+        CMSSignedData data = new CMSSignedData(certBytes);
         Collection<X509CertificateHolder> matches = data.getCertificates().getMatches(null);
         for (X509CertificateHolder holder : matches) {
             allRdns.add(buildRdns(holder.getSubject(), holder.getIssuer()));
         }
+
         return allRdns;
     }
 
+    private void hashCertificates(byte[] certBytes) throws IOException, NoSuchAlgorithmException, CertificateException {
+        CertificateFactory cf = CertificateFactory.getInstance("X.509");
+        Collection<? extends java.security.cert.Certificate> certs = cf.generateCertificates(new ByteArrayInputStream(certBytes));
+        for (java.security.cert.Certificate c : certs) {
+            byte[] publicKeyHash = Utils.sha1(new ByteArrayInputStream(c.getPublicKey().getEncoded()));
+            publicKeyHashes.add(Utils.bytesToHex(publicKeyHash));
+            byte[] signatureHash = Utils.sha1(new ByteArrayInputStream(((X509Certificate) c).getSignature()));
+            signatureHashes.add(Utils.bytesToHex(signatureHash));
+        }
+    }
 
     private static SubjectAndIssuerRdns buildRdns(X500Name subject, X500Name issuer) {
         Hashtable defaultSymbols = null;

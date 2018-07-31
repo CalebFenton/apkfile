@@ -10,13 +10,20 @@ import gnu.trove.map.hash.TIntIntHashMap;
 import gnu.trove.map.hash.TObjectIntHashMap;
 import gnu.trove.map.hash.TObjectLongHashMap;
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.lang.reflect.Modifier;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
 
 public class Utils {
+    private static final int SHA1_BUFF_LENGTH = 0x1000;
+    private final static char[] HEX_CHARS = "0123456789abcdef".toCharArray();
 
     public static Map<Object, Integer> convertToJava(TObjectIntMap map) {
         Map<Object, Integer> javaMap = new HashMap<>();
@@ -167,4 +174,36 @@ public class Utils {
 
         return gsonBuilder;
     }
+
+    public static byte[] readFully(InputStream is) throws IOException {
+        ByteArrayOutputStream os = new ByteArrayOutputStream();
+        byte[] buffer = new byte[0xffff];
+        for (int len = is.read(buffer); len != -1; len = is.read(buffer)) {
+            os.write(buffer, 0, len);
+        }
+
+        return os.toByteArray();
+    }
+
+    public static byte[] sha1(InputStream input) throws NoSuchAlgorithmException, IOException {
+        MessageDigest sha1 = MessageDigest.getInstance("SHA1");
+        byte[] buff = new byte[SHA1_BUFF_LENGTH];
+        int remaining = 0;
+        while ((remaining = input.read(buff)) != -1) {
+            sha1.update(buff, 0, remaining);
+        }
+
+        return sha1.digest();
+    }
+
+    public static String bytesToHex(byte[] bytes) {
+        char[] hexChars = new char[bytes.length * 2];
+        for (int i = 0; i < bytes.length; i++) {
+            int v = bytes[i] & 0xff;
+            hexChars[i * 2] = HEX_CHARS[v >>> 4];
+            hexChars[i * 2 + 1] = HEX_CHARS[v & 0x0f];
+        }
+        return new String(hexChars);
+    }
+
 }
