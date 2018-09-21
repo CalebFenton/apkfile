@@ -7,7 +7,8 @@ import org.cf.apkfile.utils.Utils;
 import org.jf.dexlib2.Opcodes;
 import org.jf.dexlib2.dexbacked.DexBackedClassDef;
 import org.jf.dexlib2.dexbacked.DexBackedDexFile;
-import org.pmw.tinylog.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -17,6 +18,8 @@ import java.util.Map;
 import java.util.Set;
 
 public class DexFile {
+
+    private static final transient Logger logger = LoggerFactory.getLogger(DexFile.class);
 
     private static final transient String SUPPORT_PACKAGE = "Landroid/support/";
 
@@ -37,7 +40,6 @@ public class DexFile {
 
     private transient boolean shortMethodSignatures;
     private transient boolean filterSupportClasses;
-    private transient boolean generateNGrams;
 
     DexFile(InputStream dexStream) {
         this.dexStream = dexStream;
@@ -80,7 +82,7 @@ public class DexFile {
             try {
                 dexClass = new DexClass(classDef, shortMethodSignatures, filterSupportClasses);
             } catch (Exception e) {
-                Logger.warn("Failed to analyze class: " + classDef.getType() + "; skipping", e);
+                logger.warn("Failed to analyze class: " + classDef.getType() + "; skipping", e);
                 failedClassCount++;
                 continue;
             }
@@ -168,11 +170,6 @@ public class DexFile {
 
     DexFile setFilterSupportClasses(boolean filterSupportClasses) {
         this.filterSupportClasses = filterSupportClasses;
-        return this;
-    }
-
-    DexFile setGenerateNGrams(boolean generateNGrams) {
-        this.generateNGrams = generateNGrams;
         return this;
     }
 

@@ -17,7 +17,9 @@
 package org.cf.apkfile.res;
 
 import com.google.common.base.Preconditions;
-import org.pmw.tinylog.Logger;
+import org.cf.apkfile.dex.DexClass;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.annotation.Nullable;
 import java.io.DataOutput;
@@ -29,6 +31,8 @@ import java.util.*;
  * Represents the beginning of an XML node.
  */
 public final class XmlStartElementChunk extends XmlNodeChunk {
+
+    private static final transient Logger logger = LoggerFactory.getLogger(XmlStartElementChunk.class);
 
     /**
      * A string reference to the namespace URI, or -1 if not present.
@@ -218,7 +222,7 @@ public final class XmlStartElementChunk extends XmlNodeChunk {
             try {
                 return Integer.parseInt(value);
             } catch (NumberFormatException e) {
-                Logger.warn(e);
+                logger.warn("Problem converting value to integer", e);
                 return defaultValue;
             }
         }

@@ -1,12 +1,9 @@
 package org.cf.apkfile.manifest;
 
 import com.google.common.io.ByteStreams;
-import org.cf.apkfile.res.AttributeId;
-import org.cf.apkfile.res.Chunk;
-import org.cf.apkfile.res.ResourceTableChunk;
-import org.cf.apkfile.res.XmlChunk;
-import org.cf.apkfile.res.XmlStartElementChunk;
-import org.pmw.tinylog.Logger;
+import org.cf.apkfile.res.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.xmlpull.v1.XmlPullParserException;
 
 import javax.annotation.Nullable;
@@ -19,6 +16,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class AndroidManifest {
+
+    private static final transient Logger logger = LoggerFactory.getLogger(AndroidManifest.class);
 
     private static final String APPLICATION_ELEMENT = "application";
     private static final String COMPATIBLE_SCREENS = "compatible-screens";
@@ -196,7 +195,7 @@ public class AndroidManifest {
                 String name = chunk.getName();
                 if (MANIFEST_ELEMENT.equals(name)) {
                     if (packageName != null) {
-                        Logger.warn("Multiple manifests elements in AndroidManifest; ignoring");
+                        logger.warn("Multiple manifests elements in AndroidManifest; ignoring");
                     } else {
                         parsePackageInformation(chunk);
                     }
@@ -235,7 +234,7 @@ public class AndroidManifest {
             try {
                 minSdkVersion = Integer.parseInt(value);
             } catch (NumberFormatException nfe) {
-                Logger.warn("Invalid minSdkVersion value: " + value);
+                logger.warn("Invalid minSdkVersion value: " + value);
             }
         }
         value = usesSdk.getAttribute(AttributeId.TARGET_SDK_VERSION);
@@ -243,7 +242,7 @@ public class AndroidManifest {
             try {
                 targetSdkVersion = Integer.parseInt(value);
             } catch (NumberFormatException nfe) {
-                Logger.warn("Invalid targetSdkVersion value: " + value);
+                logger.warn("Invalid targetSdkVersion value: " + value);
             }
         }
         value = usesSdk.getAttribute(AttributeId.MAX_SDK_VERSION);
@@ -251,7 +250,7 @@ public class AndroidManifest {
             try {
                 maxSdkVersion = Integer.parseInt(value);
             } catch (NumberFormatException nfe) {
-                Logger.warn("Invalid maxSdkVersion value: " + value);
+                logger.warn("Invalid maxSdkVersion value: " + value);
             }
         }
     }
@@ -272,7 +271,7 @@ public class AndroidManifest {
 
     private void parsePackageInformation(XmlStartElementChunk manifest) {
         // Enum value to string mappings: http://androidxref.com/7.1.1_r6/xref/frameworks/base/core/res/res/values/attrs_manifest.xml
-        installLocation = manifest.getAttribute(AttributeId.INSTALL_LOCATION,0);
+        installLocation = manifest.getAttribute(AttributeId.INSTALL_LOCATION, 0);
         packageName = manifest.getAttribute(PACKAGE);
         platformBuildVersionCode = manifest
                 .getAttribute(PLATFORM_BUILD_VERSION_CODE, -1);

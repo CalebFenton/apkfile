@@ -16,7 +16,10 @@
 
 package org.cf.apkfile.res;
 
-import org.pmw.tinylog.Logger;
+
+import org.cf.apkfile.dex.DexClass;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.annotation.Nullable;
 import java.io.DataOutput;
@@ -29,8 +32,9 @@ import java.nio.ByteBuffer;
  */
 public final class UnknownChunk extends Chunk {
 
-    private final byte[] header;
+    private static final transient Logger logger = LoggerFactory.getLogger(DexClass.class);
 
+    private final byte[] header;
     private final byte[] payload;
     private final int dummyChunkSize;
 
@@ -39,21 +43,21 @@ public final class UnknownChunk extends Chunk {
 
         // If you're here, something went wrong!
         if (headerSize > chunkSize) {
-            Logger.warn("Header size (" + headerSize + ") > chunk size (" + chunkSize + ")");
+            logger.warn("Header size (" + headerSize + ") > chunk size (" + chunkSize + ")");
             header = new byte[0];
             payload = new byte[0];
             dummyChunkSize = Math.min(headerSize + chunkSize, buffer.remaining() + Chunk.METADATA_SIZE);
             return;
         }
         if (headerSize + chunkSize > buffer.remaining()) {
-            Logger.warn("Chunk size (" + (headerSize + chunkSize) + ") greater than remaining buffer (" + buffer.remaining() + ")");
+            logger.warn("Chunk size (" + (headerSize + chunkSize) + ") greater than remaining buffer (" + buffer.remaining() + ")");
             header = new byte[0];
             payload = new byte[0];
             dummyChunkSize = Math.max(buffer.remaining(), Chunk.METADATA_SIZE);
             return;
         }
         if (headerSize == 0) {
-            Logger.warn("Header size is 0, which is wrong");
+            logger.warn("Header size is 0, which is wrong");
             header = new byte[0];
             payload = new byte[0];
             dummyChunkSize = Chunk.METADATA_SIZE;
@@ -85,4 +89,5 @@ public final class UnknownChunk extends Chunk {
     public int getOriginalChunkSize() {
         return dummyChunkSize;
     }
+    
 }

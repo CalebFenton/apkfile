@@ -1,13 +1,14 @@
 package org.cf.apkfile.apk;
 
-import org.bouncycastle.cms.CMSException;
 import org.cf.apkfile.ParseException;
 import org.cf.apkfile.analysis.ComplexityAnalyzer;
+import org.cf.apkfile.dex.DexClass;
 import org.cf.apkfile.dex.DexFile;
 import org.cf.apkfile.dex.DexFileFactory;
 import org.cf.apkfile.manifest.AndroidManifest;
 import org.cf.apkfile.res.ResourceTableChunk;
-import org.pmw.tinylog.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.annotation.Nullable;
 import java.io.BufferedInputStream;
@@ -22,8 +23,9 @@ import java.util.jar.JarFile;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-
 public class ApkFile extends JarFile {
+
+    private static final transient Logger logger = LoggerFactory.getLogger(ApkFile.class);
 
     public static final Pattern CERTIFICATE_PATTERN = Pattern.compile("META-INF/[^.]+\\.(RSA|DSA|EC)", Pattern.CASE_INSENSITIVE);
     public static final Pattern DEX_PATTERN = Pattern.compile(".dex$", Pattern.CASE_INSENSITIVE);
@@ -50,12 +52,16 @@ public class ApkFile extends JarFile {
     private transient boolean useSimpleDexDetection;
     private transient DexFileFactory dexFactory;
 
-    ApkFile(String apkPath, boolean parseCertificate) throws IOException, ParseException {
+    ApkFile(String apkPath, boolean parseCertificate) throws IOException {
         super(apkPath, parseCertificate);
         entryNameToEntry = buildEntryNameToEntry(this);
 
         if (parseCertificate) {
-            parseCertificate();
+            try {
+                parseCertificate();
+            } catch (ParseException e) {
+                logger.error("Error parsing certificate", e);
+            }
         } else {
             certificate = null;
         }
@@ -66,14 +72,22 @@ public class ApkFile extends JarFile {
         resources = null;
     }
 
-    ApkFile parse() throws ParseException {
+    ApkFile parse() {
         if (!skipParsingResources) {
-            parseResources();
+            try {
+                parseResources();
+            } catch (ParseException e) {
+                logger.error("Error parsing resources", e);
+            }
         }
 
         if (!skipParsingAndroidManifest) {
             ResourceTableChunk resourceTable = resources != null ? resources.getResourceTable() : null;
-            parseAndroidManifest(resourceTable);
+            try {
+                parseAndroidManifest(resourceTable);
+            } catch (ParseException e) {
+                logger.error("Error parsing Android Manifest", e);
+            }
         }
 
         if (!skipParsingDexFiles) {
@@ -213,7 +227,7 @@ public class ApkFile extends JarFile {
             try {
                 entryNameToDex.put(entryName, dexFactory.build(dexStream));
             } catch (IOException e) {
-                Logger.error(e, "Error parsing dex: " + entryName);
+                logger.error("Error parsing DEX: " + entryName, e);
             }
         }
     }
@@ -256,12 +270,12 @@ public class ApkFile extends JarFile {
         try {
             certStream = getInputStream(certEntry);
         } catch (IOException e) {
-            throw new ParseException("No certificate found; unsigned APK", e);
+            throw new ParseException("Unable to get certificate input stream", e);
         }
 
         try {
             certificate = new Certificate(certStream);
-        } catch (CMSException | IOException | CertificateException | NoSuchAlgorithmException e) {
+        } catch (IOException | CertificateException | NoSuchAlgorithmException e) {
             throw new ParseException("Unable to parse signature: " + certEntry.getName(), e);
         }
     }
@@ -321,7 +335,7 @@ public class ApkFile extends JarFile {
                     }
                     buf.close();
                 } catch (Exception e) {
-                    Logger.warn(e, "Unable to read entry: " + ze.getName());
+                    logger.warn("Unable to read entry: " + ze.getName(), e);
                 }
             }
         }

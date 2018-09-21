@@ -93,6 +93,12 @@ public class ComplexityAnalyzer {
                     decisionPoints += 1;
                     exits += 1;
                     break;
+                case INVOKE_VIRTUAL_QUICK:
+                case INVOKE_VIRTUAL_QUICK_RANGE:
+                case INVOKE_SUPER_QUICK:
+                case INVOKE_SUPER_QUICK_RANGE:
+                    // These aren't reference instructions. They're V-table lookups.
+                    break;
                 case INVOKE_DIRECT:
                 case INVOKE_DIRECT_EMPTY:
                 case INVOKE_DIRECT_RANGE:
@@ -104,13 +110,9 @@ public class ComplexityAnalyzer {
                 case INVOKE_STATIC:
                 case INVOKE_STATIC_RANGE:
                 case INVOKE_SUPER:
-                case INVOKE_SUPER_QUICK:
                 case INVOKE_SUPER_RANGE:
-                case INVOKE_SUPER_QUICK_RANGE:
                 case INVOKE_VIRTUAL:
-                case INVOKE_VIRTUAL_QUICK:
                 case INVOKE_VIRTUAL_RANGE:
-                case INVOKE_VIRTUAL_QUICK_RANGE:
                     ReferenceInstruction refInstr = (ReferenceInstruction) instruction;
                     MethodReference methodRef = (MethodReference) refInstr.getReference();
                     String methodDescriptor = ReferenceUtil.getMethodDescriptor(methodRef);

@@ -21,7 +21,6 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableMap.Builder;
 import com.google.common.io.LittleEndianDataOutputStream;
 import com.google.common.primitives.Shorts;
-import org.pmw.tinylog.Logger;
 
 import javax.annotation.Nullable;
 import java.io.ByteArrayOutputStream;

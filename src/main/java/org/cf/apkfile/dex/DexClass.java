@@ -6,12 +6,15 @@ import org.cf.apkfile.utils.Utils;
 import org.jf.dexlib2.dexbacked.DexBackedClassDef;
 import org.jf.dexlib2.dexbacked.DexBackedMethod;
 import org.jf.dexlib2.util.ReferenceUtil;
-import org.pmw.tinylog.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class DexClass {
+
+    private static final transient Logger logger = LoggerFactory.getLogger(DexClass.class);
 
     private final transient DexBackedClassDef classDef;
     private final transient boolean shortMethodSignatures;
@@ -51,7 +54,7 @@ public class DexClass {
             try {
                 dexMethod = new DexMethod(dbm, shortMethodSignatures);
             } catch (Exception e) {
-                Logger.warn("Failed to analyze method: " + ReferenceUtil.getMethodDescriptor(dbm) + "; skipping", e);
+                logger.warn("Failed to analyze method: " + ReferenceUtil.getMethodDescriptor(dbm) + "; skipping", e);
                 failedMethodCount += 1;
                 continue;
             }
