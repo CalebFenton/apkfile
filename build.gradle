@@ -21,7 +21,7 @@ plugins {
 apply plugin: 'java'
 apply plugin: 'idea'
 
-version = '2.0.0'
+version = '2.0.1'
 group = 'org.cf'
 sourceCompatibility = 1.8
 def jarVersion = version
