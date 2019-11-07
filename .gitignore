@@ -3,6 +3,10 @@ features/
 log.txt
 todo.txt
 
+### IntelliJ
+
+out/
+
 # User-specific stuff:
 .idea/workspace.xml
 .idea/tasks.xml
