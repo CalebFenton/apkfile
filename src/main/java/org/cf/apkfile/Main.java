@@ -9,6 +9,7 @@ import org.cf.apkfile.utils.Utils;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
+import java.nio.charset.StandardCharsets;
 
 public class Main {
 
@@ -24,10 +25,10 @@ public class Main {
         Gson gson = Utils.getTroveAwareGsonBuilder()
                 .disableHtmlEscaping()
                 .serializeSpecialFloatingPointValues()
-                .setExclusionStrategies(new JarFileExclusionStrategy())
+                // .setExclusionStrategies(new JarFileExclusionStrategy())
                 .setPrettyPrinting()
                 .create();
-        Writer writer = new OutputStreamWriter(System.out);
+        Writer writer = new OutputStreamWriter(System.out, StandardCharsets.UTF_8);
         gson.toJson(apkFile, writer);
 
         writer.close();

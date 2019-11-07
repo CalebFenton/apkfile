@@ -89,12 +89,13 @@ public class BlamerTest {
                 System.out.println(css.length);
             }
         }
+        jar.close();
     }
 
     private static void doit(String path) throws Exception {
         ApkFile apkFile = new ApkFileFactory().build(path);
         GsonBuilder gsonBuilder = new GsonBuilder();
-        Gson gson = new GsonBuilder().disableHtmlEscaping().serializeSpecialFloatingPointValues().setPrettyPrinting().create();
+        Gson gson = gsonBuilder.disableHtmlEscaping().serializeSpecialFloatingPointValues().setPrettyPrinting().create();
         String json = gson.toJson(apkFile);
         System.out.println(json);
 
