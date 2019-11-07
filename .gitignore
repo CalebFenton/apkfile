@@ -45,3 +45,6 @@ hs_err_pid*
 .project
 .settings/
 bin/
+
+# vscode
+.vscode/launch.json
