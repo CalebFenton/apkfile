@@ -73,4 +73,9 @@ public class ShortMethodReference implements MethodReference {
         return shortSignature;
     }
 
+    @Override
+    public void validateReference() throws InvalidReferenceException {
+        // Reference is valid by default
+    }
+
 }
