@@ -1,8 +1,11 @@
 package org.cf.apkfile.apk;
 
+import net.lingala.zip4j.ZipFile;
+import net.lingala.zip4j.model.FileHeader;
+import net.lingala.zip4j.model.ZipParameters;
+import net.lingala.zip4j.exception.ZipException;
 import org.cf.apkfile.ParseException;
 import org.cf.apkfile.analysis.ComplexityAnalyzer;
-import org.cf.apkfile.dex.DexClass;
 import org.cf.apkfile.dex.DexFile;
 import org.cf.apkfile.dex.DexFileFactory;
 import org.cf.apkfile.manifest.AndroidManifest;
@@ -18,33 +21,31 @@ import java.io.InputStream;
 import java.security.NoSuchAlgorithmException;
 import java.security.cert.CertificateException;
 import java.util.*;
-import java.util.jar.JarEntry;
-import java.util.jar.JarFile;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-public class ApkFile extends JarFile {
-
+public class ApkFile {
     private static final transient Logger logger = LoggerFactory.getLogger(ApkFile.class);
 
     public static final Pattern CERTIFICATE_PATTERN = Pattern.compile("META-INF/[^.]+\\.(RSA|DSA|EC)", Pattern.CASE_INSENSITIVE);
-    public static final Pattern DEX_PATTERN = Pattern.compile(".dex$", Pattern.CASE_INSENSITIVE);
+    public static final Pattern DEX_PATTERN = Pattern.compile("\\.dex$", Pattern.CASE_INSENSITIVE);
     public static final Pattern ASSETS_PATTERN = Pattern.compile("^assets/");
     public static final Pattern RESOURCES_PATTERN = Pattern.compile("^res/");
     public static final Pattern RAW_RESOURCES_PATTERN = Pattern.compile("^res/raw/");
     public static final Pattern LIB_PATTERN = Pattern.compile("^lib/");
     public static final byte[] DEX_MAGIC = new byte[] { 0x64, 0x65, 0x78, 0x0A, 0x30, 0x33, };
-
-    // 0x70 is the header length + a little extra
+    // 0x70 is min header length + 0x30 for the rest of the file
     private static final int MINIMUM_DEX_SIZE = 0x70 + 0x30;
-
-    private final Map<String, JarEntry> entryNameToEntry;
+    
+    private final Map<String, FileHeader> entryNameToEntry;
     private final Map<String, DexFile> entryNameToDex;
+    
     private AndroidManifest androidManifest;
     private Certificate certificate;
     private Resources resources;
 
     private final transient File theFile;
+    private final transient ZipFile zipFile;
 
     private transient boolean skipParsingAndroidManifest;
     private transient boolean skipParsingResources;
@@ -52,24 +53,23 @@ public class ApkFile extends JarFile {
     private transient boolean useSimpleDexDetection;
     private transient DexFileFactory dexFactory;
 
-    ApkFile(String apkPath, boolean parseCertificate) throws IOException {
-        super(apkPath, parseCertificate);
-        entryNameToEntry = buildEntryNameToEntry(this);
+    ApkFile(String apkPath, boolean parseCertificate) throws IOException, ZipException {
+        zipFile = new ZipFile(apkPath);
+        theFile = new File(apkPath);
+        androidManifest = null;
+        resources = null;
+        entryNameToDex = new HashMap<>();
+        entryNameToEntry = buildEntryNameToEntry(zipFile);
 
         if (parseCertificate) {
             try {
                 parseCertificate();
             } catch (ParseException e) {
-                logger.error("Error parsing certificate", e);
+                logger.error("Exception parsing certificate", e);
             }
         } else {
             certificate = null;
         }
-
-        theFile = new File(apkPath);
-        entryNameToDex = new HashMap<>();
-        androidManifest = null;
-        resources = null;
     }
 
     ApkFile parse() {
@@ -97,7 +97,7 @@ public class ApkFile extends JarFile {
                 entry.getValue().analyze();
             }
 
-            // Need to give all DEX files in case they reference each other
+            // Need to analyze all DEX files in case they reference each other
             ComplexityAnalyzer complexityAnalyzer = new ComplexityAnalyzer(entryNameToDex.values());
             complexityAnalyzer.analyze();
         }
@@ -105,7 +105,7 @@ public class ApkFile extends JarFile {
         return this;
     }
 
-    public Collection<JarEntry> getAllEntries() {
+    public Collection<FileHeader> getAllEntries() {
         return getEntryMap().values();
     }
 
@@ -121,31 +121,31 @@ public class ApkFile extends JarFile {
         return entryNameToDex;
     }
 
-    public Map<String, JarEntry> getEntries(String entryNamePattern) {
+    public Map<String, FileHeader> getEntries(String entryNamePattern) {
         return getEntries(Pattern.compile(entryNamePattern));
     }
 
-    public Map<String, JarEntry> getEntries(Pattern entryNamePattern) {
+    public Map<String, FileHeader> getEntries(Pattern entryNamePattern) {
         return entryNameToEntry.entrySet().stream()
                 .filter(e -> entryNamePattern.matcher(e.getKey()).find())
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
     }
 
-    public JarEntry getEntry(String entryName) {
-        Optional<Map.Entry<String, JarEntry>> entry = entryNameToEntry.entrySet().stream()
+    public FileHeader getEntry(String entryName) {
+        Optional<Map.Entry<String, FileHeader>> entry = entryNameToEntry.entrySet().stream()
                 .filter(e -> entryName.equals(e.getKey())).findFirst();
-        return entry.map(Map.Entry::getValue).orElse(null);
 
+        return entry.map(Map.Entry::getValue).orElse(null);
     }
 
-    public JarEntry getEntry(Pattern entryNamePattern) {
-        Optional<Map.Entry<String, JarEntry>> entry = entryNameToEntry.entrySet().stream()
+    public FileHeader getEntry(Pattern entryNamePattern) {
+        Optional<Map.Entry<String, FileHeader>> entry = entryNameToEntry.entrySet().stream()
                 .filter(e -> entryNamePattern.matcher(e.getKey()).matches()).findFirst();
 
         return entry.map(Map.Entry::getValue).orElse(null);
     }
 
-    public Map<String, JarEntry> getEntryMap() {
+    public Map<String, FileHeader> getEntryMap() {
         return entryNameToEntry;
     }
 
@@ -157,37 +157,46 @@ public class ApkFile extends JarFile {
         return theFile;
     }
 
+    public InputStream getInputStream(String fileName) throws IOException {
+        FileHeader fileHeader = zipFile.getFileHeader(fileName);
+        return getInputStream(fileHeader);
+    }
+
+    public InputStream getInputStream(FileHeader fileHeader) throws IOException {
+        return zipFile.getInputStream(fileHeader);
+    }
+
     @Nullable
-    public JarEntry getResourcesArscEntry() {
+    public FileHeader getResourcesArscEntry() {
         return getEntry("resources.arsc");
     }
 
     @Nullable
-    public JarEntry getAndroidManifestEntry() {
+    public FileHeader getAndroidManifestEntry() {
         return getEntry("AndroidManifest.xml");
     }
 
-    public Map<String, JarEntry> getAssetsEntries() {
+    public Map<String, FileHeader> getAssetsEntries() {
         return getEntries(ASSETS_PATTERN);
     }
 
-    public Map<String, JarEntry> getResourcesEntries() {
+    public Map<String, FileHeader> getResourcesEntries() {
         return getEntries(RESOURCES_PATTERN);
     }
 
-    public Map<String, JarEntry> getRawResourcesEntries() {
+    public Map<String, FileHeader> getRawResourcesEntries() {
         return getEntries(RAW_RESOURCES_PATTERN);
     }
 
-    public Map<String, JarEntry> getLibEntries() {
+    public Map<String, FileHeader> getLibEntries() {
         return getEntries(LIB_PATTERN);
     }
 
-    public JarEntry getCertificateEntry() {
+    public FileHeader getCertificateEntry() {
         return getEntry(CERTIFICATE_PATTERN);
     }
 
-    public Map<String, JarEntry> getDexEntries() {
+    public Map<String, FileHeader> getDexEntries() {
         return getEntries(DEX_PATTERN);
     }
 
@@ -196,7 +205,7 @@ public class ApkFile extends JarFile {
             return;
         }
 
-        JarEntry androidManifestEntry = getAndroidManifestEntry();
+        FileHeader androidManifestEntry = getAndroidManifestEntry();
         if (androidManifestEntry == null) {
             throw new ParseException("No AndroidManifest found; invalid APK");
         }
@@ -237,7 +246,7 @@ public class ApkFile extends JarFile {
             return;
         }
 
-        JarEntry resourcesEntry = getResourcesArscEntry();
+        FileHeader resourcesEntry = getResourcesArscEntry();
         if (resourcesEntry == null) {
             throw new ParseException("No resources.arsc found; invalid APK");
         }
@@ -246,7 +255,7 @@ public class ApkFile extends JarFile {
         try {
             resourcesStream = getInputStream(resourcesEntry);
         } catch (IOException e) {
-            throw new RuntimeException("Unable to stream resources: " + e);
+            throw new RuntimeException("Unable to open resource input stream: " + e);
         }
 
         try {
@@ -261,7 +270,7 @@ public class ApkFile extends JarFile {
             return;
         }
 
-        JarEntry certEntry = getCertificateEntry();
+        FileHeader certEntry = getCertificateEntry();
         if (certEntry == null) {
             throw new ParseException("No certificate found; unsigned APK");
         }
@@ -270,13 +279,13 @@ public class ApkFile extends JarFile {
         try {
             certStream = getInputStream(certEntry);
         } catch (IOException e) {
-            throw new ParseException("Unable to get certificate input stream", e);
+            throw new ParseException("Unable to open certificate input stream", e);
         }
 
         try {
             certificate = new Certificate(certStream);
         } catch (IOException | CertificateException | NoSuchAlgorithmException e) {
-            throw new ParseException("Unable to parse signature: " + certEntry.getName(), e);
+            throw new ParseException("Unable to parse signature: " + certEntry.getFileName(), e);
         }
     }
 
@@ -311,31 +320,31 @@ public class ApkFile extends JarFile {
             dexStreams = getDexEntries().entrySet().stream()
                     .collect(Collectors.toMap(Map.Entry::getKey, e -> {
                         try {
-                            return getInputStream(e.getValue());
+                            return zipFile.getInputStream(e.getValue());
                         } catch (IOException e1) {
                             e1.printStackTrace();
                             return null;
                         }
                     }));
         } else {
-            for (Map.Entry<String, JarEntry> entry : entryNameToEntry.entrySet()) {
-                JarEntry ze = entry.getValue();
-                if (ze.getSize() < MINIMUM_DEX_SIZE) {
+            for (Map.Entry<String, FileHeader> entry : entryNameToEntry.entrySet()) {
+                FileHeader ze = entry.getValue();
+                if (ze.getUncompressedSize() < MINIMUM_DEX_SIZE) {
                     continue;
                 }
                 byte[] bytes = new byte[DEX_MAGIC.length];
                 try {
-                    InputStream is = getInputStream(ze);
+                    InputStream is = zipFile.getInputStream(ze);
                     BufferedInputStream buf = new BufferedInputStream(is, bytes.length);
                     buf.read(bytes, 0, bytes.length);
                     buf.close();
                     if (Arrays.equals(DEX_MAGIC, bytes)) {
-                        is = getInputStream(ze);
+                        is = zipFile.getInputStream(ze);
                         dexStreams.put(entry.getKey(), is);
                     }
                     buf.close();
                 } catch (Exception e) {
-                    logger.warn("Unable to read entry: " + ze.getName(), e);
+                    logger.warn("Unable to read entry: " + ze.getFileName(), e);
                 }
             }
         }
@@ -343,13 +352,10 @@ public class ApkFile extends JarFile {
         return dexStreams;
     }
 
-    private static Map<String, JarEntry> buildEntryNameToEntry(JarFile jarFile) {
-        Map<String, JarEntry> entryNameToEntry = new HashMap<>();
-        Enumeration<? extends JarEntry> entries = jarFile.entries();
-        while (entries.hasMoreElements()) {
-            JarEntry entry = entries.nextElement();
-            String name = entry.getName();
-            entryNameToEntry.put(name, entry);
+    private static Map<String, FileHeader> buildEntryNameToEntry(ZipFile zipFile) throws ZipException {
+        Map<String, FileHeader> entryNameToEntry = new HashMap<>();
+        for (FileHeader fileHeader : zipFile.getFileHeaders()) {
+            entryNameToEntry.put(fileHeader.getFileName(), fileHeader);
         }
 
         return entryNameToEntry;

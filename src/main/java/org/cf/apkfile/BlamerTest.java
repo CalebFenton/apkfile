@@ -9,6 +9,8 @@ import org.cf.apkfile.res.Chunk;
 import org.cf.apkfile.res.ResourceFile;
 import org.cf.apkfile.res.ResourceTableChunk;
 
+import net.lingala.zip4j.model.FileHeader;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -36,8 +38,8 @@ public class BlamerTest {
         ApkFile apkFile = new ApkFileFactory().build(path);
         FileTime apkModifiedTime = FileTime.from(new File(path).lastModified(), TimeUnit.MILLISECONDS);
         System.out.println(apkFile.getDexEntries().keySet());
-        FileTime dexModifiedTime = apkFile.getDexEntries().get("classes.dex").getLastModifiedTime();
-        FileTime certModifiedTime = apkFile.getCertificateEntry().getLastModifiedTime();
+        FileTime dexModifiedTime = FileTime.from(apkFile.getDexEntries().get("classes.dex").getLastModifiedTime(), TimeUnit.MILLISECONDS);
+        FileTime certModifiedTime = FileTime.from(apkFile.getCertificateEntry().getLastModifiedTime(), TimeUnit.MILLISECONDS);
         System.out.println("APK modified time: " + apkModifiedTime);
         System.out.println("DEX modified time: " + dexModifiedTime);
         System.out.println("CERT modified time: " + certModifiedTime);
@@ -106,13 +108,13 @@ public class BlamerTest {
                 .skipParsingDexFiles()
                 .build(path);
 
-        ZipEntry resourcesEntry = apkFile.getEntry("resources.arsc");
+        FileHeader resourcesEntry = apkFile.getEntry("resources.arsc");
         InputStream resourcesStream = apkFile.getInputStream(resourcesEntry);
 
         ResourceFile arscRF = ResourceFile.fromInputStream(resourcesStream);
         ResourceTableChunk resourceTable = (ResourceTableChunk) arscRF.getChunks().get(0);
 
-        ZipEntry manifestEntry = apkFile.getEntry("AndroidManifest.xml");
+        FileHeader manifestEntry = apkFile.getEntry("AndroidManifest.xml");
         InputStream manifestStream = apkFile.getInputStream(manifestEntry);
         //        manifestRF = ResourceFile.fromInputStream(manifestStream);
         byte[] buf = ByteStreams.toByteArray(manifestStream);

@@ -120,7 +120,7 @@ public class DexMethod {
             Field f = DexBackedMethodImplementation.class.getDeclaredField("codeOffset");
             f.setAccessible(true);
             int codeOffset = (Integer) f.get(method.getImplementation());
-            DexReaderEntropyCalculator calculator = new DexReaderEntropyCalculator(method.dexFile.readerAt(codeOffset));
+            DexReaderEntropyCalculator calculator = new DexReaderEntropyCalculator(method.dexFile.getDataBuffer().readerAt(codeOffset));
             int implementationSize = method.getImplementation().getSize();
             calculator.calculate(codeOffset, implementationSize);
             codeEntropy = calculator.entropy();

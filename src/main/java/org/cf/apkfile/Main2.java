@@ -1,6 +1,6 @@
 package org.cf.apkfile;
 
-import net.lingala.zip4j.core.ZipFile;
+import net.lingala.zip4j.ZipFile;
 import net.lingala.zip4j.model.FileHeader;
 
 public class Main2 {
@@ -10,5 +10,6 @@ public class Main2 {
         for (Object header : zipFile.getFileHeaders()) {
             System.out.println("Found header: " + ((FileHeader) header).getFileName());
         }
+        System.out.println("Getting stupid entry: " + zipFile.getFileHeader("asdflkasdjflskjdderpy"));
     }
 }

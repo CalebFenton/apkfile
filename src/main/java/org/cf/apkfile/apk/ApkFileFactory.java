@@ -40,8 +40,8 @@ public class ApkFileFactory {
     }
 
     /***
-     * Used to access dex factory options.
-     * @return the dex file factory instance for this apk file factory
+     * Used to access DEX factory options.
+     * @return the DEX file factory instance for this apk file factory
      */
     public DexFileFactory getDexFileFactory() {
         return dexFactory;

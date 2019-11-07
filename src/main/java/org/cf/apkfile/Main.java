@@ -31,6 +31,5 @@ public class Main {
         gson.toJson(apkFile, writer);
 
         writer.close();
-        apkFile.close();
     }
 }
